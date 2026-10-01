@@ -439,6 +439,8 @@ id_ex_use_rs1 &&
 ex_mem_reg_write && (ex_mem_wb_sel == ALU | PC+4) &&
 (ex_mem_rd != 5'd0) &&
 (id_ex_rs1 == ex_mem_rd)
+
+src1_fwd = ex_mem_data (要进一步选择 data 来自 alu_result 还是 PC+4)
 ```
 
 另一个是源操作数来自 MEM lw 的 result：
@@ -447,6 +449,8 @@ ex_mem_reg_write && (ex_mem_wb_sel == ALU | PC+4) &&
 mem_wb_reg_write && (mem_wb_wb_sel == MEM) &&
 (mem_wb_rd != 5'd0) &&
 (id_ex_rs1 == mem_wb_rd)
+
+src1_fwd = ex_mem_data (要进一步选择 data 来自 alu_result 还是 mem data 还是 PC+4)
 ```
 
 还有一个特殊情况是，EX 与 MEM 同时匹配上了，应该选哪个呢，比如
@@ -512,3 +516,372 @@ Branch 还要加额外的组合判断，来 src1\_fwd vs src2\_fwd，判断 take
 ![EX_MEM_output](../images/EX_MEM_output.png)
 
 以及 控制 EX/MEM 寄存器怎么更新的组合信号：ex\_mem\_en、ex\_mem\_flush
+
+
+
+
+
+
+
+# 五、MEM 架构
+
+![MEM_arch](../images/MEM_arch.png)
+
+## 1、load flow
+
+我们每次都从 sram 拿 32 bit word （4字节对齐），（SRAM 采用小端），但 load 指令有四种：
+
+```
+func3
+000    LB   读  8 bit → 符号扩展到32 bit
+001    LH   读 16 bit → 符号扩展到32 bit
+010    LW   读 32 bit
+
+100    LBU  读  8 bit → 零扩展到32 bit
+101    LHU  读 16 bit → 零扩展到32 bit
+```
+
+我们要维护一个 `addr[1:0]`，即读地址的低两位，我们通过 {addr[31:2],2'b00} 读 32 位数据，再根据`addr[1:0]`来选择从这 32 bit 中的哪个开始截取，LB 截取 1 byte，LH 截取 2 byte，LW 截取 4 byte，之后再进行对应的 符号扩展或者零扩展
+
+这样的方式会有一个问题，比如 LW 读地址 0x02，这样实际上就是读 0x02 - 0x05 这四个字节，它们是跨 32bit 的，这就需要 mem 读两次再组合起来，为了方便设计，我们约定指令带的地址均为对应对齐的，就是说LB 带的地址为1字节对齐，LH 带的地址为2字节对齐，LW 带的地址为4字节对齐，这样到了 Mem 这里，就不会出现需要读两次再拼接的情况了
+
+而如何判断要操作的是哪种 load 指令呢，就要根据 func3 来判断，
+
+
+
+## 2、store flow
+
+```
+func3
+000    SB → 写低  8 bit
+001    SH → 写低 16 bit
+010    SW → 写   32 bit
+```
+
+由于要同时兼容这三种写法，所以要维护一个 dmem\_wstrb，4 bit 用于告诉 sram 哪个 byte 是有效的
+
+比如想向 addr 0x02 SH 0x4455，那么要先补成 32 bit，0x44550000，然后 dmem\_wstrb = 4'b1100，这样sram 收到后就会截取高2 byte 覆盖高两字节
+
+
+
+## 3、mem ctrl flow
+
+### a、首先是 mem 与  Interconnect 的握手协议：
+
+简单定义 ready 信号，默认为 0，信号立起的含义是当前请求完成了
+
+当 mem 发起读写请求时，ready为0，代表busy，access 并未发生，mem 要保持请求信号
+
+当 ready 拉高的时候，代表 rdata 送出，或者 write data 写入，在当拍结束，mem 要撤掉请求信号，或者发起下一请求
+
+```
+// CPU → Interconnect
+dmem\_read
+dmem\_write
+dmem\_addr
+dmem\_wdata
+dmem\_wstrb
+
+// Interconnect → CPU
+dmem\_ready
+dmem\_rdata
+```
+
+真正 transaction 完成的条件是 (dmem_read || dmem_write) && dmem_ready
+
+比如 LW：
+
+```
+Cycle       N        N+1       N+2       N+3
+
+dmem\_read   1         1         1        0
+addr       1000      1000      1000       0
+ready       0         0         1         0
+rdata       X         X       ABCD        0
+```
+
+### b、反压逻辑
+
+由于 mem 访存需要多周期才能执行完成，当前指令在 Mem 等 ready 的时候，全流水线应该 hold，即反压 **EX ID   IF PC，但不会影响写回，所以要 hold 前流水，并且不能阻碍 WB 的执行，需要向 WB 传 bubble，当 ready 后，所有流水 refresh**
+
+但 Mem 不是所有指令都会 busy 的，对于普通的 R type 指令，在 mem 都是 bypass，所以要 busy 的条件是
+
+```
+mem_stall =
+    ex_mem_valid &&
+    (ex_mem_mem_read || ex_mem_mem_write) &&
+    !dmem_ready;
+
+if(mem_stall)begin
+    pc_en = 0;
+    if_id_en = 0;
+    id_ex_en = 0;
+    ex_mem_en = 0;
+end
+```
+
+有一个情况是 当前正在访存，下一条指令是 branch，已经在 EX 决断出 redirect_pc 并且给出 redirect_valid 了，但此时也不能跳转，PC 要仍然 hold old PC，等到解 hold 的时候，redirect_valid 再给出，PC 再更新
+
+
+
+## 4、MEM/WB
+
+需要传递的寄存器
+
+```
+mem_wb_valid
+
+mem_wb_alu_result
+mem_wb_load_data
+mem_wb_pc4
+
+mem_wb_rd
+
+mem_wb_reg_write
+mem_wb_wb_sel
+```
+
+mem_wb_wb_sel ：选择写回的数据来自哪里
+
+```
+WB_ALU → mem_wb_alu_result
+WB_MEM → mem_wb_load_data
+WB_PC4 → mem_wb_pc4
+```
+
+并且和之前的模块类似，控制信号为
+
+```
+mem_wb_en
+mem_wb_flush
+```
+
+如果当前指令是访存指令，当 `dmem_ready`的时候，访存才完成，才 mem_wb_en = 1，mem\_wb\_flus = 0，否则
+mem\_wb\_flus = 1，向 WB 传 bubble
+
+不是访存指令直接 bypass ，mem_wb_en = 1，mem\_wb\_flus = 0
+
+同样，如果上游传了 bubble，直接 mem\_wb\_valid \<= ex\_mem\_valid;   // = 0
+
+
+
+
+
+# 六、WB架构
+
+接上文，收到 wb sel 后选择写回数据的来源
+
+```
+always_comb begin
+    case (mem_wb_wb_sel)
+        WB_ALU: wb_data = mem_wb_alu_result;
+        WB_MEM: wb_data = mem_wb_load_data;
+        WB_PC4: wb_data = mem_wb_pc4;
+        default: wb_data = 32'b0;
+    endcase
+end
+```
+
+根据 `reg_write` 与 mem\_wb\_valid  决定是否要写入
+
+同时这个选择好的 wb_data 也用于 exe 的 forwarding unit，在 EX 章节已经介绍过了
+
+有一个情况是 ID 读和 wb 写 同一个寄存器，要直接 bypass，rdata = wb_data，这个在 ID 已经介绍过了
+
+
+
+# 七、Pipeline Control
+
+每一级的流水寄存器都是：                
+
+   x_x_en      x_x_flush         state
+
+       1                0                valid
+
+       0               0                 hold
+
+       x                1                 bubble
+
+
+
+## case 1：Load-Use Hazard 如
+
+```
+lw   x5, 0(x1)
+add  x6, x5, x2
+```
+
+当 I1 在 EX 计算结束时，还没有进入 Mem，x5 的值还没拿到，I2 已经在 ID 中，准备进入 EX 进行计算了，但 x5 还是旧值，所以不允许进入 EX，这时应该：
+
+```
+PC       HOLD
+IF/ID    HOLD
+ID/EX    Bubble
+
+EX/MEM   正常前进
+MEM/WB   正常前进
+```
+
+对应的控制信号：
+
+```
+pc_en       = 0;    // hold PC
+
+if_id_en    = 0;    // hold IF/ID 
+if_id_flush = 0;
+
+id_ex_en    = 0;  // flush ID/EX，向 ex 传递 bubble，将 I2 留在 ID
+id_ex_flush = 1;
+
+ex_mem_en    = 1;    // keep EX/MEM
+ex_mem_flush = 0;
+
+mem_wb_en    = 1;    // keep MEM/WB
+mem_wb_flush = 0;
+```
+
+
+
+## case 2：mem stall 如
+
+```
+lw   x5, 0(x1)     // I1
+add  x6, x7, x8    // I2
+sub  x9, x10,x11   // I3
+```
+
+lw 进入 Mem 后，要发起 load 操作，但 SRAM / MMIO 需要几个周期才能拿到 rdata ，
+
+```
+mem_stall = ex_mem_valid &&
+            (ex_mem_mem_read || ex_mem_mem_write) &&
+            !dmem_ready;
+```
+
+所以要将 PC IF ID MEM 全部 stall，向 wb 传递 bubble，即
+
+```
+PC       HOLD
+IF/ID    HOLD
+ID/EX    HOLD
+EX/MEM   HOLD
+MEM/WB   Bubble
+```
+
+控制信号：
+
+```
+pc_en       = 0;    // hold PC
+
+if_id_en    = 0;     // hold IF/ID 
+if_id_flush = 0;
+
+id_ex_en    = 0;    // hold ID/EX
+id_ex_flush = 0;
+
+ex_mem_en    = 0;   // hold EX/MEM
+ex_mem_flush = 0;
+
+mem_wb_en    = 0;    // flush MEM/WB，传递 bubble    
+mem_wb_flush = 1;
+```
+
+等几个周期后  `dmem_ready = 1`  再 refresh 各 module
+
+
+
+## case 3：IF stall
+
+IF 取指令也要访问 SRAM，也会出现 需要等到 ready的情况，ready 后才能拿到下一条指令向下传递，此时需要向下游传递 bubble，而已经在流水线里的老指令完全可以继续跑
+
+```
+PC      HOLD          // 当前取指地址不能变
+IF/ID   ?             // 第一拍当前指令消费后，应变 Bubble
+ID/EX   ADVANCE
+EX/MEM  ADVANCE
+MEM/WB  ADVANCE
+```
+
+
+
+## case 4：Branch / JAL / JALR 的 control hazard
+
+以 beq 为例；
+
+```
+I1: beq x1, x2, TARGET
+I2: add x3, x4, x5       // 顺序下一条
+...
+TARGET:
+I5: sub x6, x7, x8
+```
+
+当 beq 到达 ID 时，会解析出 ctrl\_flow  = FLOW\_BRANCH，于是会令
+
+```
+PC       HOLD
+IF/ID    FLUSH
+ID/EX    ADVANCE
+```
+
+即 PC 保持在 I2，向 ID 传递 bubble，并且把 ID 中的 I1 送进 EX 中计算
+
+### case a、EX 决断：BEQ not taken
+
+那么 redirect_valid = 0，此时 PC 还在 hold I2，接下来恢复 PC & IF/ID ，直接将 I2 送进 ID，PC <= I3
+
+```
+pc_en    = 1
+if_id_en = 1 
+if_id_flush = 0 
+```
+
+### case b、EX 决断：BEQ taken
+
+那么 branch\_taken = 1，并准备好 redirect_pc，在 EX 允许前进时，即 ex_mem_en == 1 (这是为了防止 branch 的上一条指令为 mem 操作，此时需要 stall，等待 mem_ready，才能继续前进，送回 redirect_pc) 时，redirect\_valid  = 1；
+
+```
+redirect_valid =
+    id_ex_valid &&
+    ex_mem_en &&
+    branch_taken;
+```
+
+在时钟沿到达时，PC detect 到 redirect\_valid ，则 PC <= redirect_pc，然后 IF 从 TARGET 发起取指，等待 mem_ready 恢复 if_id_en，pc_en，将指令送给 ID
+
+并且由于本轮 EX 收到的指令为 bubble，因此会使得 redirect_valid = 0，
+
+
+
+## case 4：上游 x_x_valid == 0
+
+传递 下级 valid <= 上级 valid
+
+```
+if (id_ex_flush)
+    id_ex_valid <= 1'b0;        // 主动塞 Bubble
+else if (id_ex_en)
+    id_ex_valid <= if_id_valid; // 正常传递，包括 valid=0
+else
+    ;                           // HOLD，保持原来的 valid
+```
+
+## case 5：summy
+
+control uniu  priority：
+
+```
+Reset
+  ↓
+MEM stall
+  ↓
+Redirect
+  ↓
+Load-use hazard
+  ↓
+ID control-flow wait
+  ↓
+IF wait
+  ↓
+Normal
+```
