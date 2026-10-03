@@ -1,4 +1,3 @@
-
 # 四、MEM 架构
 
 ![MEM_arch](../images/MEM_arch.png)
@@ -42,7 +41,7 @@ func3
 
 ## 3、mem ctrl flow
 
-### a、首先是 mem 与  Interconnect 的握手协议：
+### a、首先是 mem 与  Interconnect 的握手协议：可变延迟、ready 握手、等待期间保持请求
 
 简单定义 ready 信号，默认为 0，信号立起的含义是当前请求完成了
 
@@ -70,11 +69,25 @@ dmem\_rdata
 ```
 Cycle       N        N+1       N+2       N+3
 
-dmem\_read   1         1         1        0
-addr       1000      1000      1000       0
+dmem\_read   1         1         1        1
+addr       1000      1000      1000       2000
 ready       0         0         1         0
-rdata       X         X       ABCD        0
+rdata       X         X       ABCD        x
 ```
+
+- `dmem_read/write=1` 表示**当前事务有效**，不是单周期操作脉冲。
+- `dmem_ready=0`：事务未完成，CPU HOLD `EX/MEM`，请求、地址、数据保持不变。
+- `dmem_ready=1`：当前事务完成，流水线可以继续。
+- Load 完成时，`dmem_rdata` 必须有效。
+- Slave 必须保证一个事务只产生**一次副作用**，不能因为请求连续为 1 而重复执行。
+
+重点是 slave，不可以 detect 到 dmem_read/write 就无脑读，就是不可以一个事务被连续发起，等到 ready 拉高，才更新，再接收下一个任务
+
+
+
+缺点：要新的 instruction 进到 mem 后，下一周期才能被 dsram detect 到，发起读操作，这样每个 instruction 都会有一周期的损失，后续如果吞吐率达不到，可以对协议做出改进，在 dsram 准备一个 cmd fifo，这样就会允许多个 cmd 连续发送，而无需每个 instruction 都等 1 cycle 被采样
+
+
 
 ### b、反压逻辑
 
@@ -138,4 +151,3 @@ mem\_wb\_flus = 1，向 WB 传 bubble
 不是访存指令直接 bypass ，mem_wb_en = 1，mem\_wb\_flus = 0
 
 同样，如果上游传了 bubble，直接 mem\_wb\_valid \<= ex\_mem\_valid;   // = 0
-

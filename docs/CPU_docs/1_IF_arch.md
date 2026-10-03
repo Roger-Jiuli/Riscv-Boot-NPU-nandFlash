@@ -24,9 +24,23 @@
 
 ## 2、instruction Memory
 
-输入：PC & readen
+ISRAM：固定 1-cycle 同步读
 
-输出：instruction body
+接口：
+
+```
+imem_en
+imem_addr
+imem_rdata
+```
+
+- `imem_en=1`：当前周期发起一次取指请求，ISRAM 在**上升沿采样 `imem_addr`**。
+- 下一周期 `imem_rdata` 输出该地址对应的指令。
+- 支持流水读取：**每周期可发一个地址，每周期可返回一条指令**。
+- `imem_en=0`：不发起新请求，约定 `imem_rdata` 保持上一次读数据。
+- 无 `ready`，因为读延迟固定为 1 cycle。
+
+
 
 
 
