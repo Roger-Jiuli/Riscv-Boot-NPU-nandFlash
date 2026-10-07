@@ -1,0 +1,1346 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/design/.synopsys_dv_prefs.tcl
+# ============================================================
+# RV32I CPU
+# Standalone ASIC Synthesis Flow
+#
+# Tool:
+#   Synopsys Design Compiler
+#
+# Flow:
+#   Setup
+#     -> Analyze
+#     -> Elaborate
+#     -> Link
+#     -> Pre-compile Checks
+#     -> Constraints
+#     -> Compile Ultra
+#     -> Post-compile Checks
+#     -> QoR Reports
+#     -> Netlist / DDC / SDC
+# ============================================================
+# ============================================================
+# 0. Environment
+# ============================================================
+source ./scripts/setup.tcl
+============================================================
+ DC Environment Setup Complete
+ Target Library : smic13_tt.db
+============================================================
+set TOP cpu_core
+cpu_core
+file mkdir ./reports
+file mkdir ./outputs
+# ============================================================
+# 1. Read RTL
+# ============================================================
+echo ""
+
+echo "============================================================"
+============================================================
+echo " 1. ANALYZE RTL"
+ 1. ANALYZE RTL
+echo "============================================================"
+============================================================
+analyze     -format sverilog     -vcs "-f ./scripts/filelist.f"
+Running PRESTO HDLC
+Compiling source file ../rtl/rv32i_cpu/alu.sv
+Compiling source file ../rtl/rv32i_cpu/decoder.sv
+Compiling source file ../rtl/rv32i_cpu/forwarding_unit.sv
+Compiling source file ../rtl/rv32i_cpu/hazard_unit.sv
+Compiling source file ../rtl/rv32i_cpu/imm_gen.sv
+Compiling source file ../rtl/rv32i_cpu/load_unit.sv
+Compiling source file ../rtl/rv32i_cpu/store_unit.sv
+Compiling source file ../rtl/rv32i_cpu/regfile.sv
+Compiling source file ../rtl/rv32i_cpu/if_stage.sv
+Compiling source file ../rtl/rv32i_cpu/id_state.sv
+Compiling source file ../rtl/rv32i_cpu/ex_state.sv
+Compiling source file ../rtl/rv32i_cpu/mem_stage.sv
+Compiling source file ../rtl/rv32i_cpu/wb_stage.sv
+Compiling source file ../rtl/rv32i_cpu/pipeline_control.sv
+Compiling source file ../rtl/rv32i_cpu/cpu_core.sv
+Presto compilation completed successfully.
+Loading db file '/home/design/pdk/smic13/STD/Synopsys/smic13_tt.db'
+1
+# ============================================================
+# 2. Elaborate
+# ============================================================
+echo ""
+
+echo "============================================================"
+============================================================
+echo " 2. ELABORATE"
+ 2. ELABORATE
+echo "============================================================"
+============================================================
+elaborate $TOP
+Loading db file '/home/eda_tool/syn/syn/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/eda_tool/syn/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'smic13_tt'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'cpu_core'.
+Information: Building the design 'if_stage' instantiated from design 'cpu_core' with
+	the parameters "RESET_PC=32'h00000000". (HDL-193)
+
+Inferred memory devices in process
+	in routine if_stage_00000000 line 62 in file
+		'../rtl/rv32i_cpu/if_stage.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       pc_reg        | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine if_stage_00000000 line 81 in file
+		'../rtl/rv32i_cpu/if_stage.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  if1_pc_valid_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    if1_pc_q_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine if_stage_00000000 line 99 in file
+		'../rtl/rv32i_cpu/if_stage.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   if_id_instr_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   if_id_valid_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    if_id_pc_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'id_stage'. (HDL-193)
+
+Inferred memory devices in process
+	in routine id_stage line 187 in file
+		'../rtl/rv32i_cpu/id_state.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| id_ex_ctrl_flow_reg | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   id_ex_valid_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    id_ex_pc_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| id_ex_rs1_data_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| id_ex_rs2_data_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    id_ex_rs1_reg    | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    id_ex_rs2_reg    | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    id_ex_rd_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    id_ex_imm_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  id_ex_funct3_reg   | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  id_ex_use_rs1_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  id_ex_use_rs2_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  id_ex_alu_op_reg   | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+| id_ex_alu_src_a_reg | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+| id_ex_alu_src_b_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| id_ex_mem_read_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| id_ex_mem_write_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| id_ex_reg_write_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  id_ex_wb_sel_reg   | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'hazard_unit'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ex_stage'. (HDL-193)
+Warning:  ../rtl/rv32i_cpu/ex_state.sv:183: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 150 in file
+	'../rtl/rv32i_cpu/ex_state.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           152            |    auto/auto     |
+|           158            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 174 in file
+	'../rtl/rv32i_cpu/ex_state.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           176            |    auto/auto     |
+|           183            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 212 in file
+	'../rtl/rv32i_cpu/ex_state.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           216            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 250 in file
+	'../rtl/rv32i_cpu/ex_state.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           257            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine ex_stage line 299 in file
+		'../rtl/rv32i_cpu/ex_state.sv'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+|   ex_mem_wb_sel_reg   | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   ex_mem_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| ex_mem_alu_result_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| ex_mem_store_data_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    ex_mem_pc4_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     ex_mem_rd_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   ex_mem_funct3_reg   | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  ex_mem_mem_read_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| ex_mem_mem_write_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| ex_mem_reg_write_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+=================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mem_stage'. (HDL-193)
+
+Inferred memory devices in process
+	in routine mem_stage line 125 in file
+		'../rtl/rv32i_cpu/mem_stage.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  hold_forward_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine mem_stage line 141 in file
+		'../rtl/rv32i_cpu/mem_stage.sv'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+|   mem_wb_wb_sel_reg   | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   mem_wb_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| mem_wb_alu_result_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| mem_wb_load_data_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    mem_wb_pc4_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     mem_wb_rd_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+| mem_wb_reg_write_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+=================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'wb_stage'. (HDL-193)
+
+Statistics for case statements in always block at line 37 in file
+	'../rtl/rv32i_cpu/wb_stage.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            39            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'pipeline_control' instantiated from design 'cpu_core' with
+	the parameters "FLOW_NORMAL=2'h0". (HDL-193)
+
+Inferred memory devices in process
+	in routine pipeline_control_0 line 68 in file
+		'../rtl/rv32i_cpu/pipeline_control.sv'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+| redirect_refill_q_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+=================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'decoder'. (HDL-193)
+Warning:  ../rtl/rv32i_cpu/decoder.sv:141: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ../rtl/rv32i_cpu/decoder.sv:188: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 98 in file
+	'../rtl/rv32i_cpu/decoder.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           122            |    auto/auto     |
+|           141            |    auto/auto     |
+|           188            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'regfile'. (HDL-193)
+
+Inferred memory devices in process
+	in routine regfile line 33 in file
+		'../rtl/rv32i_cpu/regfile.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      regs_reg       | Flip-flop | 1024  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|    regfile/62    |   32   |   32    |      5       |
+|    regfile/71    |   32   |   32    |      5       |
+======================================================
+Presto compilation completed successfully.
+Information: Building the design 'imm_gen'. (HDL-193)
+
+Statistics for case statements in always block at line 15 in file
+	'../rtl/rv32i_cpu/imm_gen.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            17            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'forwarding_unit'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'alu'. (HDL-193)
+Warning:  ../rtl/rv32i_cpu/alu.sv:48: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 22 in file
+	'../rtl/rv32i_cpu/alu.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            24            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'store_unit'. (HDL-193)
+
+Statistics for case statements in always block at line 10 in file
+	'../rtl/rv32i_cpu/store_unit.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            15            |    auto/auto     |
+|            19            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'load_unit'. (HDL-193)
+
+Statistics for case statements in always block at line 13 in file
+	'../rtl/rv32i_cpu/load_unit.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            16            |    auto/auto     |
+|            25            |    auto/auto     |
+|            32            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+1
+current_design $TOP
+Current design is 'cpu_core'.
+{cpu_core}
+# ============================================================
+# 3. Link
+# ============================================================
+echo ""
+
+echo "============================================================"
+============================================================
+echo " 3. LINK"
+ 3. LINK
+echo "============================================================"
+============================================================
+link
+
+  Linking design 'cpu_core'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (15 designs)              /home/design/projects/Riscv-Boot-NPU-nandFlash/syn/cpu_core.db, etc
+  smic13_tt (library)         /home/design/pdk/smic13/STD/Synopsys/smic13_tt.db
+
+1
+# ============================================================
+# 4. Pre-compile Checks
+# ============================================================
+echo ""
+
+echo "============================================================"
+============================================================
+echo " 4. PRE-COMPILE CHECKS"
+ 4. PRE-COMPILE CHECKS
+echo "============================================================"
+============================================================
+check_design     > ./reports/check_design_precompile.rpt
+# ============================================================
+# 5. Timing Constraints
+# ============================================================
+echo ""
+
+echo "============================================================"
+============================================================
+echo " 5. READ TIMING CONSTRAINTS"
+ 5. READ TIMING CONSTRAINTS
+echo "============================================================"
+============================================================
+source ./constraints/cpu.sdc
+check_timing     > ./reports/check_timing_precompile.rpt
+# ============================================================
+# 6. Compile
+# ============================================================
+echo ""
+
+echo "============================================================"
+============================================================
+echo " 6. COMPILE ULTRA"
+ 6. COMPILE ULTRA
+echo "============================================================"
+============================================================
+compile_ultra
+Loading db file '/home/eda_tool/syn/syn/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Performing power optimization. (PWR-850)
+Analyzing: "/home/design/pdk/smic13/STD/Synopsys/smic13_tt.db"
+Library analysis succeeded.
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.1 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.1 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 150 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'cpu_core'
+
+Loaded alib file './alib-52/smic13_tt.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy u_ex_stage before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_ex_stage/u_alu before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_mem_stage/u_store_unit before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_mem_stage/u_load_unit before Pass 1 (OPT-776)
+Information: Ungrouping 4 of 15 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'regfile'
+Information: Added key list 'DesignWare' to design 'regfile'. (DDB-72)
+  Processing 'cpu_core'
+Information: Added key list 'DesignWare' to design 'cpu_core'. (DDB-72)
+ Implement Synthetic for 'cpu_core'.
+  Processing 'decoder'
+  Processing 'imm_gen'
+  Processing 'pipeline_control_0'
+  Processing 'hazard_unit'
+Information: Added key list 'DesignWare' to design 'hazard_unit'. (DDB-72)
+  Processing 'mem_stage'
+  Processing 'id_stage'
+  Processing 'if_stage_00000000'
+ Implement Synthetic for 'if_stage_00000000'.
+  Processing 'wb_stage'
+  Processing 'forwarding_unit'
+Information: Added key list 'DesignWare' to design 'forwarding_unit'. (DDB-72)
+Memory usage for J1 task 230 Mbytes -- main task 214 Mbytes.
+Memory usage for J2 task 214 Mbytes -- main task 214 Mbytes.
+Memory usage for J3 task 214 Mbytes -- main task 214 Mbytes.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Complementing port 'redirect_valid' in design 'if_stage_00000000'.
+	 The new name of the port is 'redirect_valid_BAR'. (OPT-319)
+Information: Complementing port 'redirect_valid' in design 'pipeline_control_0'.
+	 The new name of the port is 'redirect_valid_BAR'. (OPT-319)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'if_stage_00000000'. (DDB-72)
+Information: The wire load model of the parent cell cpu_core is different from that of the child cell u_if_stage in the design if_stage_00000000. The child cell will not be ungrouped. (OPT-779)
+Information: The wire load model of the parent cell cpu_core is different from that of the child cell u_id_stage in the design id_stage. The child cell will not be ungrouped. (OPT-779)
+Information: The wire load model of the parent cell cpu_core is different from that of the child cell u_hazard_unit in the design hazard_unit. The child cell will not be ungrouped. (OPT-779)
+Information: The wire load model of the parent cell cpu_core is different from that of the child cell u_mem_stage in the design mem_stage. The child cell will not be ungrouped. (OPT-779)
+Information: The wire load model of the parent cell cpu_core is different from that of the child cell u_wb_stage in the design wb_stage. The child cell will not be ungrouped. (OPT-779)
+Information: The wire load model of the parent cell cpu_core is different from that of the child cell u_pipeline_control in the design pipeline_control_0. The child cell will not be ungrouped. (OPT-779)
+Information: The wire load model of the parent cell cpu_core is different from that of the child cell u_ex_stage/u_forwarding_unit in the design forwarding_unit. The child cell will not be ungrouped. (OPT-779)
+Information: The wire load model of the parent cell u_id_stage is different from that of the child cell u_id_stage/u_decoder in the design decoder. The child cell will not be ungrouped. (OPT-779)
+Information: The wire load model of the parent cell u_id_stage is different from that of the child cell u_id_stage/u_imm_gen in the design imm_gen. The child cell will not be ungrouped. (OPT-779)
+Information: 8 other designs were not ungrouped because of differing wire load models. (OPT-779)
+  Mapping Optimization (Phase 1)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Mapping 'cpu_core_DP_OP_45J2_122_6278_0'
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:28  110207.0      0.00       0.0       0.1                           3687.4795
+    0:00:28  110207.0      0.00       0.0       0.1                           3687.4795
+    0:00:28  110207.0      0.00       0.0       0.1                           3687.4795
+    0:00:28  110207.0      0.00       0.0       0.1                           3687.4795
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+
+  Beginning Delay Optimization HSVT Pass
+  --------------------------------------
+    0:00:34  106610.9      0.00       0.0       0.1                           3412.6223
+    0:00:34  106610.9      0.00       0.0       0.1                           3412.6223
+    0:00:34  106610.9      0.00       0.0       0.1                           3412.6223
+    0:00:34  106610.9      0.00       0.0       0.1                           3412.6223
+    0:00:34  106610.9      0.00       0.0       0.1                           3412.6223
+    0:00:34  106610.9      0.00       0.0       0.1                           3412.6223
+    0:00:34  106610.9      0.00       0.0       0.1                           3412.6223
+    0:00:34  106610.9      0.00       0.0       0.1                           3412.6223
+    0:00:35  106610.9      0.00       0.0       0.1                           3412.6223
+    0:00:36  106107.1      0.00       0.0       0.0                           3289.4524
+    0:00:36  106107.1      0.00       0.0       0.0                           3289.4524
+    0:00:36  106107.1      0.00       0.0       0.0                           3289.4524
+    0:00:36  106107.1      0.00       0.0       0.0                           3289.4524
+    0:00:36  106107.1      0.00       0.0       0.0                           3289.4524
+    0:00:36  106107.1      0.00       0.0       0.0                           3289.4524
+    0:00:36  106107.1      0.00       0.0       0.0                           3289.4524
+    0:00:36  106107.1      0.00       0.0       0.0                           3289.4524
+    0:00:36  106107.1      0.00       0.0       0.0                           3289.4524
+    0:00:36  106107.1      0.00       0.0       0.0                           3289.4524
+    0:00:36  106107.1      0.00       0.0       0.0                           3289.4524
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:36  106107.1      0.00       0.0       0.0                           3289.4524
+    0:00:36  106107.1      0.00       0.0       0.0                           3289.4524
+    0:00:36  106107.1      0.00       0.0       0.0                           3289.4524
+    0:00:36  106107.1      0.00       0.0       0.0                           3289.4524
+    0:00:36  106107.1      0.00       0.0       0.0                           3289.4524
+    0:00:36  106107.1      0.00       0.0       0.0                           3289.4524
+    0:00:36  106107.1      0.00       0.0       0.0                           3289.4524
+    0:00:36  106107.1      0.00       0.0       0.0                           3289.4524
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:36  106107.1      0.00       0.0       0.0                           3289.4524
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:00:36  106113.2      0.00       0.0       0.0                           3289.4204
+    0:00:36  106113.2      0.00       0.0       0.0                           3289.4204
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:36  106113.2      0.00       0.0       0.0                           3289.4204
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+Information: Complementing port 'imem_en' in design 'if_stage_00000000'.
+	 The new name of the port is 'imem_en_BAR'. (OPT-319)
+Information: Complementing port 'ex_valid' in design 'hazard_unit'.
+	 The new name of the port is 'ex_valid_BAR'. (OPT-319)
+Information: Complementing port 'ex_valid' in design 'forwarding_unit'.
+	 The new name of the port is 'ex_valid_BAR'. (OPT-319)
+Information: Complementing port 'id_ex_valid' in design 'id_stage'.
+	 The new name of the port is 'id_ex_valid_BAR'. (OPT-319)
+    0:00:40  112847.1      0.00       0.0       0.0                           3849.8083
+    0:00:40  112847.1      0.00       0.0       0.0                           3849.8083
+    0:00:40  112847.1      0.00       0.0       0.0                           3849.8083
+    0:00:41  106311.4      0.00       0.0       0.0                           3158.2900
+    0:00:41  106311.4      0.00       0.0       0.0                           3158.2900
+    0:00:41  106311.4      0.00       0.0       0.0                           3158.2900
+    0:00:41  106311.4      0.00       0.0       0.0                           3158.2900
+    0:00:41  106311.4      0.00       0.0       0.0                           3158.2900
+    0:00:41  106311.4      0.00       0.0       0.0                           3158.2900
+    0:00:41  106311.4      0.00       0.0       0.0                           3158.2900
+    0:00:41  106311.4      0.00       0.0       0.0                           3158.2900
+    0:00:41  106311.4      0.00       0.0       0.0                           3158.2900
+    0:00:41  106311.4      0.00       0.0       0.0                           3158.2900
+    0:00:41  106311.4      0.00       0.0       0.0                           3158.2900
+    0:00:41  106311.4      0.00       0.0       0.0                           3158.2900
+    0:00:41  106311.4      0.00       0.0       0.0                           3158.2900
+    0:00:41  106311.4      0.00       0.0       0.0                           3158.2900
+    0:00:41  106311.4      0.00       0.0       0.0                           3158.2900
+    0:00:41  106311.4      0.00       0.0       0.0                           3158.2900
+    0:00:41  106311.4      0.00       0.0       0.0                           3158.2900
+    0:00:41  106311.4      0.00       0.0       0.0                           3158.2900
+    0:00:41  106311.4      0.00       0.0       0.0                           3158.2900
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:41  106311.4      0.00       0.0       0.0                           3158.2900
+    0:00:42  105532.1      0.00       0.0       0.0                           3131.7754
+    0:00:42  105532.1      0.00       0.0       0.0                           3131.7754
+    0:00:42  105532.1      0.00       0.0       0.0                           3131.7754
+    0:00:43  105523.1      0.00       0.0       0.0                           3129.5530
+
+  Beginning Delay Optimization HSVT Pass
+  --------------------------------------
+    0:00:43  105523.1      0.00       0.0       0.0                           3129.5530
+    0:00:43  105523.1      0.00       0.0       0.0                           3129.5530
+    0:00:43  105523.1      0.00       0.0       0.0                           3129.5530
+    0:00:43  105523.1      0.00       0.0       0.0                           3129.5530
+    0:00:44  105523.1      0.00       0.0       0.0                           3129.5530
+    0:00:44  105523.1      0.00       0.0       0.0                           3129.5530
+    0:00:44  105523.1      0.00       0.0       0.0                           3129.5530
+    0:00:44  105523.1      0.00       0.0       0.0                           3129.5530
+    0:00:46  105057.1      0.00       0.0       0.0                           3114.1826
+    0:00:46  105057.1      0.00       0.0       0.0                           3114.1826
+    0:00:46  105057.1      0.00       0.0       0.0                           3114.1826
+    0:00:46  105057.1      0.00       0.0       0.0                           3114.1826
+    0:00:46  104975.4      0.00       0.0       0.0                           3109.5327
+Loading db file '/home/design/pdk/smic13/STD/Synopsys/smic13_tt.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'cpu_core' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'u_pipeline_control/net26393': 1279 load(s), 1 driver(s)
+     Net 'u_id_stage/u_regfile/clk': 1502 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+# ============================================================
+# 7. Post-compile Checks
+# ============================================================
+echo ""
+
+echo "============================================================"
+============================================================
+echo " 7. POST-COMPILE CHECKS"
+ 7. POST-COMPILE CHECKS
+echo "============================================================"
+============================================================
+check_design     > ./reports/check_design_postcompile.rpt
+check_timing     > ./reports/check_timing_postcompile.rpt
+# ============================================================
+# 8. QoR Reports
+# ============================================================
+echo ""
+
+echo "============================================================"
+============================================================
+echo " 8. GENERATE REPORTS"
+ 8. GENERATE REPORTS
+echo "============================================================"
+============================================================
+# ------------------------------------------------------------
+# QoR Summary
+# ------------------------------------------------------------
+report_qor     > ./reports/qor.rpt
+# ------------------------------------------------------------
+# Area
+# ------------------------------------------------------------
+report_area     -hierarchy     > ./reports/area.rpt
+# ------------------------------------------------------------
+# Maximum / Setup Timing
+# ------------------------------------------------------------
+report_timing     -delay_type max     -max_paths 20     -nworst 2     -input_pins     -nets     > ./reports/timing_max.rpt
+# ------------------------------------------------------------
+# Constraint Violations
+# ------------------------------------------------------------
+report_constraint     -all_violators     > ./reports/constraint_violators.rpt
+# ------------------------------------------------------------
+# Cell / Reference Usage
+# ------------------------------------------------------------
+report_reference     -hierarchy     > ./reports/reference.rpt
+# ============================================================
+# 9. Write Results
+# ============================================================
+echo ""
+
+echo "============================================================"
+============================================================
+echo " 9. WRITE OUTPUTS"
+ 9. WRITE OUTPUTS
+echo "============================================================"
+============================================================
+# ------------------------------------------------------------
+# Make synthesized names Verilog friendly
+# ------------------------------------------------------------
+change_names     -rules verilog     -hierarchy
+Warning: In the design id_stage, net 'if_id_instr[24]' is connecting multiple ports. (UCN-1)
+Warning: In the design id_stage, net 'if_id_instr[23]' is connecting multiple ports. (UCN-1)
+Warning: In the design id_stage, net 'if_id_instr[22]' is connecting multiple ports. (UCN-1)
+Warning: In the design id_stage, net 'if_id_instr[21]' is connecting multiple ports. (UCN-1)
+Warning: In the design id_stage, net 'if_id_instr[20]' is connecting multiple ports. (UCN-1)
+Warning: In the design id_stage, net 'if_id_instr[19]' is connecting multiple ports. (UCN-1)
+Warning: In the design id_stage, net 'if_id_instr[18]' is connecting multiple ports. (UCN-1)
+Warning: In the design id_stage, net 'if_id_instr[17]' is connecting multiple ports. (UCN-1)
+Warning: In the design id_stage, net 'if_id_instr[16]' is connecting multiple ports. (UCN-1)
+Warning: In the design id_stage, net 'if_id_instr[15]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[31]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[30]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[29]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[28]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[27]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[26]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[25]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[24]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[23]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[22]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[21]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[20]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[19]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[18]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[17]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[16]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[15]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[14]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[13]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[12]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[11]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[10]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[9]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[8]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[7]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[6]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[5]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[4]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design mem_stage, net 'ex_mem_alu_result[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design wb_stage, net 'mem_wb_rd[4]' is connecting multiple ports. (UCN-1)
+Warning: In the design wb_stage, net 'mem_wb_rd[3]' is connecting multiple ports. (UCN-1)
+Warning: In the design wb_stage, net 'mem_wb_rd[2]' is connecting multiple ports. (UCN-1)
+Warning: In the design wb_stage, net 'mem_wb_rd[1]' is connecting multiple ports. (UCN-1)
+Warning: In the design wb_stage, net 'mem_wb_rd[0]' is connecting multiple ports. (UCN-1)
+Warning: In the design pipeline_control_0, net 'id_ex_en' is connecting multiple ports. (UCN-1)
+1
+# ------------------------------------------------------------
+# Gate-level Netlist
+# ------------------------------------------------------------
+write_file     -format verilog     -hierarchy     -output ./outputs/cpu_core_netlist.v
+Writing verilog file '/home/design/projects/Riscv-Boot-NPU-nandFlash/syn/outputs/cpu_core_netlist.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+# ------------------------------------------------------------
+# Synopsys Design Database
+# ------------------------------------------------------------
+write_file     -format ddc     -hierarchy     -output ./outputs/cpu_core.ddc
+Writing ddc file './outputs/cpu_core.ddc'.
+1
+# ------------------------------------------------------------
+# Final SDC
+# ------------------------------------------------------------
+write_sdc     ./outputs/cpu_core.sdc
+1
+# ============================================================
+# 10. Final Console Summary
+# ============================================================
+echo ""
+
+echo "============================================================"
+============================================================
+echo " RV32I CPU SYNTHESIS COMPLETE"
+ RV32I CPU SYNTHESIS COMPLETE
+echo "============================================================"
+============================================================
+echo ""
+
+echo "---------------- QoR ----------------"
+---------------- QoR ----------------
+report_qor
+ 
+****************************************
+Report : qor
+Design : cpu_core
+Version: O-2018.06-SP1
+Date   : Wed Oct  7 19:29:13 2026
+****************************************
+
+
+  Timing Path Group 'clk'
+  -----------------------------------
+  Levels of Logic:              37.00
+  Critical Path Length:          8.90
+  Critical Path Slack:           0.00
+  Critical Path Clk Period:     10.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:         10
+  Hierarchical Port Count:       1208
+  Leaf Cell Count:               7301
+  Buf/Inv Cell Count:             553
+  Buf Cell Count:                  75
+  Inv Cell Count:                 478
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:      5799
+  Sequential Cell Count:         1502
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:    50437.750027
+  Noncombinational Area: 54537.622063
+  Buf/Inv Area:           2709.746023
+  Total Buffer Area:           521.95
+  Total Inverter Area:        2187.80
+  Macro/Black Box Area:      0.000000
+  Net Area:                  0.000000
+  -----------------------------------
+  Cell Area:            104975.372090
+  Design Area:          104975.372090
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:          7402
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: Design
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    2.96
+  Logic Optimization:                  3.78
+  Mapping Optimization:               18.33
+  -----------------------------------------
+  Overall Compile Time:               46.99
+  Overall Compile Wall Clock Time:    47.98
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1
+echo ""
+
+echo "---------------- Area ---------------"
+---------------- Area ---------------
+report_area
+ 
+****************************************
+Report : area
+Design : cpu_core
+Version: O-2018.06-SP1
+Date   : Wed Oct  7 19:29:13 2026
+****************************************
+
+Library(s) Used:
+
+    smic13_tt (File: /home/design/pdk/smic13/STD/Synopsys/smic13_tt.db)
+
+Number of ports:                         1378
+Number of nets:                          8590
+Number of cells:                         7314
+Number of combinational cells:           5799
+Number of sequential cells:              1505
+Number of macros/black boxes:               0
+Number of buf/inv:                        553
+Number of references:                      85
+
+Combinational area:              50437.750027
+Buf/Inv area:                     2709.746023
+Noncombinational area:           54537.622063
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                104975.372090
+Total area:                 undefined
+1
+echo ""
+
+echo "--------------- Timing --------------"
+--------------- Timing --------------
+report_timing     -delay_type max     -max_paths 5
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 5
+Design : cpu_core
+Version: O-2018.06-SP1
+Date   : Wed Oct  7 19:29:13 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: TYPICAL   Library: smic13_tt
+Wire Load Model Mode: segmented
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/pc_reg_31_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  regfile            reference_area_100000 smic13_tt
+  pipeline_control_0 reference_area_20000  smic13_tt
+  mem_stage          reference_area_20000  smic13_tt
+  id_stage           reference_area_100000 smic13_tt
+  cpu_core           reference_area_1000000
+                                           smic13_tt
+  if_stage_00000000  reference_area_20000  smic13_tt
+  forwarding_unit    reference_area_20000  smic13_tt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_3_/CK (FFDQRHD1X)              0.00 #     0.00 r
+  u_ex_stage_ex_mem_rd_reg_3_/Q (FFDQRHD1X)               0.30       0.30 r
+  u_ex_stage_u_forwarding_unit/mem_rd[3] (forwarding_unit)
+                                                          0.00       0.30 r
+  u_ex_stage_u_forwarding_unit/U7/Z (INVHDPX)             0.10       0.40 f
+  u_ex_stage_u_forwarding_unit/U30/Z (OAI22HDLX)          0.25       0.65 r
+  u_ex_stage_u_forwarding_unit/U50/Z (AOI221HDLX)         0.10       0.75 f
+  u_ex_stage_u_forwarding_unit/U12/Z (OAI21HDLX)          0.16       0.90 r
+  u_ex_stage_u_forwarding_unit/U51/Z (AOI211HDLX)         0.09       0.99 f
+  u_ex_stage_u_forwarding_unit/U5/Z (OAI21HDMX)           0.12       1.11 r
+  u_ex_stage_u_forwarding_unit/U4/Z (AOI211HDLX)          0.12       1.23 f
+  u_ex_stage_u_forwarding_unit/U24/Z (NOR2B1HD1X)         0.22       1.45 f
+  u_ex_stage_u_forwarding_unit/forward_b[1] (forwarding_unit)
+                                                          0.00       1.45 f
+  U1345/Z (INVHDMX)                                       0.12       1.57 r
+  U1689/Z (NAND2HD1X)                                     0.07       1.63 f
+  U1343/Z (BUFHD3X)                                       0.17       1.80 f
+  U2169/Z (INVHD1X)                                       0.69       2.50 r
+  U1332/Z (AOI21HDLX)                                     0.14       2.63 f
+  U1291/Z (NAND2HDUX)                                     0.79       3.42 r
+  U2077/Z (INVHDLX)                                       0.17       3.59 f
+  U2363/Z (NAND2HDUX)                                     0.37       3.95 r
+  U2365/Z (NAND2HDUX)                                     0.15       4.11 f
+  U2366/Z (OAI22HDMX)                                     0.27       4.38 r
+  U2367/Z (NAND2HDUX)                                     0.14       4.51 f
+  U2368/Z (OAI221HDLX)                                    0.22       4.73 r
+  U1262/Z (NAND3HDLX)                                     0.17       4.90 f
+  U2369/Z (NAND4HDMX)                                     0.16       5.07 r
+  U2370/Z (OAI222HDLX)                                    0.25       5.31 f
+  U2379/Z (NAND2HDUX)                                     0.26       5.58 r
+  U2380/Z (OAI221HDLX)                                    0.17       5.75 f
+  U2386/Z (OAI21HDMX)                                     0.16       5.91 r
+  U1370/Z (NAND2HD1X)                                     0.07       5.98 f
+  U2387/Z (NAND4HDMX)                                     0.11       6.10 r
+  U1367/Z (NAND2HD1X)                                     0.07       6.16 f
+  U1363/Z (NAND2HD1X)                                     0.14       6.31 r
+  U2070/Z (BUFHD2X)                                       0.67       6.97 r
+  u_if_stage/redirect_valid_BAR (if_stage_00000000)       0.00       6.97 r
+  u_if_stage/U115/Z (INVHD1X)                             0.86       7.84 f
+  u_if_stage/U191/Z (AOI21B2HDLX)                         0.45       8.29 r
+  u_if_stage/U66/Z (AOI21HDLX)                            0.14       8.43 f
+  u_if_stage/U198/Z (OAI21HDUX)                           0.20       8.63 r
+  u_if_stage/U199/Z (AOI22HD1X)                           0.12       8.75 f
+  u_if_stage/U200/Z (OAI31HDMX)                           0.15       8.90 r
+  u_if_stage/pc_reg_31_/D (FFDQRHDMX)                     0.00       8.90 r
+  data arrival time                                                  8.90
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/pc_reg_31_/CK (FFDQRHDMX)                    0.00       9.00 r
+  library setup time                                     -0.10       8.90
+  data required time                                                 8.90
+  --------------------------------------------------------------------------
+  data required time                                                 8.90
+  data arrival time                                                 -8.90
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_id_stage/id_ex_pc_reg_2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_ex_stage_ex_mem_pc4_reg_30_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  regfile            reference_area_100000 smic13_tt
+  pipeline_control_0 reference_area_20000  smic13_tt
+  mem_stage          reference_area_20000  smic13_tt
+  id_stage           reference_area_100000 smic13_tt
+  cpu_core           reference_area_1000000
+                                           smic13_tt
+  if_stage_00000000  reference_area_20000  smic13_tt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_id_stage/id_ex_pc_reg_2_/CK (FFDQRHDMX)               0.00 #     0.00 r
+  u_id_stage/id_ex_pc_reg_2_/Q (FFDQRHDMX)                0.48       0.48 r
+  u_id_stage/id_ex_pc[2] (id_stage)                       0.00       0.48 r
+  U2127/Z (NAND2HDUX)                                     0.31       0.79 f
+  U2110/Z (NOR2HDUX)                                      0.68       1.47 r
+  U1985/Z (NAND2HDUX)                                     0.38       1.86 f
+  U2009/Z (NOR2HDUX)                                      0.77       2.63 r
+  U1577/Z (NAND2HD1X)                                     0.19       2.82 f
+  U1576/Z (NOR2HD1X)                                      0.26       3.08 r
+  U1987/Z (NAND2HDUX)                                     0.32       3.40 f
+  U2128/Z (NOR2HD1X)                                      0.32       3.73 r
+  U1242/Z (NAND2HD2X)                                     0.12       3.85 f
+  U1621/Z (NOR2HD3X)                                      0.12       3.97 r
+  U1623/Z (NAND2HD2X)                                     0.09       4.06 f
+  U1622/Z (NOR2HD3X)                                      0.11       4.17 r
+  U2129/Z (NAND2HD1X)                                     0.12       4.29 f
+  U2130/Z (NOR2HD1X)                                      0.24       4.52 r
+  U2131/Z (NAND2HD1X)                                     0.14       4.67 f
+  U2011/Z (NOR2HDUX)                                      0.59       5.26 r
+  U2012/Z (NAND2HDUX)                                     0.40       5.66 f
+  U2132/Z (NOR2HD1X)                                      0.33       5.99 r
+  U2133/Z (NAND2HD1X)                                     0.16       6.15 f
+  U2134/Z (NOR2HD1X)                                      0.26       6.41 r
+  U1235/Z (NAND2HD2X)                                     0.12       6.53 f
+  U1620/Z (NOR2HD3X)                                      0.11       6.64 r
+  U2135/Z (NAND2HD1X)                                     0.12       6.76 f
+  U2136/Z (NOR2HD1X)                                      0.22       6.98 r
+  U2137/Z (NAND2HDUX)                                     0.29       7.28 f
+  U2138/Z (NOR2HDUX)                                      0.67       7.95 r
+  U2139/Z (NAND2HDUX)                                     0.39       8.34 f
+  U2140/Z (OAI211HDLX)                                    0.31       8.65 r
+  U2141/Z (OAI21HDUX)                                     0.15       8.80 f
+  u_ex_stage_ex_mem_pc4_reg_30_/D (FFDQRHDMX)             0.00       8.80 f
+  data arrival time                                                  8.80
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_ex_stage_ex_mem_pc4_reg_30_/CK (FFDQRHDMX)            0.00       9.00 r
+  library setup time                                     -0.19       8.81
+  data required time                                                 8.81
+  --------------------------------------------------------------------------
+  data required time                                                 8.81
+  data arrival time                                                 -8.80
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/pc_reg_9_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  regfile            reference_area_100000 smic13_tt
+  pipeline_control_0 reference_area_20000  smic13_tt
+  mem_stage          reference_area_20000  smic13_tt
+  id_stage           reference_area_100000 smic13_tt
+  cpu_core           reference_area_1000000
+                                           smic13_tt
+  if_stage_00000000  reference_area_20000  smic13_tt
+  forwarding_unit    reference_area_20000  smic13_tt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_1_/CK (FFDQRHD1X)              0.00 #     0.00 r
+  u_ex_stage_ex_mem_rd_reg_1_/Q (FFDQRHD1X)               0.27       0.27 f
+  u_ex_stage_u_forwarding_unit/mem_rd[1] (forwarding_unit)
+                                                          0.00       0.27 f
+  u_ex_stage_u_forwarding_unit/U19/Z (INVHDMX)            0.22       0.50 r
+  u_ex_stage_u_forwarding_unit/U45/Z (OAI22HDMX)          0.12       0.62 f
+  u_ex_stage_u_forwarding_unit/U46/Z (AOI221HDLX)         0.14       0.76 r
+  u_ex_stage_u_forwarding_unit/U13/Z (OAI21HDLX)          0.12       0.87 f
+  u_ex_stage_u_forwarding_unit/U47/Z (AOI211HDLX)         0.12       1.00 r
+  u_ex_stage_u_forwarding_unit/U48/Z (NAND2HDUX)          0.17       1.17 f
+  u_ex_stage_u_forwarding_unit/U10/Z (NOR2HDMX)           0.26       1.43 r
+  u_ex_stage_u_forwarding_unit/forward_a[1] (forwarding_unit)
+                                                          0.00       1.43 r
+  U1265/Z (INVHDUX)                                       0.11       1.53 f
+  U2163/Z (AND2HD1X)                                      0.26       1.80 f
+  U1342/Z (NOR2HD2X)                                      0.30       2.10 r
+  U2173/Z (BUFHD3X)                                       0.31       2.41 r
+  U2259/Z (NAND2HDUX)                                     0.14       2.55 f
+  U1274/Z (NAND2HDUX)                                     1.12       3.66 r
+  U2437/Z (NAND2HDUX)                                     0.11       3.78 f
+  U1284/Z (NAND2HDUX)                                     1.17       4.95 r
+  U1843/Z (INVHDLX)                                       0.36       5.31 f
+  U1314/Z (OAI22HDMX)                                     0.41       5.72 r
+  U1750/Z (NOR2HDUX)                                      0.34       6.06 f
+  U1280/Z (AOI21HDUX)                                     1.02       7.08 r
+  U1426/Z (INVHDLX)                                       0.17       7.25 f
+  U1310/Z (OAI21HDLX)                                     0.24       7.49 r
+  U2886/Z (NAND2HDUX)                                     0.22       7.71 f
+  U2887/Z (NOR2HDUX)                                      0.32       8.02 r
+  U2906/Z (AOI211HDLX)                                    0.19       8.21 f
+  U3266/Z (NOR2HDUX)                                      0.39       8.61 r
+  u_if_stage/redirect_pc[9] (if_stage_00000000)           0.00       8.61 r
+  u_if_stage/U51/Z (AOI22HDLX)                            0.10       8.71 f
+  u_if_stage/U21/Z (OAI21HDLX)                            0.17       8.88 r
+  u_if_stage/pc_reg_9_/D (FFDQRHDMX)                      0.00       8.88 r
+  data arrival time                                                  8.88
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/pc_reg_9_/CK (FFDQRHDMX)                     0.00       9.00 r
+  library setup time                                     -0.10       8.90
+  data required time                                                 8.90
+  --------------------------------------------------------------------------
+  data required time                                                 8.90
+  data arrival time                                                 -8.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.02
+
+
+  Startpoint: u_id_stage/id_ex_pc_reg_2_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_ex_stage_ex_mem_pc4_reg_31_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  regfile            reference_area_100000 smic13_tt
+  pipeline_control_0 reference_area_20000  smic13_tt
+  mem_stage          reference_area_20000  smic13_tt
+  id_stage           reference_area_100000 smic13_tt
+  cpu_core           reference_area_1000000
+                                           smic13_tt
+  if_stage_00000000  reference_area_20000  smic13_tt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_id_stage/id_ex_pc_reg_2_/CK (FFDQRHDMX)               0.00 #     0.00 r
+  u_id_stage/id_ex_pc_reg_2_/Q (FFDQRHDMX)                0.48       0.48 r
+  u_id_stage/id_ex_pc[2] (id_stage)                       0.00       0.48 r
+  U2127/Z (NAND2HDUX)                                     0.31       0.79 f
+  U2110/Z (NOR2HDUX)                                      0.68       1.47 r
+  U1985/Z (NAND2HDUX)                                     0.38       1.86 f
+  U2009/Z (NOR2HDUX)                                      0.77       2.63 r
+  U1577/Z (NAND2HD1X)                                     0.19       2.82 f
+  U1576/Z (NOR2HD1X)                                      0.26       3.08 r
+  U1987/Z (NAND2HDUX)                                     0.32       3.40 f
+  U2128/Z (NOR2HD1X)                                      0.32       3.73 r
+  U1242/Z (NAND2HD2X)                                     0.12       3.85 f
+  U1621/Z (NOR2HD3X)                                      0.12       3.97 r
+  U1623/Z (NAND2HD2X)                                     0.09       4.06 f
+  U1622/Z (NOR2HD3X)                                      0.11       4.17 r
+  U2129/Z (NAND2HD1X)                                     0.12       4.29 f
+  U2130/Z (NOR2HD1X)                                      0.24       4.52 r
+  U2131/Z (NAND2HD1X)                                     0.14       4.67 f
+  U2011/Z (NOR2HDUX)                                      0.59       5.26 r
+  U2012/Z (NAND2HDUX)                                     0.40       5.66 f
+  U2132/Z (NOR2HD1X)                                      0.33       5.99 r
+  U2133/Z (NAND2HD1X)                                     0.16       6.15 f
+  U2134/Z (NOR2HD1X)                                      0.26       6.41 r
+  U1235/Z (NAND2HD2X)                                     0.12       6.53 f
+  U1620/Z (NOR2HD3X)                                      0.11       6.64 r
+  U2135/Z (NAND2HD1X)                                     0.12       6.76 f
+  U2136/Z (NOR2HD1X)                                      0.22       6.98 r
+  U2137/Z (NAND2HDUX)                                     0.29       7.28 f
+  U2138/Z (NOR2HDUX)                                      0.67       7.95 r
+  U2139/Z (NAND2HDUX)                                     0.39       8.34 f
+  U2067/Z (AOI22B2HDLX)                                   0.23       8.58 f
+  U2116/Z (OAI21HDUX)                                     0.29       8.87 r
+  u_ex_stage_ex_mem_pc4_reg_31_/D (FFDQRHDMX)             0.00       8.87 r
+  data arrival time                                                  8.87
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_ex_stage_ex_mem_pc4_reg_31_/CK (FFDQRHDMX)            0.00       9.00 r
+  library setup time                                     -0.11       8.89
+  data required time                                                 8.89
+  --------------------------------------------------------------------------
+  data required time                                                 8.89
+  data arrival time                                                 -8.87
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.02
+
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/pc_reg_25_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  regfile            reference_area_100000 smic13_tt
+  pipeline_control_0 reference_area_20000  smic13_tt
+  mem_stage          reference_area_20000  smic13_tt
+  id_stage           reference_area_100000 smic13_tt
+  cpu_core           reference_area_1000000
+                                           smic13_tt
+  if_stage_00000000  reference_area_20000  smic13_tt
+  forwarding_unit    reference_area_20000  smic13_tt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_1_/CK (FFDQRHD1X)              0.00 #     0.00 r
+  u_ex_stage_ex_mem_rd_reg_1_/Q (FFDQRHD1X)               0.27       0.27 f
+  u_ex_stage_u_forwarding_unit/mem_rd[1] (forwarding_unit)
+                                                          0.00       0.27 f
+  u_ex_stage_u_forwarding_unit/U19/Z (INVHDMX)            0.22       0.50 r
+  u_ex_stage_u_forwarding_unit/U45/Z (OAI22HDMX)          0.12       0.62 f
+  u_ex_stage_u_forwarding_unit/U46/Z (AOI221HDLX)         0.14       0.76 r
+  u_ex_stage_u_forwarding_unit/U13/Z (OAI21HDLX)          0.12       0.87 f
+  u_ex_stage_u_forwarding_unit/U47/Z (AOI211HDLX)         0.12       1.00 r
+  u_ex_stage_u_forwarding_unit/U48/Z (NAND2HDUX)          0.17       1.17 f
+  u_ex_stage_u_forwarding_unit/U10/Z (NOR2HDMX)           0.26       1.43 r
+  u_ex_stage_u_forwarding_unit/forward_a[1] (forwarding_unit)
+                                                          0.00       1.43 r
+  U1265/Z (INVHDUX)                                       0.11       1.53 f
+  U2163/Z (AND2HD1X)                                      0.26       1.80 f
+  U1342/Z (NOR2HD2X)                                      0.30       2.10 r
+  U2173/Z (BUFHD3X)                                       0.31       2.41 r
+  U2259/Z (NAND2HDUX)                                     0.14       2.55 f
+  U1274/Z (NAND2HDUX)                                     1.12       3.66 r
+  U2437/Z (NAND2HDUX)                                     0.11       3.78 f
+  U1284/Z (NAND2HDUX)                                     1.17       4.95 r
+  U1843/Z (INVHDLX)                                       0.36       5.31 f
+  U1314/Z (OAI22HDMX)                                     0.41       5.72 r
+  U1750/Z (NOR2HDUX)                                      0.34       6.06 f
+  U1280/Z (AOI21HDUX)                                     1.02       7.08 r
+  U1426/Z (INVHDLX)                                       0.17       7.25 f
+  U1310/Z (OAI21HDLX)                                     0.24       7.49 r
+  U2886/Z (NAND2HDUX)                                     0.22       7.71 f
+  U3157/Z (NOR2HDUX)                                      0.32       8.02 r
+  U3160/Z (AOI211HDLX)                                    0.19       8.22 f
+  U1790/Z (OAI22HDLX)                                     0.39       8.60 r
+  u_if_stage/redirect_pc[25] (if_stage_00000000)          0.00       8.60 r
+  u_if_stage/U57/Z (AOI22HDLX)                            0.10       8.71 f
+  u_if_stage/U13/Z (OAI21HDLX)                            0.17       8.88 r
+  u_if_stage/pc_reg_25_/D (FFDQRHDMX)                     0.00       8.88 r
+  data arrival time                                                  8.88
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/pc_reg_25_/CK (FFDQRHDMX)                    0.00       9.00 r
+  library setup time                                     -0.10       8.90
+  data required time                                                 8.90
+  --------------------------------------------------------------------------
+  data required time                                                 8.90
+  data arrival time                                                 -8.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.02
+
+
+1
+echo ""
+
+echo "============================================================"
+============================================================
+echo " Reports : ./reports/"
+ Reports : ./reports/
+echo " Outputs : ./outputs/"
+ Outputs : ./outputs/
+echo "============================================================"
+============================================================
+exit
+Memory usage for main task 235 Mbytes.
+Memory usage for this session 235 Mbytes.
+CPU usage for this session 111 seconds ( 0.03 hours ).
+
+Thank you...

@@ -29,6 +29,8 @@ module forwarding_unit (
     input  logic [4:0] wb_rd,
 
 
+    input  logic       hold_forward,
+
     // ============================================================
     // Forward select
     // ============================================================
@@ -76,7 +78,7 @@ module forwarding_unit (
 
             end
             else if (
-                wb_valid &&
+                (wb_valid || hold_forward) &&
                 wb_reg_write &&
                 (wb_rd != 5'd0) &&
                 (wb_rd == ex_rs1)
@@ -107,7 +109,7 @@ module forwarding_unit (
 
             end
             else if (
-                wb_valid &&
+                (wb_valid || hold_forward) &&
                 wb_reg_write &&
                 (wb_rd != 5'd0) &&
                 (wb_rd == ex_rs2)

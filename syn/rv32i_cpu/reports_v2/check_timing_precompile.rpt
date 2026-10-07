@@ -1,0 +1,77 @@
+Information: Changed wire load model for 'pipeline_control_0' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'wb_stage' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'load_unit' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'store_unit' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'mem_stage' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'alu' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'forwarding_unit' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'ex_stage' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'hazard_unit' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'imm_gen' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'regfile' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'decoder' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'id_stage' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'if_stage_00000000' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_add_width32' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*ADD_UNS_OP_32_3_32' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_cmp2_width32' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*GEQ_UNS_OP_32_32_1' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_cmp2_width32' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*LT_UNS_OP_32_32_1' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_cmp2_width32' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*GEQ_TC_OP_32_32_1' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_cmp2_width32' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*LT_TC_OP_32_32_1' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_cmp6_width32' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*NE_UNS_OP_32_32_1' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_cmp6_width32' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*EQ_UNS_OP_32_32_1' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_sub_width32' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*SUB_UNS_OP_32_32_32' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_add_width32' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*ADD_UNS_OP_32_32_32' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW_rash_A_width32_SH_width5' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*ASHR_TC_UNS_OP_32_5_32' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW_rash_A_width32_SH_width5' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*ASHR_UNS_UNS_OP_32_5_32' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_cmp2_width32' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*LT_UNS_OP_32_32_1' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_cmp2_width32' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*LT_TC_OP_32_32_1' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_ash_A_width32_SH_width5' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*ASH_UNS_UNS_OP_32_5_32' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_cmp6_width5' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*EQ_UNS_OP_5_5_1' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_cmp6_width5' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*EQ_UNS_OP_5_5_1' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_cmp6_width5' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*EQ_UNS_OP_5_5_1' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_cmp6_width5' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*EQ_UNS_OP_5_5_1' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_cmp6_width5' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*EQ_UNS_OP_5_5_1' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_cmp6_width5' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*EQ_UNS_OP_5_5_1' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_cmp6_width5' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*EQ_UNS_OP_5_5_1' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_cmp6_width5' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*EQ_UNS_OP_5_5_1' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'DW01_add_width32' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for '*ADD_UNS_OP_32_3_32' from '(none)' to 'area_zero'. (OPT-170)
+Information: Updating design information... (UID-85)
+Warning: Design 'cpu_core' contains 3 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+
+Information: Checking unconstrained_endpoints...
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+1

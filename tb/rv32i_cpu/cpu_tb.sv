@@ -63,7 +63,14 @@ module cpu_tb;
         forever #5 clk = ~clk;
     end
 
+    `include "common/cpu_checkers.sv"
     // 具体测项
-    `include "tests/alu_test.sv"
+    //`include "tests/alu_test.sv"
+    //`include "tests/forwarding_test.sv"
+    //`include "tests/load_store_test.sv"
+    //`include "tests/load_use_test.sv"
+    //`include "tests/branch_test.sv"
+    //`include "tests/jump_test.sv"
+    `include "tests/integration_test.sv"
 
 endmodule

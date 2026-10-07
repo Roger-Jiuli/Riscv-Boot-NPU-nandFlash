@@ -166,6 +166,7 @@ module cpu_core #(
     logic [31:0] redirect_pc;
 
     logic        mem_stall;
+    logic        hold_forward;
 
     logic [31:0] mem_forward_data;
 
@@ -333,6 +334,7 @@ module cpu_core #(
         .mem_rd            (ex_mem_rd),
         .mem_wb_sel        (ex_mem_wb_sel),
         .mem_forward_data  (mem_forward_data),
+        .hold_forward      (hold_forward),
 
         // MEM/WB forwarding
         .wb_valid          (mem_wb_valid),
@@ -406,6 +408,7 @@ module cpu_core #(
         .mem_wb_flush      (mem_wb_flush),
 
         .mem_stall         (mem_stall),
+        .hold_forward      (hold_forward),
 
         // MEM/WB
         .mem_wb_valid      (mem_wb_valid),

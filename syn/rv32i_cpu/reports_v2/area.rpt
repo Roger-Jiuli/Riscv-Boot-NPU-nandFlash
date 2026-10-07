@@ -1,0 +1,53 @@
+ 
+****************************************
+Report : area
+Design : cpu_core
+Version: O-2018.06-SP1
+Date   : Wed Oct  7 19:46:38 2026
+****************************************
+
+Library(s) Used:
+
+    smic13_tt (File: /home/design/pdk/smic13/STD/Synopsys/smic13_tt.db)
+
+Number of ports:                         1378
+Number of nets:                          9848
+Number of cells:                         8603
+Number of combinational cells:           7088
+Number of sequential cells:              1505
+Number of macros/black boxes:               0
+Number of buf/inv:                        889
+Number of references:                     133
+
+Combinational area:              66519.960234
+Buf/Inv area:                     6419.372039
+Noncombinational area:           55393.877003
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                121913.837236
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area             Local cell area
+                                  --------------------  ------------------------------ 
+Hierarchical cell                 Absolute     Percent  Combi-      Noncombi-   Black-
+                                  Total        Total    national    national    boxes   Design
+--------------------------------  -----------  -------  ----------  ----------  ------  ------------------
+cpu_core                          121913.8372    100.0  29008.3341   4174.1281  0.0000  cpu_core
+u_ex_stage/u_forwarding_unit         726.1870      0.6    726.1870      0.0000  0.0000  forwarding_unit
+u_hazard_unit                        223.9060      0.2    223.9060      0.0000  0.0000  hazard_unit
+u_id_stage                         72210.4388     59.2   2216.3740   6352.7122  0.0000  id_stage
+u_id_stage/u_decoder                 328.3020      0.3    328.3020      0.0000  0.0000  decoder
+u_id_stage/u_imm_gen                 408.4950      0.3    408.4950      0.0000  0.0000  imm_gen
+u_id_stage/u_regfile               62904.5556     51.6  26885.0343  36019.5214  0.0000  regfile
+u_if_stage                          7879.2301      6.5   3113.5550   4765.6751  0.0000  if_stage_00000000
+u_mem_stage                         6449.5061      5.3   2403.9760   4045.5301  0.0000  mem_stage
+u_pipeline_control                   181.5480      0.1    145.2380     36.3100  0.0000  pipeline_control_0
+u_wb_stage                          1060.5590      0.9   1060.5590      0.0000  0.0000  wb_stage
+--------------------------------  -----------  -------  ----------  ----------  ------  ------------------
+Total                                                   66519.9602  55393.8770  0.0000
+
+1

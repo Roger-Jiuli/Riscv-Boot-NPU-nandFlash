@@ -47,6 +47,7 @@ module if_stage #(
 
     // 记录上一拍发给 ISRAM 的 PC
     logic [31:0] if1_pc_q;
+    logic if1_pc_valid;
 
     assign imem_addr = pc;
 
@@ -80,10 +81,13 @@ module if_stage #(
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             if1_pc_q    <= 32'b0;
+            if1_pc_valid    <= 1'b0;
         end
         else begin
-            if (imem_en)
+            if (imem_en) begin
                 if1_pc_q <= imem_addr;
+                if1_pc_valid <= 1'b1;
+            end
         end
     end
 
@@ -102,7 +106,7 @@ module if_stage #(
             if_id_valid <= 1'b0;
         end
         else if (if_id_en) begin
-            if_id_valid <= 1;
+            if_id_valid <= if1_pc_valid;
 
             if_id_pc    <= if1_pc_q;
             if_id_instr <= imem_rdata;

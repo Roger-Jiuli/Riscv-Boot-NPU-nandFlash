@@ -1,0 +1,1315 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-slack_lesser_than 100.00
+	-max_paths 20
+	-sort_by slack
+Design : cpu_core
+Version: O-2018.06-SP1
+Date   : Wed Oct  7 20:20:22 2026
+****************************************
+
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_3_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/pc_reg_31_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_3_/CK (FFDQRHD1X)              0.00       0.00 r
+  u_ex_stage_ex_mem_rd_reg_3_/Q (FFDQRHD1X)               0.30       0.30 r
+  u_ex_stage_u_forwarding_unit/U7/Z (INVHDPX)             0.10       0.40 f
+  u_ex_stage_u_forwarding_unit/U30/Z (OAI22HDLX)          0.25       0.65 r
+  u_ex_stage_u_forwarding_unit/U50/Z (AOI221HDLX)         0.10       0.75 f
+  u_ex_stage_u_forwarding_unit/U12/Z (OAI21HDLX)          0.16       0.90 r
+  u_ex_stage_u_forwarding_unit/U51/Z (AOI211HDLX)         0.09       0.99 f
+  u_ex_stage_u_forwarding_unit/U5/Z (OAI21HDMX)           0.12       1.11 r
+  u_ex_stage_u_forwarding_unit/U4/Z (AOI211HDLX)          0.12       1.23 f
+  u_ex_stage_u_forwarding_unit/U24/Z (NOR2B1HD1X)         0.22       1.45 f
+  U1345/Z (INVHDMX)                                       0.12       1.57 r
+  U1689/Z (NAND2HD1X)                                     0.07       1.63 f
+  U1343/Z (BUFHD3X)                                       0.17       1.80 f
+  U2169/Z (INVHD1X)                                       0.69       2.50 r
+  U1332/Z (AOI21HDLX)                                     0.14       2.63 f
+  U1291/Z (NAND2HDUX)                                     0.79       3.42 r
+  U2077/Z (INVHDLX)                                       0.17       3.59 f
+  U2363/Z (NAND2HDUX)                                     0.37       3.95 r
+  U2365/Z (NAND2HDUX)                                     0.15       4.11 f
+  U2366/Z (OAI22HDMX)                                     0.27       4.38 r
+  U2367/Z (NAND2HDUX)                                     0.14       4.51 f
+  U2368/Z (OAI221HDLX)                                    0.22       4.73 r
+  U1262/Z (NAND3HDLX)                                     0.17       4.90 f
+  U2369/Z (NAND4HDMX)                                     0.16       5.07 r
+  U2370/Z (OAI222HDLX)                                    0.25       5.31 f
+  U2379/Z (NAND2HDUX)                                     0.26       5.58 r
+  U2380/Z (OAI221HDLX)                                    0.17       5.75 f
+  U2386/Z (OAI21HDMX)                                     0.16       5.91 r
+  U1370/Z (NAND2HD1X)                                     0.07       5.98 f
+  U2387/Z (NAND4HDMX)                                     0.11       6.10 r
+  U1367/Z (NAND2HD1X)                                     0.07       6.16 f
+  U1363/Z (NAND2HD1X)                                     0.14       6.31 r
+  U2070/Z (BUFHD2X)                                       0.67       6.97 r
+  u_if_stage/U115/Z (INVHD1X)                             0.86       7.84 f
+  u_if_stage/U191/Z (AOI21B2HDLX)                         0.45       8.29 r
+  u_if_stage/U66/Z (AOI21HDLX)                            0.14       8.43 f
+  u_if_stage/U198/Z (OAI21HDUX)                           0.20       8.63 r
+  u_if_stage/U199/Z (AOI22HD1X)                           0.12       8.75 f
+  u_if_stage/U200/Z (OAI31HDMX)                           0.15       8.90 r
+  u_if_stage/pc_reg_31_/D (FFDQRHDMX)                     0.00       8.90 r
+  data arrival time                                                  8.90
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/pc_reg_31_/CK (FFDQRHDMX)                               9.00 r
+  library setup time                                     -0.10       8.90
+  data required time                                                 8.90
+  ------------------------------------------------------------------------------
+  data required time                                                 8.90
+  data arrival time                                                 -8.90
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_id_stage/id_ex_pc_reg_2_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_ex_stage_ex_mem_pc4_reg_30_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_id_stage/id_ex_pc_reg_2_/CK (FFDQRHDMX)               0.00       0.00 r
+  u_id_stage/id_ex_pc_reg_2_/Q (FFDQRHDMX)                0.48       0.48 r
+  U2127/Z (NAND2HDUX)                                     0.31       0.79 f
+  U2110/Z (NOR2HDUX)                                      0.68       1.47 r
+  U1985/Z (NAND2HDUX)                                     0.38       1.86 f
+  U2009/Z (NOR2HDUX)                                      0.77       2.63 r
+  U1577/Z (NAND2HD1X)                                     0.19       2.82 f
+  U1576/Z (NOR2HD1X)                                      0.26       3.08 r
+  U1987/Z (NAND2HDUX)                                     0.32       3.40 f
+  U2128/Z (NOR2HD1X)                                      0.32       3.73 r
+  U1242/Z (NAND2HD2X)                                     0.12       3.85 f
+  U1621/Z (NOR2HD3X)                                      0.12       3.97 r
+  U1623/Z (NAND2HD2X)                                     0.09       4.06 f
+  U1622/Z (NOR2HD3X)                                      0.11       4.17 r
+  U2129/Z (NAND2HD1X)                                     0.12       4.29 f
+  U2130/Z (NOR2HD1X)                                      0.24       4.52 r
+  U2131/Z (NAND2HD1X)                                     0.14       4.67 f
+  U2011/Z (NOR2HDUX)                                      0.59       5.26 r
+  U2012/Z (NAND2HDUX)                                     0.40       5.66 f
+  U2132/Z (NOR2HD1X)                                      0.33       5.99 r
+  U2133/Z (NAND2HD1X)                                     0.16       6.15 f
+  U2134/Z (NOR2HD1X)                                      0.26       6.41 r
+  U1235/Z (NAND2HD2X)                                     0.12       6.53 f
+  U1620/Z (NOR2HD3X)                                      0.11       6.64 r
+  U2135/Z (NAND2HD1X)                                     0.12       6.76 f
+  U2136/Z (NOR2HD1X)                                      0.22       6.98 r
+  U2137/Z (NAND2HDUX)                                     0.29       7.28 f
+  U2138/Z (NOR2HDUX)                                      0.67       7.95 r
+  U2139/Z (NAND2HDUX)                                     0.39       8.34 f
+  U2140/Z (OAI211HDLX)                                    0.31       8.65 r
+  U2141/Z (OAI21HDUX)                                     0.15       8.80 f
+  u_ex_stage_ex_mem_pc4_reg_30_/D (FFDQRHDMX)             0.00       8.80 f
+  data arrival time                                                  8.80
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_ex_stage_ex_mem_pc4_reg_30_/CK (FFDQRHDMX)                       9.00 r
+  library setup time                                     -0.19       8.81
+  data required time                                                 8.81
+  ------------------------------------------------------------------------------
+  data required time                                                 8.81
+  data arrival time                                                 -8.80
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_1_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/pc_reg_9_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_1_/CK (FFDQRHD1X)              0.00       0.00 r
+  u_ex_stage_ex_mem_rd_reg_1_/Q (FFDQRHD1X)               0.27       0.27 f
+  u_ex_stage_u_forwarding_unit/U19/Z (INVHDMX)            0.22       0.50 r
+  u_ex_stage_u_forwarding_unit/U45/Z (OAI22HDMX)          0.12       0.62 f
+  u_ex_stage_u_forwarding_unit/U46/Z (AOI221HDLX)         0.14       0.76 r
+  u_ex_stage_u_forwarding_unit/U13/Z (OAI21HDLX)          0.12       0.87 f
+  u_ex_stage_u_forwarding_unit/U47/Z (AOI211HDLX)         0.12       1.00 r
+  u_ex_stage_u_forwarding_unit/U48/Z (NAND2HDUX)          0.17       1.17 f
+  u_ex_stage_u_forwarding_unit/U10/Z (NOR2HDMX)           0.26       1.43 r
+  U1265/Z (INVHDUX)                                       0.11       1.53 f
+  U2163/Z (AND2HD1X)                                      0.26       1.80 f
+  U1342/Z (NOR2HD2X)                                      0.30       2.10 r
+  U2173/Z (BUFHD3X)                                       0.31       2.41 r
+  U2259/Z (NAND2HDUX)                                     0.14       2.55 f
+  U1274/Z (NAND2HDUX)                                     1.12       3.66 r
+  U2437/Z (NAND2HDUX)                                     0.11       3.78 f
+  U1284/Z (NAND2HDUX)                                     1.17       4.95 r
+  U1843/Z (INVHDLX)                                       0.36       5.31 f
+  U1314/Z (OAI22HDMX)                                     0.41       5.72 r
+  U1750/Z (NOR2HDUX)                                      0.34       6.06 f
+  U1280/Z (AOI21HDUX)                                     1.02       7.08 r
+  U1426/Z (INVHDLX)                                       0.17       7.25 f
+  U1310/Z (OAI21HDLX)                                     0.24       7.49 r
+  U2886/Z (NAND2HDUX)                                     0.22       7.71 f
+  U2887/Z (NOR2HDUX)                                      0.32       8.02 r
+  U2906/Z (AOI211HDLX)                                    0.19       8.21 f
+  U3266/Z (NOR2HDUX)                                      0.39       8.61 r
+  u_if_stage/U51/Z (AOI22HDLX)                            0.10       8.71 f
+  u_if_stage/U21/Z (OAI21HDLX)                            0.17       8.88 r
+  u_if_stage/pc_reg_9_/D (FFDQRHDMX)                      0.00       8.88 r
+  data arrival time                                                  8.88
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/pc_reg_9_/CK (FFDQRHDMX)                                9.00 r
+  library setup time                                     -0.10       8.90
+  data required time                                                 8.90
+  ------------------------------------------------------------------------------
+  data required time                                                 8.90
+  data arrival time                                                 -8.88
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.02
+
+
+  Startpoint: u_id_stage/id_ex_pc_reg_2_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_ex_stage_ex_mem_pc4_reg_31_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_id_stage/id_ex_pc_reg_2_/CK (FFDQRHDMX)               0.00       0.00 r
+  u_id_stage/id_ex_pc_reg_2_/Q (FFDQRHDMX)                0.48       0.48 r
+  U2127/Z (NAND2HDUX)                                     0.31       0.79 f
+  U2110/Z (NOR2HDUX)                                      0.68       1.47 r
+  U1985/Z (NAND2HDUX)                                     0.38       1.86 f
+  U2009/Z (NOR2HDUX)                                      0.77       2.63 r
+  U1577/Z (NAND2HD1X)                                     0.19       2.82 f
+  U1576/Z (NOR2HD1X)                                      0.26       3.08 r
+  U1987/Z (NAND2HDUX)                                     0.32       3.40 f
+  U2128/Z (NOR2HD1X)                                      0.32       3.73 r
+  U1242/Z (NAND2HD2X)                                     0.12       3.85 f
+  U1621/Z (NOR2HD3X)                                      0.12       3.97 r
+  U1623/Z (NAND2HD2X)                                     0.09       4.06 f
+  U1622/Z (NOR2HD3X)                                      0.11       4.17 r
+  U2129/Z (NAND2HD1X)                                     0.12       4.29 f
+  U2130/Z (NOR2HD1X)                                      0.24       4.52 r
+  U2131/Z (NAND2HD1X)                                     0.14       4.67 f
+  U2011/Z (NOR2HDUX)                                      0.59       5.26 r
+  U2012/Z (NAND2HDUX)                                     0.40       5.66 f
+  U2132/Z (NOR2HD1X)                                      0.33       5.99 r
+  U2133/Z (NAND2HD1X)                                     0.16       6.15 f
+  U2134/Z (NOR2HD1X)                                      0.26       6.41 r
+  U1235/Z (NAND2HD2X)                                     0.12       6.53 f
+  U1620/Z (NOR2HD3X)                                      0.11       6.64 r
+  U2135/Z (NAND2HD1X)                                     0.12       6.76 f
+  U2136/Z (NOR2HD1X)                                      0.22       6.98 r
+  U2137/Z (NAND2HDUX)                                     0.29       7.28 f
+  U2138/Z (NOR2HDUX)                                      0.67       7.95 r
+  U2139/Z (NAND2HDUX)                                     0.39       8.34 f
+  U2067/Z (AOI22B2HDLX)                                   0.23       8.58 f
+  U2116/Z (OAI21HDUX)                                     0.29       8.87 r
+  u_ex_stage_ex_mem_pc4_reg_31_/D (FFDQRHDMX)             0.00       8.87 r
+  data arrival time                                                  8.87
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_ex_stage_ex_mem_pc4_reg_31_/CK (FFDQRHDMX)                       9.00 r
+  library setup time                                     -0.11       8.89
+  data required time                                                 8.89
+  ------------------------------------------------------------------------------
+  data required time                                                 8.89
+  data arrival time                                                 -8.87
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.02
+
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_1_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/pc_reg_25_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_1_/CK (FFDQRHD1X)              0.00       0.00 r
+  u_ex_stage_ex_mem_rd_reg_1_/Q (FFDQRHD1X)               0.27       0.27 f
+  u_ex_stage_u_forwarding_unit/U19/Z (INVHDMX)            0.22       0.50 r
+  u_ex_stage_u_forwarding_unit/U45/Z (OAI22HDMX)          0.12       0.62 f
+  u_ex_stage_u_forwarding_unit/U46/Z (AOI221HDLX)         0.14       0.76 r
+  u_ex_stage_u_forwarding_unit/U13/Z (OAI21HDLX)          0.12       0.87 f
+  u_ex_stage_u_forwarding_unit/U47/Z (AOI211HDLX)         0.12       1.00 r
+  u_ex_stage_u_forwarding_unit/U48/Z (NAND2HDUX)          0.17       1.17 f
+  u_ex_stage_u_forwarding_unit/U10/Z (NOR2HDMX)           0.26       1.43 r
+  U1265/Z (INVHDUX)                                       0.11       1.53 f
+  U2163/Z (AND2HD1X)                                      0.26       1.80 f
+  U1342/Z (NOR2HD2X)                                      0.30       2.10 r
+  U2173/Z (BUFHD3X)                                       0.31       2.41 r
+  U2259/Z (NAND2HDUX)                                     0.14       2.55 f
+  U1274/Z (NAND2HDUX)                                     1.12       3.66 r
+  U2437/Z (NAND2HDUX)                                     0.11       3.78 f
+  U1284/Z (NAND2HDUX)                                     1.17       4.95 r
+  U1843/Z (INVHDLX)                                       0.36       5.31 f
+  U1314/Z (OAI22HDMX)                                     0.41       5.72 r
+  U1750/Z (NOR2HDUX)                                      0.34       6.06 f
+  U1280/Z (AOI21HDUX)                                     1.02       7.08 r
+  U1426/Z (INVHDLX)                                       0.17       7.25 f
+  U1310/Z (OAI21HDLX)                                     0.24       7.49 r
+  U2886/Z (NAND2HDUX)                                     0.22       7.71 f
+  U3157/Z (NOR2HDUX)                                      0.32       8.02 r
+  U3160/Z (AOI211HDLX)                                    0.19       8.22 f
+  U1790/Z (OAI22HDLX)                                     0.39       8.60 r
+  u_if_stage/U57/Z (AOI22HDLX)                            0.10       8.71 f
+  u_if_stage/U13/Z (OAI21HDLX)                            0.17       8.88 r
+  u_if_stage/pc_reg_25_/D (FFDQRHDMX)                     0.00       8.88 r
+  data arrival time                                                  8.88
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/pc_reg_25_/CK (FFDQRHDMX)                               9.00 r
+  library setup time                                     -0.10       8.90
+  data required time                                                 8.90
+  ------------------------------------------------------------------------------
+  data required time                                                 8.90
+  data arrival time                                                 -8.88
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.02
+
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_1_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/pc_reg_28_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_1_/CK (FFDQRHD1X)              0.00       0.00 r
+  u_ex_stage_ex_mem_rd_reg_1_/Q (FFDQRHD1X)               0.29       0.29 r
+  u_ex_stage_u_forwarding_unit/U19/Z (INVHDMX)            0.14       0.44 f
+  u_ex_stage_u_forwarding_unit/U45/Z (OAI22HDMX)          0.17       0.60 r
+  u_ex_stage_u_forwarding_unit/U46/Z (AOI221HDLX)         0.09       0.70 f
+  u_ex_stage_u_forwarding_unit/U13/Z (OAI21HDLX)          0.16       0.85 r
+  u_ex_stage_u_forwarding_unit/U47/Z (AOI211HDLX)         0.08       0.93 f
+  u_ex_stage_u_forwarding_unit/U48/Z (NAND2HDUX)          0.27       1.20 r
+  u_ex_stage_u_forwarding_unit/U3/Z (NAND4HDMX)           0.11       1.32 f
+  u_ex_stage_u_forwarding_unit/U49/Z (NOR2HD1X)           0.18       1.49 r
+  U2164/Z (NAND2B1HDMX)                                   0.13       1.62 r
+  U1344/Z (INVHD1X)                                       0.12       1.74 f
+  U1615/Z (NAND2HD3X)                                     0.22       1.96 r
+  U2171/Z (BUFHD2X)                                       0.35       2.31 r
+  U2224/Z (OAI22HDMX)                                     0.12       2.43 f
+  U1525/Z (AOI21HDLX)                                     0.23       2.66 r
+  U2226/Z (NAND2HD1X)                                     0.20       2.86 f
+  U1251/Z (NAND2HDUX)                                     0.24       3.10 r
+  U2532/Z (NAND2HD1X)                                     0.24       3.34 f
+  U2654/CO (FAHHDMX)                                      0.34       3.69 f
+  U1894/CO (FAHHDLX)                                      0.18       3.86 f
+  U1887/CO (FAHHDLX)                                      0.18       4.04 f
+  U1417/CO (FAHHDMX)                                      0.16       4.20 f
+  U1308/CO (FAHHDMX)                                      0.16       4.37 f
+  U1304/CO (FAHHDMX)                                      0.16       4.53 f
+  U2885/CO (FAHHD1X)                                      0.17       4.70 f
+  U2814/CO (FAHHD2X)                                      0.15       4.85 f
+  U2873/CO (FAHHD2X)                                      0.14       4.99 f
+  U2934/CO (FAHHD1X)                                      0.16       5.15 f
+  U2923/CO (FAHHDMX)                                      0.16       5.31 f
+  U1903/CO (FAHHDLX)                                      0.18       5.49 f
+  U1906/CO (FAHHDLX)                                      0.18       5.67 f
+  U3113/CO (FAHHDMX)                                      0.16       5.83 f
+  U3130/CO (FAHHDMX)                                      0.16       5.99 f
+  U3138/CO (FAHHDMX)                                      0.16       6.16 f
+  U3148/CO (FAHHDMX)                                      0.16       6.32 f
+  U3080/CO (FAHHDMX)                                      0.16       6.48 f
+  U3090/CO (FAHHDMX)                                      0.16       6.64 f
+  U3099/CO (FAHHDMX)                                      0.16       6.81 f
+  U3123/CO (FAHHDMX)                                      0.16       6.97 f
+  U1961/CO (FAHHDLX)                                      0.18       7.15 f
+  U3164/CO (FAHHDMX)                                      0.16       7.31 f
+  U3172/CO (FAHHDMX)                                      0.16       7.47 f
+  U3182/CO (FAHHDMX)                                      0.16       7.63 f
+  U1952/S (FAHHDLX)                                       0.18       7.82 f
+  U1289/Z (AOI21HDUX)                                     0.40       8.22 r
+  U2048/Z (OAI22HDLX)                                     0.19       8.41 f
+  u_if_stage/U85/Z (AOI22HDLX)                            0.25       8.66 r
+  u_if_stage/U190/Z (OAI31HDMX)                           0.15       8.81 f
+  u_if_stage/pc_reg_28_/D (FFDQRHDMX)                     0.00       8.81 f
+  data arrival time                                                  8.81
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/pc_reg_28_/CK (FFDQRHDMX)                               9.00 r
+  library setup time                                     -0.16       8.84
+  data required time                                                 8.84
+  ------------------------------------------------------------------------------
+  data required time                                                 8.84
+  data arrival time                                                 -8.81
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.03
+
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_1_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/pc_reg_30_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_1_/CK (FFDQRHD1X)              0.00       0.00 r
+  u_ex_stage_ex_mem_rd_reg_1_/Q (FFDQRHD1X)               0.29       0.29 r
+  u_ex_stage_u_forwarding_unit/U19/Z (INVHDMX)            0.14       0.44 f
+  u_ex_stage_u_forwarding_unit/U45/Z (OAI22HDMX)          0.17       0.60 r
+  u_ex_stage_u_forwarding_unit/U46/Z (AOI221HDLX)         0.09       0.70 f
+  u_ex_stage_u_forwarding_unit/U13/Z (OAI21HDLX)          0.16       0.85 r
+  u_ex_stage_u_forwarding_unit/U47/Z (AOI211HDLX)         0.08       0.93 f
+  u_ex_stage_u_forwarding_unit/U48/Z (NAND2HDUX)          0.27       1.20 r
+  u_ex_stage_u_forwarding_unit/U3/Z (NAND4HDMX)           0.11       1.32 f
+  u_ex_stage_u_forwarding_unit/U49/Z (NOR2HD1X)           0.18       1.49 r
+  U2164/Z (NAND2B1HDMX)                                   0.13       1.62 r
+  U1344/Z (INVHD1X)                                       0.12       1.74 f
+  U1615/Z (NAND2HD3X)                                     0.22       1.96 r
+  U2171/Z (BUFHD2X)                                       0.35       2.31 r
+  U2224/Z (OAI22HDMX)                                     0.12       2.43 f
+  U1525/Z (AOI21HDLX)                                     0.23       2.66 r
+  U2226/Z (NAND2HD1X)                                     0.20       2.86 f
+  U1251/Z (NAND2HDUX)                                     0.24       3.10 r
+  U2532/Z (NAND2HD1X)                                     0.24       3.34 f
+  U2654/CO (FAHHDMX)                                      0.34       3.69 f
+  U1894/CO (FAHHDLX)                                      0.18       3.86 f
+  U1887/CO (FAHHDLX)                                      0.18       4.04 f
+  U1417/CO (FAHHDMX)                                      0.16       4.20 f
+  U1308/CO (FAHHDMX)                                      0.16       4.37 f
+  U1304/CO (FAHHDMX)                                      0.16       4.53 f
+  U2885/CO (FAHHD1X)                                      0.17       4.70 f
+  U2814/CO (FAHHD2X)                                      0.15       4.85 f
+  U2873/CO (FAHHD2X)                                      0.14       4.99 f
+  U2934/CO (FAHHD1X)                                      0.16       5.15 f
+  U2923/CO (FAHHDMX)                                      0.16       5.31 f
+  U1903/CO (FAHHDLX)                                      0.18       5.49 f
+  U1906/CO (FAHHDLX)                                      0.18       5.67 f
+  U3113/CO (FAHHDMX)                                      0.16       5.83 f
+  U3130/CO (FAHHDMX)                                      0.16       5.99 f
+  U3138/CO (FAHHDMX)                                      0.16       6.16 f
+  U3148/CO (FAHHDMX)                                      0.16       6.32 f
+  U3080/CO (FAHHDMX)                                      0.16       6.48 f
+  U3090/CO (FAHHDMX)                                      0.16       6.64 f
+  U3099/CO (FAHHDMX)                                      0.16       6.81 f
+  U3123/CO (FAHHDMX)                                      0.16       6.97 f
+  U1961/CO (FAHHDLX)                                      0.18       7.15 f
+  U3164/CO (FAHHDMX)                                      0.16       7.31 f
+  U3172/CO (FAHHDMX)                                      0.16       7.47 f
+  U3182/CO (FAHHDMX)                                      0.16       7.63 f
+  U1952/CO (FAHHDLX)                                      0.18       7.81 f
+  U3207/CO (FAHHDMX)                                      0.16       7.98 f
+  U3213/S (FAHHD1X)                                       0.21       8.18 r
+  U1990/Z (AOI211HDLX)                                    0.18       8.36 f
+  U3328/Z (OAI22HD1X)                                     0.23       8.60 r
+  u_if_stage/U196/Z (NAND2HD1X)                           0.06       8.66 f
+  u_if_stage/U197/Z (OAI221HDLX)                          0.19       8.85 r
+  u_if_stage/pc_reg_30_/D (FFDQRHDMX)                     0.00       8.85 r
+  data arrival time                                                  8.85
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/pc_reg_30_/CK (FFDQRHDMX)                               9.00 r
+  library setup time                                     -0.11       8.89
+  data required time                                                 8.89
+  ------------------------------------------------------------------------------
+  data required time                                                 8.89
+  data arrival time                                                 -8.85
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.04
+
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_3_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_26_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_3_/CK (FFDQRHD1X)              0.00       0.00 r
+  u_ex_stage_ex_mem_rd_reg_3_/Q (FFDQRHD1X)               0.30       0.30 r
+  u_ex_stage_u_forwarding_unit/U7/Z (INVHDPX)             0.10       0.40 f
+  u_ex_stage_u_forwarding_unit/U30/Z (OAI22HDLX)          0.25       0.65 r
+  u_ex_stage_u_forwarding_unit/U50/Z (AOI221HDLX)         0.10       0.75 f
+  u_ex_stage_u_forwarding_unit/U12/Z (OAI21HDLX)          0.16       0.90 r
+  u_ex_stage_u_forwarding_unit/U51/Z (AOI211HDLX)         0.09       0.99 f
+  u_ex_stage_u_forwarding_unit/U5/Z (OAI21HDMX)           0.12       1.11 r
+  u_ex_stage_u_forwarding_unit/U4/Z (AOI211HDLX)          0.12       1.23 f
+  u_ex_stage_u_forwarding_unit/U24/Z (NOR2B1HD1X)         0.22       1.45 f
+  U1345/Z (INVHDMX)                                       0.12       1.57 r
+  U1689/Z (NAND2HD1X)                                     0.07       1.63 f
+  U1343/Z (BUFHD3X)                                       0.17       1.80 f
+  U2169/Z (INVHD1X)                                       0.69       2.50 r
+  U1549/Z (AOI21HDLX)                                     0.14       2.63 f
+  U1292/Z (NAND2HDUX)                                     0.92       3.55 r
+  U2286/Z (NOR2B1HDLX)                                    0.26       3.81 r
+  U1260/Z (INVHDUX)                                       0.10       3.91 f
+  U2287/Z (NAND2HDUX)                                     0.20       4.11 r
+  U2288/Z (OAI22HDMX)                                     0.19       4.31 f
+  U2290/Z (AOI211HDLX)                                    0.30       4.61 r
+  U2292/Z (NAND2HDUX)                                     0.14       4.75 f
+  U2320/Z (OAI222HDLX)                                    0.47       5.22 r
+  U2383/Z (NAND4B1HDLX)                                   0.20       5.42 f
+  U2384/Z (OAI221HDLX)                                    0.27       5.69 r
+  U2385/Z (OAI21HDMX)                                     0.12       5.81 f
+  U1375/Z (INVHDPX)                                       0.08       5.88 r
+  U2386/Z (OAI21HDMX)                                     0.09       5.97 f
+  U1370/Z (NAND2HD1X)                                     0.09       6.07 r
+  U2387/Z (NAND4HDMX)                                     0.10       6.17 f
+  U1367/Z (NAND2HD1X)                                     0.09       6.25 r
+  U1363/Z (NAND2HD1X)                                     0.12       6.37 f
+  u_pipeline_control/U9/Z (NAND2HD1X)                     0.18       6.55 r
+  u_pipeline_control/U6/Z (AOI21HDMX)                     0.16       6.70 f
+  u_if_stage/U5/Z (INVHDUX)                               1.03       7.73 r
+  u_if_stage/U204/Z (INVHD1X)                             0.76       8.49 f
+  u_if_stage/U99/Z (AOI22B2HDLX)                          0.28       8.77 f
+  u_if_stage/if1_pc_q_reg_26_/D (FFDQRHDMX)               0.00       8.77 f
+  data arrival time                                                  8.77
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/if1_pc_q_reg_26_/CK (FFDQRHDMX)                         9.00 r
+  library setup time                                     -0.17       8.83
+  data required time                                                 8.83
+  ------------------------------------------------------------------------------
+  data required time                                                 8.83
+  data arrival time                                                 -8.77
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_3_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_27_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_3_/CK (FFDQRHD1X)              0.00       0.00 r
+  u_ex_stage_ex_mem_rd_reg_3_/Q (FFDQRHD1X)               0.30       0.30 r
+  u_ex_stage_u_forwarding_unit/U7/Z (INVHDPX)             0.10       0.40 f
+  u_ex_stage_u_forwarding_unit/U30/Z (OAI22HDLX)          0.25       0.65 r
+  u_ex_stage_u_forwarding_unit/U50/Z (AOI221HDLX)         0.10       0.75 f
+  u_ex_stage_u_forwarding_unit/U12/Z (OAI21HDLX)          0.16       0.90 r
+  u_ex_stage_u_forwarding_unit/U51/Z (AOI211HDLX)         0.09       0.99 f
+  u_ex_stage_u_forwarding_unit/U5/Z (OAI21HDMX)           0.12       1.11 r
+  u_ex_stage_u_forwarding_unit/U4/Z (AOI211HDLX)          0.12       1.23 f
+  u_ex_stage_u_forwarding_unit/U24/Z (NOR2B1HD1X)         0.22       1.45 f
+  U1345/Z (INVHDMX)                                       0.12       1.57 r
+  U1689/Z (NAND2HD1X)                                     0.07       1.63 f
+  U1343/Z (BUFHD3X)                                       0.17       1.80 f
+  U2169/Z (INVHD1X)                                       0.69       2.50 r
+  U1549/Z (AOI21HDLX)                                     0.14       2.63 f
+  U1292/Z (NAND2HDUX)                                     0.92       3.55 r
+  U2286/Z (NOR2B1HDLX)                                    0.26       3.81 r
+  U1260/Z (INVHDUX)                                       0.10       3.91 f
+  U2287/Z (NAND2HDUX)                                     0.20       4.11 r
+  U2288/Z (OAI22HDMX)                                     0.19       4.31 f
+  U2290/Z (AOI211HDLX)                                    0.30       4.61 r
+  U2292/Z (NAND2HDUX)                                     0.14       4.75 f
+  U2320/Z (OAI222HDLX)                                    0.47       5.22 r
+  U2383/Z (NAND4B1HDLX)                                   0.20       5.42 f
+  U2384/Z (OAI221HDLX)                                    0.27       5.69 r
+  U2385/Z (OAI21HDMX)                                     0.12       5.81 f
+  U1375/Z (INVHDPX)                                       0.08       5.88 r
+  U2386/Z (OAI21HDMX)                                     0.09       5.97 f
+  U1370/Z (NAND2HD1X)                                     0.09       6.07 r
+  U2387/Z (NAND4HDMX)                                     0.10       6.17 f
+  U1367/Z (NAND2HD1X)                                     0.09       6.25 r
+  U1363/Z (NAND2HD1X)                                     0.12       6.37 f
+  u_pipeline_control/U9/Z (NAND2HD1X)                     0.18       6.55 r
+  u_pipeline_control/U6/Z (AOI21HDMX)                     0.16       6.70 f
+  u_if_stage/U5/Z (INVHDUX)                               1.03       7.73 r
+  u_if_stage/U204/Z (INVHD1X)                             0.76       8.49 f
+  u_if_stage/U100/Z (AOI22B2HDLX)                         0.28       8.77 f
+  u_if_stage/if1_pc_q_reg_27_/D (FFDQRHDMX)               0.00       8.77 f
+  data arrival time                                                  8.77
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/if1_pc_q_reg_27_/CK (FFDQRHDMX)                         9.00 r
+  library setup time                                     -0.17       8.83
+  data required time                                                 8.83
+  ------------------------------------------------------------------------------
+  data required time                                                 8.83
+  data arrival time                                                 -8.77
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_3_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_18_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_3_/CK (FFDQRHD1X)              0.00       0.00 r
+  u_ex_stage_ex_mem_rd_reg_3_/Q (FFDQRHD1X)               0.30       0.30 r
+  u_ex_stage_u_forwarding_unit/U7/Z (INVHDPX)             0.10       0.40 f
+  u_ex_stage_u_forwarding_unit/U30/Z (OAI22HDLX)          0.25       0.65 r
+  u_ex_stage_u_forwarding_unit/U50/Z (AOI221HDLX)         0.10       0.75 f
+  u_ex_stage_u_forwarding_unit/U12/Z (OAI21HDLX)          0.16       0.90 r
+  u_ex_stage_u_forwarding_unit/U51/Z (AOI211HDLX)         0.09       0.99 f
+  u_ex_stage_u_forwarding_unit/U5/Z (OAI21HDMX)           0.12       1.11 r
+  u_ex_stage_u_forwarding_unit/U4/Z (AOI211HDLX)          0.12       1.23 f
+  u_ex_stage_u_forwarding_unit/U24/Z (NOR2B1HD1X)         0.22       1.45 f
+  U1345/Z (INVHDMX)                                       0.12       1.57 r
+  U1689/Z (NAND2HD1X)                                     0.07       1.63 f
+  U1343/Z (BUFHD3X)                                       0.17       1.80 f
+  U2169/Z (INVHD1X)                                       0.69       2.50 r
+  U1549/Z (AOI21HDLX)                                     0.14       2.63 f
+  U1292/Z (NAND2HDUX)                                     0.92       3.55 r
+  U2286/Z (NOR2B1HDLX)                                    0.26       3.81 r
+  U1260/Z (INVHDUX)                                       0.10       3.91 f
+  U2287/Z (NAND2HDUX)                                     0.20       4.11 r
+  U2288/Z (OAI22HDMX)                                     0.19       4.31 f
+  U2290/Z (AOI211HDLX)                                    0.30       4.61 r
+  U2292/Z (NAND2HDUX)                                     0.14       4.75 f
+  U2320/Z (OAI222HDLX)                                    0.47       5.22 r
+  U2383/Z (NAND4B1HDLX)                                   0.20       5.42 f
+  U2384/Z (OAI221HDLX)                                    0.27       5.69 r
+  U2385/Z (OAI21HDMX)                                     0.12       5.81 f
+  U1375/Z (INVHDPX)                                       0.08       5.88 r
+  U2386/Z (OAI21HDMX)                                     0.09       5.97 f
+  U1370/Z (NAND2HD1X)                                     0.09       6.07 r
+  U2387/Z (NAND4HDMX)                                     0.10       6.17 f
+  U1367/Z (NAND2HD1X)                                     0.09       6.25 r
+  U1363/Z (NAND2HD1X)                                     0.12       6.37 f
+  u_pipeline_control/U9/Z (NAND2HD1X)                     0.18       6.55 r
+  u_pipeline_control/U6/Z (AOI21HDMX)                     0.16       6.70 f
+  u_if_stage/U5/Z (INVHDUX)                               1.03       7.73 r
+  u_if_stage/U204/Z (INVHD1X)                             0.76       8.49 f
+  u_if_stage/U93/Z (AOI22B2HDLX)                          0.28       8.77 f
+  u_if_stage/if1_pc_q_reg_18_/D (FFDQRHDMX)               0.00       8.77 f
+  data arrival time                                                  8.77
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/if1_pc_q_reg_18_/CK (FFDQRHDMX)                         9.00 r
+  library setup time                                     -0.17       8.83
+  data required time                                                 8.83
+  ------------------------------------------------------------------------------
+  data required time                                                 8.83
+  data arrival time                                                 -8.77
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_3_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_19_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_3_/CK (FFDQRHD1X)              0.00       0.00 r
+  u_ex_stage_ex_mem_rd_reg_3_/Q (FFDQRHD1X)               0.30       0.30 r
+  u_ex_stage_u_forwarding_unit/U7/Z (INVHDPX)             0.10       0.40 f
+  u_ex_stage_u_forwarding_unit/U30/Z (OAI22HDLX)          0.25       0.65 r
+  u_ex_stage_u_forwarding_unit/U50/Z (AOI221HDLX)         0.10       0.75 f
+  u_ex_stage_u_forwarding_unit/U12/Z (OAI21HDLX)          0.16       0.90 r
+  u_ex_stage_u_forwarding_unit/U51/Z (AOI211HDLX)         0.09       0.99 f
+  u_ex_stage_u_forwarding_unit/U5/Z (OAI21HDMX)           0.12       1.11 r
+  u_ex_stage_u_forwarding_unit/U4/Z (AOI211HDLX)          0.12       1.23 f
+  u_ex_stage_u_forwarding_unit/U24/Z (NOR2B1HD1X)         0.22       1.45 f
+  U1345/Z (INVHDMX)                                       0.12       1.57 r
+  U1689/Z (NAND2HD1X)                                     0.07       1.63 f
+  U1343/Z (BUFHD3X)                                       0.17       1.80 f
+  U2169/Z (INVHD1X)                                       0.69       2.50 r
+  U1549/Z (AOI21HDLX)                                     0.14       2.63 f
+  U1292/Z (NAND2HDUX)                                     0.92       3.55 r
+  U2286/Z (NOR2B1HDLX)                                    0.26       3.81 r
+  U1260/Z (INVHDUX)                                       0.10       3.91 f
+  U2287/Z (NAND2HDUX)                                     0.20       4.11 r
+  U2288/Z (OAI22HDMX)                                     0.19       4.31 f
+  U2290/Z (AOI211HDLX)                                    0.30       4.61 r
+  U2292/Z (NAND2HDUX)                                     0.14       4.75 f
+  U2320/Z (OAI222HDLX)                                    0.47       5.22 r
+  U2383/Z (NAND4B1HDLX)                                   0.20       5.42 f
+  U2384/Z (OAI221HDLX)                                    0.27       5.69 r
+  U2385/Z (OAI21HDMX)                                     0.12       5.81 f
+  U1375/Z (INVHDPX)                                       0.08       5.88 r
+  U2386/Z (OAI21HDMX)                                     0.09       5.97 f
+  U1370/Z (NAND2HD1X)                                     0.09       6.07 r
+  U2387/Z (NAND4HDMX)                                     0.10       6.17 f
+  U1367/Z (NAND2HD1X)                                     0.09       6.25 r
+  U1363/Z (NAND2HD1X)                                     0.12       6.37 f
+  u_pipeline_control/U9/Z (NAND2HD1X)                     0.18       6.55 r
+  u_pipeline_control/U6/Z (AOI21HDMX)                     0.16       6.70 f
+  u_if_stage/U5/Z (INVHDUX)                               1.03       7.73 r
+  u_if_stage/U204/Z (INVHD1X)                             0.76       8.49 f
+  u_if_stage/U94/Z (AOI22B2HDLX)                          0.28       8.77 f
+  u_if_stage/if1_pc_q_reg_19_/D (FFDQRHDMX)               0.00       8.77 f
+  data arrival time                                                  8.77
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/if1_pc_q_reg_19_/CK (FFDQRHDMX)                         9.00 r
+  library setup time                                     -0.17       8.83
+  data required time                                                 8.83
+  ------------------------------------------------------------------------------
+  data required time                                                 8.83
+  data arrival time                                                 -8.77
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_3_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_11_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_3_/CK (FFDQRHD1X)              0.00       0.00 r
+  u_ex_stage_ex_mem_rd_reg_3_/Q (FFDQRHD1X)               0.30       0.30 r
+  u_ex_stage_u_forwarding_unit/U7/Z (INVHDPX)             0.10       0.40 f
+  u_ex_stage_u_forwarding_unit/U30/Z (OAI22HDLX)          0.25       0.65 r
+  u_ex_stage_u_forwarding_unit/U50/Z (AOI221HDLX)         0.10       0.75 f
+  u_ex_stage_u_forwarding_unit/U12/Z (OAI21HDLX)          0.16       0.90 r
+  u_ex_stage_u_forwarding_unit/U51/Z (AOI211HDLX)         0.09       0.99 f
+  u_ex_stage_u_forwarding_unit/U5/Z (OAI21HDMX)           0.12       1.11 r
+  u_ex_stage_u_forwarding_unit/U4/Z (AOI211HDLX)          0.12       1.23 f
+  u_ex_stage_u_forwarding_unit/U24/Z (NOR2B1HD1X)         0.22       1.45 f
+  U1345/Z (INVHDMX)                                       0.12       1.57 r
+  U1689/Z (NAND2HD1X)                                     0.07       1.63 f
+  U1343/Z (BUFHD3X)                                       0.17       1.80 f
+  U2169/Z (INVHD1X)                                       0.69       2.50 r
+  U1549/Z (AOI21HDLX)                                     0.14       2.63 f
+  U1292/Z (NAND2HDUX)                                     0.92       3.55 r
+  U2286/Z (NOR2B1HDLX)                                    0.26       3.81 r
+  U1260/Z (INVHDUX)                                       0.10       3.91 f
+  U2287/Z (NAND2HDUX)                                     0.20       4.11 r
+  U2288/Z (OAI22HDMX)                                     0.19       4.31 f
+  U2290/Z (AOI211HDLX)                                    0.30       4.61 r
+  U2292/Z (NAND2HDUX)                                     0.14       4.75 f
+  U2320/Z (OAI222HDLX)                                    0.47       5.22 r
+  U2383/Z (NAND4B1HDLX)                                   0.20       5.42 f
+  U2384/Z (OAI221HDLX)                                    0.27       5.69 r
+  U2385/Z (OAI21HDMX)                                     0.12       5.81 f
+  U1375/Z (INVHDPX)                                       0.08       5.88 r
+  U2386/Z (OAI21HDMX)                                     0.09       5.97 f
+  U1370/Z (NAND2HD1X)                                     0.09       6.07 r
+  U2387/Z (NAND4HDMX)                                     0.10       6.17 f
+  U1367/Z (NAND2HD1X)                                     0.09       6.25 r
+  U1363/Z (NAND2HD1X)                                     0.12       6.37 f
+  u_pipeline_control/U9/Z (NAND2HD1X)                     0.18       6.55 r
+  u_pipeline_control/U6/Z (AOI21HDMX)                     0.16       6.70 f
+  u_if_stage/U5/Z (INVHDUX)                               1.03       7.73 r
+  u_if_stage/U204/Z (INVHD1X)                             0.76       8.49 f
+  u_if_stage/U90/Z (AOI22B2HDLX)                          0.28       8.77 f
+  u_if_stage/if1_pc_q_reg_11_/D (FFDQRHDMX)               0.00       8.77 f
+  data arrival time                                                  8.77
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/if1_pc_q_reg_11_/CK (FFDQRHDMX)                         9.00 r
+  library setup time                                     -0.17       8.83
+  data required time                                                 8.83
+  ------------------------------------------------------------------------------
+  data required time                                                 8.83
+  data arrival time                                                 -8.77
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_3_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_21_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_3_/CK (FFDQRHD1X)              0.00       0.00 r
+  u_ex_stage_ex_mem_rd_reg_3_/Q (FFDQRHD1X)               0.30       0.30 r
+  u_ex_stage_u_forwarding_unit/U7/Z (INVHDPX)             0.10       0.40 f
+  u_ex_stage_u_forwarding_unit/U30/Z (OAI22HDLX)          0.25       0.65 r
+  u_ex_stage_u_forwarding_unit/U50/Z (AOI221HDLX)         0.10       0.75 f
+  u_ex_stage_u_forwarding_unit/U12/Z (OAI21HDLX)          0.16       0.90 r
+  u_ex_stage_u_forwarding_unit/U51/Z (AOI211HDLX)         0.09       0.99 f
+  u_ex_stage_u_forwarding_unit/U5/Z (OAI21HDMX)           0.12       1.11 r
+  u_ex_stage_u_forwarding_unit/U4/Z (AOI211HDLX)          0.12       1.23 f
+  u_ex_stage_u_forwarding_unit/U24/Z (NOR2B1HD1X)         0.22       1.45 f
+  U1345/Z (INVHDMX)                                       0.12       1.57 r
+  U1689/Z (NAND2HD1X)                                     0.07       1.63 f
+  U1343/Z (BUFHD3X)                                       0.17       1.80 f
+  U2169/Z (INVHD1X)                                       0.69       2.50 r
+  U1549/Z (AOI21HDLX)                                     0.14       2.63 f
+  U1292/Z (NAND2HDUX)                                     0.92       3.55 r
+  U2286/Z (NOR2B1HDLX)                                    0.26       3.81 r
+  U1260/Z (INVHDUX)                                       0.10       3.91 f
+  U2287/Z (NAND2HDUX)                                     0.20       4.11 r
+  U2288/Z (OAI22HDMX)                                     0.19       4.31 f
+  U2290/Z (AOI211HDLX)                                    0.30       4.61 r
+  U2292/Z (NAND2HDUX)                                     0.14       4.75 f
+  U2320/Z (OAI222HDLX)                                    0.47       5.22 r
+  U2383/Z (NAND4B1HDLX)                                   0.20       5.42 f
+  U2384/Z (OAI221HDLX)                                    0.27       5.69 r
+  U2385/Z (OAI21HDMX)                                     0.12       5.81 f
+  U1375/Z (INVHDPX)                                       0.08       5.88 r
+  U2386/Z (OAI21HDMX)                                     0.09       5.97 f
+  U1370/Z (NAND2HD1X)                                     0.09       6.07 r
+  U2387/Z (NAND4HDMX)                                     0.10       6.17 f
+  U1367/Z (NAND2HD1X)                                     0.09       6.25 r
+  U1363/Z (NAND2HD1X)                                     0.12       6.37 f
+  u_pipeline_control/U9/Z (NAND2HD1X)                     0.18       6.55 r
+  u_pipeline_control/U6/Z (AOI21HDMX)                     0.16       6.70 f
+  u_if_stage/U5/Z (INVHDUX)                               1.03       7.73 r
+  u_if_stage/U204/Z (INVHD1X)                             0.76       8.49 f
+  u_if_stage/U95/Z (AOI22B2HDLX)                          0.28       8.77 f
+  u_if_stage/if1_pc_q_reg_21_/D (FFDQRHDMX)               0.00       8.77 f
+  data arrival time                                                  8.77
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/if1_pc_q_reg_21_/CK (FFDQRHDMX)                         9.00 r
+  library setup time                                     -0.17       8.83
+  data required time                                                 8.83
+  ------------------------------------------------------------------------------
+  data required time                                                 8.83
+  data arrival time                                                 -8.77
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_3_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_22_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_3_/CK (FFDQRHD1X)              0.00       0.00 r
+  u_ex_stage_ex_mem_rd_reg_3_/Q (FFDQRHD1X)               0.30       0.30 r
+  u_ex_stage_u_forwarding_unit/U7/Z (INVHDPX)             0.10       0.40 f
+  u_ex_stage_u_forwarding_unit/U30/Z (OAI22HDLX)          0.25       0.65 r
+  u_ex_stage_u_forwarding_unit/U50/Z (AOI221HDLX)         0.10       0.75 f
+  u_ex_stage_u_forwarding_unit/U12/Z (OAI21HDLX)          0.16       0.90 r
+  u_ex_stage_u_forwarding_unit/U51/Z (AOI211HDLX)         0.09       0.99 f
+  u_ex_stage_u_forwarding_unit/U5/Z (OAI21HDMX)           0.12       1.11 r
+  u_ex_stage_u_forwarding_unit/U4/Z (AOI211HDLX)          0.12       1.23 f
+  u_ex_stage_u_forwarding_unit/U24/Z (NOR2B1HD1X)         0.22       1.45 f
+  U1345/Z (INVHDMX)                                       0.12       1.57 r
+  U1689/Z (NAND2HD1X)                                     0.07       1.63 f
+  U1343/Z (BUFHD3X)                                       0.17       1.80 f
+  U2169/Z (INVHD1X)                                       0.69       2.50 r
+  U1549/Z (AOI21HDLX)                                     0.14       2.63 f
+  U1292/Z (NAND2HDUX)                                     0.92       3.55 r
+  U2286/Z (NOR2B1HDLX)                                    0.26       3.81 r
+  U1260/Z (INVHDUX)                                       0.10       3.91 f
+  U2287/Z (NAND2HDUX)                                     0.20       4.11 r
+  U2288/Z (OAI22HDMX)                                     0.19       4.31 f
+  U2290/Z (AOI211HDLX)                                    0.30       4.61 r
+  U2292/Z (NAND2HDUX)                                     0.14       4.75 f
+  U2320/Z (OAI222HDLX)                                    0.47       5.22 r
+  U2383/Z (NAND4B1HDLX)                                   0.20       5.42 f
+  U2384/Z (OAI221HDLX)                                    0.27       5.69 r
+  U2385/Z (OAI21HDMX)                                     0.12       5.81 f
+  U1375/Z (INVHDPX)                                       0.08       5.88 r
+  U2386/Z (OAI21HDMX)                                     0.09       5.97 f
+  U1370/Z (NAND2HD1X)                                     0.09       6.07 r
+  U2387/Z (NAND4HDMX)                                     0.10       6.17 f
+  U1367/Z (NAND2HD1X)                                     0.09       6.25 r
+  U1363/Z (NAND2HD1X)                                     0.12       6.37 f
+  u_pipeline_control/U9/Z (NAND2HD1X)                     0.18       6.55 r
+  u_pipeline_control/U6/Z (AOI21HDMX)                     0.16       6.70 f
+  u_if_stage/U5/Z (INVHDUX)                               1.03       7.73 r
+  u_if_stage/U204/Z (INVHD1X)                             0.76       8.49 f
+  u_if_stage/U96/Z (AOI22B2HDLX)                          0.28       8.77 f
+  u_if_stage/if1_pc_q_reg_22_/D (FFDQRHDMX)               0.00       8.77 f
+  data arrival time                                                  8.77
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/if1_pc_q_reg_22_/CK (FFDQRHDMX)                         9.00 r
+  library setup time                                     -0.17       8.83
+  data required time                                                 8.83
+  ------------------------------------------------------------------------------
+  data required time                                                 8.83
+  data arrival time                                                 -8.77
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_3_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_13_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_3_/CK (FFDQRHD1X)              0.00       0.00 r
+  u_ex_stage_ex_mem_rd_reg_3_/Q (FFDQRHD1X)               0.30       0.30 r
+  u_ex_stage_u_forwarding_unit/U7/Z (INVHDPX)             0.10       0.40 f
+  u_ex_stage_u_forwarding_unit/U30/Z (OAI22HDLX)          0.25       0.65 r
+  u_ex_stage_u_forwarding_unit/U50/Z (AOI221HDLX)         0.10       0.75 f
+  u_ex_stage_u_forwarding_unit/U12/Z (OAI21HDLX)          0.16       0.90 r
+  u_ex_stage_u_forwarding_unit/U51/Z (AOI211HDLX)         0.09       0.99 f
+  u_ex_stage_u_forwarding_unit/U5/Z (OAI21HDMX)           0.12       1.11 r
+  u_ex_stage_u_forwarding_unit/U4/Z (AOI211HDLX)          0.12       1.23 f
+  u_ex_stage_u_forwarding_unit/U24/Z (NOR2B1HD1X)         0.22       1.45 f
+  U1345/Z (INVHDMX)                                       0.12       1.57 r
+  U1689/Z (NAND2HD1X)                                     0.07       1.63 f
+  U1343/Z (BUFHD3X)                                       0.17       1.80 f
+  U2169/Z (INVHD1X)                                       0.69       2.50 r
+  U1549/Z (AOI21HDLX)                                     0.14       2.63 f
+  U1292/Z (NAND2HDUX)                                     0.92       3.55 r
+  U2286/Z (NOR2B1HDLX)                                    0.26       3.81 r
+  U1260/Z (INVHDUX)                                       0.10       3.91 f
+  U2287/Z (NAND2HDUX)                                     0.20       4.11 r
+  U2288/Z (OAI22HDMX)                                     0.19       4.31 f
+  U2290/Z (AOI211HDLX)                                    0.30       4.61 r
+  U2292/Z (NAND2HDUX)                                     0.14       4.75 f
+  U2320/Z (OAI222HDLX)                                    0.47       5.22 r
+  U2383/Z (NAND4B1HDLX)                                   0.20       5.42 f
+  U2384/Z (OAI221HDLX)                                    0.27       5.69 r
+  U2385/Z (OAI21HDMX)                                     0.12       5.81 f
+  U1375/Z (INVHDPX)                                       0.08       5.88 r
+  U2386/Z (OAI21HDMX)                                     0.09       5.97 f
+  U1370/Z (NAND2HD1X)                                     0.09       6.07 r
+  U2387/Z (NAND4HDMX)                                     0.10       6.17 f
+  U1367/Z (NAND2HD1X)                                     0.09       6.25 r
+  U1363/Z (NAND2HD1X)                                     0.12       6.37 f
+  u_pipeline_control/U9/Z (NAND2HD1X)                     0.18       6.55 r
+  u_pipeline_control/U6/Z (AOI21HDMX)                     0.16       6.70 f
+  u_if_stage/U5/Z (INVHDUX)                               1.03       7.73 r
+  u_if_stage/U204/Z (INVHD1X)                             0.76       8.49 f
+  u_if_stage/U91/Z (AOI22B2HDLX)                          0.28       8.77 f
+  u_if_stage/if1_pc_q_reg_13_/D (FFDQRHDMX)               0.00       8.77 f
+  data arrival time                                                  8.77
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/if1_pc_q_reg_13_/CK (FFDQRHDMX)                         9.00 r
+  library setup time                                     -0.17       8.83
+  data required time                                                 8.83
+  ------------------------------------------------------------------------------
+  data required time                                                 8.83
+  data arrival time                                                 -8.77
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_3_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_14_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_3_/CK (FFDQRHD1X)              0.00       0.00 r
+  u_ex_stage_ex_mem_rd_reg_3_/Q (FFDQRHD1X)               0.30       0.30 r
+  u_ex_stage_u_forwarding_unit/U7/Z (INVHDPX)             0.10       0.40 f
+  u_ex_stage_u_forwarding_unit/U30/Z (OAI22HDLX)          0.25       0.65 r
+  u_ex_stage_u_forwarding_unit/U50/Z (AOI221HDLX)         0.10       0.75 f
+  u_ex_stage_u_forwarding_unit/U12/Z (OAI21HDLX)          0.16       0.90 r
+  u_ex_stage_u_forwarding_unit/U51/Z (AOI211HDLX)         0.09       0.99 f
+  u_ex_stage_u_forwarding_unit/U5/Z (OAI21HDMX)           0.12       1.11 r
+  u_ex_stage_u_forwarding_unit/U4/Z (AOI211HDLX)          0.12       1.23 f
+  u_ex_stage_u_forwarding_unit/U24/Z (NOR2B1HD1X)         0.22       1.45 f
+  U1345/Z (INVHDMX)                                       0.12       1.57 r
+  U1689/Z (NAND2HD1X)                                     0.07       1.63 f
+  U1343/Z (BUFHD3X)                                       0.17       1.80 f
+  U2169/Z (INVHD1X)                                       0.69       2.50 r
+  U1549/Z (AOI21HDLX)                                     0.14       2.63 f
+  U1292/Z (NAND2HDUX)                                     0.92       3.55 r
+  U2286/Z (NOR2B1HDLX)                                    0.26       3.81 r
+  U1260/Z (INVHDUX)                                       0.10       3.91 f
+  U2287/Z (NAND2HDUX)                                     0.20       4.11 r
+  U2288/Z (OAI22HDMX)                                     0.19       4.31 f
+  U2290/Z (AOI211HDLX)                                    0.30       4.61 r
+  U2292/Z (NAND2HDUX)                                     0.14       4.75 f
+  U2320/Z (OAI222HDLX)                                    0.47       5.22 r
+  U2383/Z (NAND4B1HDLX)                                   0.20       5.42 f
+  U2384/Z (OAI221HDLX)                                    0.27       5.69 r
+  U2385/Z (OAI21HDMX)                                     0.12       5.81 f
+  U1375/Z (INVHDPX)                                       0.08       5.88 r
+  U2386/Z (OAI21HDMX)                                     0.09       5.97 f
+  U1370/Z (NAND2HD1X)                                     0.09       6.07 r
+  U2387/Z (NAND4HDMX)                                     0.10       6.17 f
+  U1367/Z (NAND2HD1X)                                     0.09       6.25 r
+  U1363/Z (NAND2HD1X)                                     0.12       6.37 f
+  u_pipeline_control/U9/Z (NAND2HD1X)                     0.18       6.55 r
+  u_pipeline_control/U6/Z (AOI21HDMX)                     0.16       6.70 f
+  u_if_stage/U5/Z (INVHDUX)                               1.03       7.73 r
+  u_if_stage/U204/Z (INVHD1X)                             0.76       8.49 f
+  u_if_stage/U72/Z (AOI22B2HDLX)                          0.28       8.77 f
+  u_if_stage/if1_pc_q_reg_14_/D (FFDQRHDMX)               0.00       8.77 f
+  data arrival time                                                  8.77
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/if1_pc_q_reg_14_/CK (FFDQRHDMX)                         9.00 r
+  library setup time                                     -0.17       8.83
+  data required time                                                 8.83
+  ------------------------------------------------------------------------------
+  data required time                                                 8.83
+  data arrival time                                                 -8.77
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_3_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_15_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_3_/CK (FFDQRHD1X)              0.00       0.00 r
+  u_ex_stage_ex_mem_rd_reg_3_/Q (FFDQRHD1X)               0.30       0.30 r
+  u_ex_stage_u_forwarding_unit/U7/Z (INVHDPX)             0.10       0.40 f
+  u_ex_stage_u_forwarding_unit/U30/Z (OAI22HDLX)          0.25       0.65 r
+  u_ex_stage_u_forwarding_unit/U50/Z (AOI221HDLX)         0.10       0.75 f
+  u_ex_stage_u_forwarding_unit/U12/Z (OAI21HDLX)          0.16       0.90 r
+  u_ex_stage_u_forwarding_unit/U51/Z (AOI211HDLX)         0.09       0.99 f
+  u_ex_stage_u_forwarding_unit/U5/Z (OAI21HDMX)           0.12       1.11 r
+  u_ex_stage_u_forwarding_unit/U4/Z (AOI211HDLX)          0.12       1.23 f
+  u_ex_stage_u_forwarding_unit/U24/Z (NOR2B1HD1X)         0.22       1.45 f
+  U1345/Z (INVHDMX)                                       0.12       1.57 r
+  U1689/Z (NAND2HD1X)                                     0.07       1.63 f
+  U1343/Z (BUFHD3X)                                       0.17       1.80 f
+  U2169/Z (INVHD1X)                                       0.69       2.50 r
+  U1549/Z (AOI21HDLX)                                     0.14       2.63 f
+  U1292/Z (NAND2HDUX)                                     0.92       3.55 r
+  U2286/Z (NOR2B1HDLX)                                    0.26       3.81 r
+  U1260/Z (INVHDUX)                                       0.10       3.91 f
+  U2287/Z (NAND2HDUX)                                     0.20       4.11 r
+  U2288/Z (OAI22HDMX)                                     0.19       4.31 f
+  U2290/Z (AOI211HDLX)                                    0.30       4.61 r
+  U2292/Z (NAND2HDUX)                                     0.14       4.75 f
+  U2320/Z (OAI222HDLX)                                    0.47       5.22 r
+  U2383/Z (NAND4B1HDLX)                                   0.20       5.42 f
+  U2384/Z (OAI221HDLX)                                    0.27       5.69 r
+  U2385/Z (OAI21HDMX)                                     0.12       5.81 f
+  U1375/Z (INVHDPX)                                       0.08       5.88 r
+  U2386/Z (OAI21HDMX)                                     0.09       5.97 f
+  U1370/Z (NAND2HD1X)                                     0.09       6.07 r
+  U2387/Z (NAND4HDMX)                                     0.10       6.17 f
+  U1367/Z (NAND2HD1X)                                     0.09       6.25 r
+  U1363/Z (NAND2HD1X)                                     0.12       6.37 f
+  u_pipeline_control/U9/Z (NAND2HD1X)                     0.18       6.55 r
+  u_pipeline_control/U6/Z (AOI21HDMX)                     0.16       6.70 f
+  u_if_stage/U5/Z (INVHDUX)                               1.03       7.73 r
+  u_if_stage/U204/Z (INVHD1X)                             0.76       8.49 f
+  u_if_stage/U92/Z (AOI22B2HDLX)                          0.28       8.77 f
+  u_if_stage/if1_pc_q_reg_15_/D (FFDQRHDMX)               0.00       8.77 f
+  data arrival time                                                  8.77
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/if1_pc_q_reg_15_/CK (FFDQRHDMX)                         9.00 r
+  library setup time                                     -0.17       8.83
+  data required time                                                 8.83
+  ------------------------------------------------------------------------------
+  data required time                                                 8.83
+  data arrival time                                                 -8.77
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_3_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_25_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_3_/CK (FFDQRHD1X)              0.00       0.00 r
+  u_ex_stage_ex_mem_rd_reg_3_/Q (FFDQRHD1X)               0.30       0.30 r
+  u_ex_stage_u_forwarding_unit/U7/Z (INVHDPX)             0.10       0.40 f
+  u_ex_stage_u_forwarding_unit/U30/Z (OAI22HDLX)          0.25       0.65 r
+  u_ex_stage_u_forwarding_unit/U50/Z (AOI221HDLX)         0.10       0.75 f
+  u_ex_stage_u_forwarding_unit/U12/Z (OAI21HDLX)          0.16       0.90 r
+  u_ex_stage_u_forwarding_unit/U51/Z (AOI211HDLX)         0.09       0.99 f
+  u_ex_stage_u_forwarding_unit/U5/Z (OAI21HDMX)           0.12       1.11 r
+  u_ex_stage_u_forwarding_unit/U4/Z (AOI211HDLX)          0.12       1.23 f
+  u_ex_stage_u_forwarding_unit/U24/Z (NOR2B1HD1X)         0.22       1.45 f
+  U1345/Z (INVHDMX)                                       0.12       1.57 r
+  U1689/Z (NAND2HD1X)                                     0.07       1.63 f
+  U1343/Z (BUFHD3X)                                       0.17       1.80 f
+  U2169/Z (INVHD1X)                                       0.69       2.50 r
+  U1549/Z (AOI21HDLX)                                     0.14       2.63 f
+  U1292/Z (NAND2HDUX)                                     0.92       3.55 r
+  U2286/Z (NOR2B1HDLX)                                    0.26       3.81 r
+  U1260/Z (INVHDUX)                                       0.10       3.91 f
+  U2287/Z (NAND2HDUX)                                     0.20       4.11 r
+  U2288/Z (OAI22HDMX)                                     0.19       4.31 f
+  U2290/Z (AOI211HDLX)                                    0.30       4.61 r
+  U2292/Z (NAND2HDUX)                                     0.14       4.75 f
+  U2320/Z (OAI222HDLX)                                    0.47       5.22 r
+  U2383/Z (NAND4B1HDLX)                                   0.20       5.42 f
+  U2384/Z (OAI221HDLX)                                    0.27       5.69 r
+  U2385/Z (OAI21HDMX)                                     0.12       5.81 f
+  U1375/Z (INVHDPX)                                       0.08       5.88 r
+  U2386/Z (OAI21HDMX)                                     0.09       5.97 f
+  U1370/Z (NAND2HD1X)                                     0.09       6.07 r
+  U2387/Z (NAND4HDMX)                                     0.10       6.17 f
+  U1367/Z (NAND2HD1X)                                     0.09       6.25 r
+  U1363/Z (NAND2HD1X)                                     0.12       6.37 f
+  u_pipeline_control/U9/Z (NAND2HD1X)                     0.18       6.55 r
+  u_pipeline_control/U6/Z (AOI21HDMX)                     0.16       6.70 f
+  u_if_stage/U5/Z (INVHDUX)                               1.03       7.73 r
+  u_if_stage/U204/Z (INVHD1X)                             0.76       8.49 f
+  u_if_stage/U98/Z (AOI22B2HDLX)                          0.28       8.77 f
+  u_if_stage/if1_pc_q_reg_25_/D (FFDQRHDMX)               0.00       8.77 f
+  data arrival time                                                  8.77
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/if1_pc_q_reg_25_/CK (FFDQRHDMX)                         9.00 r
+  library setup time                                     -0.17       8.83
+  data required time                                                 8.83
+  ------------------------------------------------------------------------------
+  data required time                                                 8.83
+  data arrival time                                                 -8.77
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_3_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_29_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_3_/CK (FFDQRHD1X)              0.00       0.00 r
+  u_ex_stage_ex_mem_rd_reg_3_/Q (FFDQRHD1X)               0.30       0.30 r
+  u_ex_stage_u_forwarding_unit/U7/Z (INVHDPX)             0.10       0.40 f
+  u_ex_stage_u_forwarding_unit/U30/Z (OAI22HDLX)          0.25       0.65 r
+  u_ex_stage_u_forwarding_unit/U50/Z (AOI221HDLX)         0.10       0.75 f
+  u_ex_stage_u_forwarding_unit/U12/Z (OAI21HDLX)          0.16       0.90 r
+  u_ex_stage_u_forwarding_unit/U51/Z (AOI211HDLX)         0.09       0.99 f
+  u_ex_stage_u_forwarding_unit/U5/Z (OAI21HDMX)           0.12       1.11 r
+  u_ex_stage_u_forwarding_unit/U4/Z (AOI211HDLX)          0.12       1.23 f
+  u_ex_stage_u_forwarding_unit/U24/Z (NOR2B1HD1X)         0.22       1.45 f
+  U1345/Z (INVHDMX)                                       0.12       1.57 r
+  U1689/Z (NAND2HD1X)                                     0.07       1.63 f
+  U1343/Z (BUFHD3X)                                       0.17       1.80 f
+  U2169/Z (INVHD1X)                                       0.69       2.50 r
+  U1549/Z (AOI21HDLX)                                     0.14       2.63 f
+  U1292/Z (NAND2HDUX)                                     0.92       3.55 r
+  U2286/Z (NOR2B1HDLX)                                    0.26       3.81 r
+  U1260/Z (INVHDUX)                                       0.10       3.91 f
+  U2287/Z (NAND2HDUX)                                     0.20       4.11 r
+  U2288/Z (OAI22HDMX)                                     0.19       4.31 f
+  U2290/Z (AOI211HDLX)                                    0.30       4.61 r
+  U2292/Z (NAND2HDUX)                                     0.14       4.75 f
+  U2320/Z (OAI222HDLX)                                    0.47       5.22 r
+  U2383/Z (NAND4B1HDLX)                                   0.20       5.42 f
+  U2384/Z (OAI221HDLX)                                    0.27       5.69 r
+  U2385/Z (OAI21HDMX)                                     0.12       5.81 f
+  U1375/Z (INVHDPX)                                       0.08       5.88 r
+  U2386/Z (OAI21HDMX)                                     0.09       5.97 f
+  U1370/Z (NAND2HD1X)                                     0.09       6.07 r
+  U2387/Z (NAND4HDMX)                                     0.10       6.17 f
+  U1367/Z (NAND2HD1X)                                     0.09       6.25 r
+  U1363/Z (NAND2HD1X)                                     0.12       6.37 f
+  u_pipeline_control/U9/Z (NAND2HD1X)                     0.18       6.55 r
+  u_pipeline_control/U6/Z (AOI21HDMX)                     0.16       6.70 f
+  u_if_stage/U5/Z (INVHDUX)                               1.03       7.73 r
+  u_if_stage/U204/Z (INVHD1X)                             0.76       8.49 f
+  u_if_stage/U101/Z (AOI22B2HDLX)                         0.28       8.77 f
+  u_if_stage/if1_pc_q_reg_29_/D (FFDQRHDMX)               0.00       8.77 f
+  data arrival time                                                  8.77
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/if1_pc_q_reg_29_/CK (FFDQRHDMX)                         9.00 r
+  library setup time                                     -0.16       8.84
+  data required time                                                 8.84
+  ------------------------------------------------------------------------------
+  data required time                                                 8.84
+  data arrival time                                                 -8.77
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.07
+
+
+  Startpoint: u_ex_stage_ex_mem_rd_reg_3_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_10_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_ex_stage_ex_mem_rd_reg_3_/CK (FFDQRHD1X)              0.00       0.00 r
+  u_ex_stage_ex_mem_rd_reg_3_/Q (FFDQRHD1X)               0.30       0.30 r
+  u_ex_stage_u_forwarding_unit/U7/Z (INVHDPX)             0.10       0.40 f
+  u_ex_stage_u_forwarding_unit/U30/Z (OAI22HDLX)          0.25       0.65 r
+  u_ex_stage_u_forwarding_unit/U50/Z (AOI221HDLX)         0.10       0.75 f
+  u_ex_stage_u_forwarding_unit/U12/Z (OAI21HDLX)          0.16       0.90 r
+  u_ex_stage_u_forwarding_unit/U51/Z (AOI211HDLX)         0.09       0.99 f
+  u_ex_stage_u_forwarding_unit/U5/Z (OAI21HDMX)           0.12       1.11 r
+  u_ex_stage_u_forwarding_unit/U4/Z (AOI211HDLX)          0.12       1.23 f
+  u_ex_stage_u_forwarding_unit/U24/Z (NOR2B1HD1X)         0.22       1.45 f
+  U1345/Z (INVHDMX)                                       0.12       1.57 r
+  U1689/Z (NAND2HD1X)                                     0.07       1.63 f
+  U1343/Z (BUFHD3X)                                       0.17       1.80 f
+  U2169/Z (INVHD1X)                                       0.69       2.50 r
+  U1549/Z (AOI21HDLX)                                     0.14       2.63 f
+  U1292/Z (NAND2HDUX)                                     0.92       3.55 r
+  U2286/Z (NOR2B1HDLX)                                    0.26       3.81 r
+  U1260/Z (INVHDUX)                                       0.10       3.91 f
+  U2287/Z (NAND2HDUX)                                     0.20       4.11 r
+  U2288/Z (OAI22HDMX)                                     0.19       4.31 f
+  U2290/Z (AOI211HDLX)                                    0.30       4.61 r
+  U2292/Z (NAND2HDUX)                                     0.14       4.75 f
+  U2320/Z (OAI222HDLX)                                    0.47       5.22 r
+  U2383/Z (NAND4B1HDLX)                                   0.20       5.42 f
+  U2384/Z (OAI221HDLX)                                    0.27       5.69 r
+  U2385/Z (OAI21HDMX)                                     0.12       5.81 f
+  U1375/Z (INVHDPX)                                       0.08       5.88 r
+  U2386/Z (OAI21HDMX)                                     0.09       5.97 f
+  U1370/Z (NAND2HD1X)                                     0.09       6.07 r
+  U2387/Z (NAND4HDMX)                                     0.10       6.17 f
+  U1367/Z (NAND2HD1X)                                     0.09       6.25 r
+  U1363/Z (NAND2HD1X)                                     0.12       6.37 f
+  u_pipeline_control/U9/Z (NAND2HD1X)                     0.18       6.55 r
+  u_pipeline_control/U6/Z (AOI21HDMX)                     0.16       6.70 f
+  u_if_stage/U5/Z (INVHDUX)                               1.03       7.73 r
+  u_if_stage/U204/Z (INVHD1X)                             0.76       8.49 f
+  u_if_stage/U89/Z (AOI22B2HDLX)                          0.28       8.77 f
+  u_if_stage/if1_pc_q_reg_10_/D (FFDQRHDMX)               0.00       8.77 f
+  data arrival time                                                  8.77
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -1.00       9.00
+  u_if_stage/if1_pc_q_reg_10_/CK (FFDQRHDMX)                         9.00 r
+  library setup time                                     -0.16       8.84
+  data required time                                                 8.84
+  ------------------------------------------------------------------------------
+  data required time                                                 8.84
+  data arrival time                                                 -8.77
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.07
+
+Warning: report_timing has satisfied the max_paths criteria. There are 1585 further endpoints which have paths of interest with slack less than   100.00 that were not considered when generating this report. (UITE-502)
+
+1

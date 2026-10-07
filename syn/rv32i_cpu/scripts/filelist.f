@@ -1,0 +1,15 @@
+../../rtl/rv32i_cpu/alu.sv
+../../rtl/rv32i_cpu/decoder.sv
+../../rtl/rv32i_cpu/forwarding_unit.sv
+../../rtl/rv32i_cpu/hazard_unit.sv
+../../rtl/rv32i_cpu/imm_gen.sv
+../../rtl/rv32i_cpu/load_unit.sv
+../../rtl/rv32i_cpu/store_unit.sv
+../../rtl/rv32i_cpu/regfile.sv
+../../rtl/rv32i_cpu/if_stage.sv
+../../rtl/rv32i_cpu/id_state.sv
+../../rtl/rv32i_cpu/ex_state.sv
+../../rtl/rv32i_cpu/mem_stage.sv
+../../rtl/rv32i_cpu/wb_stage.sv
+../../rtl/rv32i_cpu/pipeline_control.sv
+../../rtl/rv32i_cpu/cpu_core.sv

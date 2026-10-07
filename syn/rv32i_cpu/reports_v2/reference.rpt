@@ -1,0 +1,505 @@
+ 
+****************************************
+Report : reference
+Design : cpu_core
+Version: O-2018.06-SP1
+Date   : Wed Oct  7 19:46:38 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2CLKHD1X        smic13_tt      7.564000       4     30.256001  
+AND2CLKHD2X        smic13_tt     10.590000      27    285.930004  
+AND2CLKHD3X        smic13_tt     12.103000      24    290.471992  
+AND2CLKHD4X        smic13_tt     13.616000       3     40.848001  
+AND2HD1X           smic13_tt      7.564000       7     52.948001  
+AND2HD2X           smic13_tt     10.590000      14    148.260002  
+AND2HDMX           smic13_tt      7.564000      10     75.640001  
+AND3HD1X           smic13_tt      9.077000       2     18.153999  
+AND3HD2X           smic13_tt     12.103000      28    338.883991  
+AND3HDLX           smic13_tt      9.077000       2     18.153999  
+AND3HDMX           smic13_tt      9.077000       3     27.230999  
+AND4HD1X           smic13_tt     12.103000       7     84.720998  
+AND4HD2X           smic13_tt     13.616000      16    217.856003  
+AND4HDMX           smic13_tt     12.103000       2     24.205999  
+AOI21HD1X          smic13_tt      9.077000      36    326.771988  
+AOI21HD2X          smic13_tt     15.129000       1     15.129000  
+AOI21HDLX          smic13_tt      7.564000      17    128.588002  
+AOI21HDMX          smic13_tt      7.564000      34    257.176004  
+AOI21HDUX          smic13_tt      7.564000       1      7.564000  
+AOI22B2HDLX        smic13_tt     12.103000       2     24.205999  
+AOI22HD1X          smic13_tt     10.590000       2     21.180000  
+AOI22HDLX          smic13_tt      9.077000       3     27.230999  
+AOI22HDMX          smic13_tt      9.077000      16    145.231995  
+AOI31HD1X          smic13_tt     10.590000       1     10.590000  
+AOI31HDLX          smic13_tt      9.077000       3     27.230999  
+AOI211HD1X         smic13_tt     15.129000       4     60.515999  
+AOI211HDLX         smic13_tt      9.077000      10     90.769997  
+BUFCLKHD1X         smic13_tt      6.052000      12     72.624001  
+BUFCLKHD2X         smic13_tt      9.077000       2     18.153999  
+BUFCLKHD3X         smic13_tt     10.590000       1     10.590000  
+BUFCLKHD4X         smic13_tt     12.103000       1     12.103000  
+BUFCLKHDMX         smic13_tt      6.052000       1      6.052000  
+BUFHD1X            smic13_tt      6.052000       7     42.364000  
+BUFHD2X            smic13_tt      7.564000      16    121.024002  
+BUFHD3X            smic13_tt     10.590000      13    137.670002  
+BUFHD4X            smic13_tt     13.616000      20    272.320004  
+BUFHD6X            smic13_tt     18.155001       9    163.395006  
+BUFHDLX            smic13_tt      6.052000       3     18.156000  
+BUFHDMX            smic13_tt      6.052000       5     30.260000  
+DEL1HD1X           smic13_tt     10.590000       2     21.180000  
+FFDQRHD1X          smic13_tt     36.310001      19    689.890026  n
+FFDQRHD2X          smic13_tt     39.334999       1     39.334999  n
+FFDQRHDMX          smic13_tt     36.310001      81   2941.110111  n
+FFDRHQHD3X         smic13_tt     55.977001       9    503.793011  n
+INVCLKHD2X         smic13_tt      6.052000      19    114.988001  
+INVCLKHD3X         smic13_tt      9.077000      27    245.078991  
+INVCLKHD14X        smic13_tt     27.232000      10    272.320004  
+INVCLKHDMX         smic13_tt      4.539000      14     63.546000  
+INVHD1X            smic13_tt      4.539000      24    108.936001  
+INVHD2X            smic13_tt      6.052000      83    502.316004  
+INVHD3X            smic13_tt      9.077000      33    299.540989  
+INVHD4X            smic13_tt     10.590000      37    391.830006  
+INVHD5X            smic13_tt     12.103000       5     60.514998  
+INVHD6X            smic13_tt     13.616000      11    149.776002  
+INVHD7X            smic13_tt     16.642000       3     49.926001  
+INVHD8X            smic13_tt     18.155001      17    308.635012  
+INVHDLX            smic13_tt      4.539000      59    267.801002  
+INVHDMX            smic13_tt      4.539000      68    308.652002  
+INVHDPX            smic13_tt      4.539000      72    326.808002  
+INVHDUX            smic13_tt      4.539000      12     54.468000  
+MUX2CLKHD2X        smic13_tt     15.129000       6     90.773998  
+MUX2HD1X           smic13_tt     13.616000       6     81.696001  
+MUX2HD2X           smic13_tt     16.642000       8    133.136002  
+MUX2HDMX           smic13_tt     12.103000     114   1379.741964  
+MUXI2HD1X          smic13_tt     16.642000       1     16.642000  
+MUXI2HD2X          smic13_tt     18.155001       1     18.155001  
+NAND2B1HD1X        smic13_tt      7.564000      10     75.640001  
+NAND2B1HD2X        smic13_tt     12.103000       3     36.308999  
+NAND2B1HDLX        smic13_tt      7.564000       1      7.564000  
+NAND2B1HDMX        smic13_tt      7.564000       4     30.256001  
+NAND2HD1X          smic13_tt      6.052000     349   2112.148016  
+NAND2HD2X          smic13_tt     10.590000     384   4066.560059  
+NAND2HD3X          smic13_tt     13.616000     286   3894.176050  
+NAND2HDLX          smic13_tt      6.052000      10     60.520000  
+NAND2HDMX          smic13_tt      6.052000      97    587.044004  
+NAND2HDUX          smic13_tt      4.539000     289   1311.771010  
+NAND3B1HD1X        smic13_tt     10.590000       3     31.770000  
+NAND3B1HDMX        smic13_tt      9.077000       3     27.230999  
+NAND3HD1X          smic13_tt      9.077000      11     99.846996  
+NAND3HDLX          smic13_tt      7.564000       6     45.384001  
+NAND3HDMX          smic13_tt      7.564000      12     90.768002  
+NAND4B1HDMX        smic13_tt     12.103000       3     36.308999  
+NAND4HD2X          smic13_tt     16.642000       1     16.642000  
+NAND4HDLX          smic13_tt      9.077000       3     27.230999  
+NAND4HDMX          smic13_tt      9.077000      17    154.308994  
+NOR2B1HD1X         smic13_tt      7.564000       9     68.076001  
+NOR2B1HD2X         smic13_tt     12.103000      28    338.883991  
+NOR2B1HDLX         smic13_tt      7.564000       8     60.512001  
+NOR2B1HDMX         smic13_tt      7.564000       1      7.564000  
+NOR2B1HDUX         smic13_tt      7.564000       1      7.564000  
+NOR2HD1X           smic13_tt      6.052000      93    562.836004  
+NOR2HD2X           smic13_tt      9.077000      80    726.159973  
+NOR2HD3X           smic13_tt     13.616000      88   1198.208015  
+NOR2HDLX           smic13_tt      6.052000       1      6.052000  
+NOR2HDMX           smic13_tt      6.052000      27    163.404001  
+NOR2HDUX           smic13_tt      4.539000      53    240.567002  
+OAI21HD1X          smic13_tt      9.077000      37    335.848988  
+OAI21HD2X          smic13_tt     15.129000       1     15.129000  
+OAI21HDLX          smic13_tt      7.564000      16    121.024002  
+OAI21HDMX          smic13_tt      7.564000      58    438.712008  
+OAI21HDUX          smic13_tt      7.564000      10     75.640001  
+OAI22B2HD1X        smic13_tt     13.616000       2     27.232000  
+OAI22B2HD2X        smic13_tt     19.667999       8    157.343994  
+OAI22B2HDMX        smic13_tt     12.103000       5     60.514998  
+OAI22HD1X          smic13_tt     10.590000       2     21.180000  
+OAI22HDMX          smic13_tt      9.077000       6     54.461998  
+OAI211HD1X         smic13_tt     10.590000       4     42.360001  
+OAI211HD2X         smic13_tt     18.155001       1     18.155001  
+OAI211HDLX         smic13_tt     10.590000       2     21.180000  
+OR2HD1X            smic13_tt      7.564000      11     83.204001  
+OR2HD2X            smic13_tt     10.590000      25    264.750004  
+OR2HDLX            smic13_tt      7.564000       9     68.076001  
+OR2HDMX            smic13_tt      7.564000       5     37.820001  
+OR3HD1X            smic13_tt      9.077000       3     27.230999  
+OR3HD2X            smic13_tt     12.103000       1     12.103000  
+OR4HDMX            smic13_tt     12.103000       1     12.103000  
+XNOR2HD1X          smic13_tt     15.129000       6     90.773998  
+XNOR2HD2X          smic13_tt     16.642000      51    848.742010  
+XNOR2HD3X          smic13_tt     19.667999       3     59.003998  
+XNOR2HDMX          smic13_tt     15.129000      24    363.095993  
+XOR2CLKHD1X        smic13_tt     15.129000       2     30.257999  
+XOR2CLKHD3X        smic13_tt     19.667999       3     59.003998  
+XOR2HD1X           smic13_tt     15.129000       4     60.515999  
+XOR2HD2X           smic13_tt     16.642000      17    282.914003  
+XOR2HD3X           smic13_tt     19.667999       1     19.667999  
+XOR2HDMX           smic13_tt     15.129000      16    242.063995  
+forwarding_unit                 726.186997       1    726.186997  h
+hazard_unit                     223.905997       1    223.905997  h
+id_stage                      72210.438795       1  72210.438795  h, n
+if_stage_00000000              7879.230120       1   7879.230120  h, n
+mem_stage                      6449.506104       1   6449.506104  h, n
+pipeline_control_0              181.548001       1    181.548001  h, n
+wb_stage                       1060.558997       1   1060.558997  h
+-----------------------------------------------------------------------------
+Total 133 references                                121913.837236
+
+****************************************
+Design: forwarding_unit 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2CLKHD2X        smic13_tt     10.590000       1     10.590000  
+AND2CLKHD3X        smic13_tt     12.103000       2     24.205999  
+AND2CLKHD4X        smic13_tt     13.616000       2     27.232000  
+AND2HD1X           smic13_tt      7.564000       2     15.128000  
+AND4HD2X           smic13_tt     13.616000       1     13.616000  
+AOI21HD1X          smic13_tt      9.077000       1      9.077000  
+BUFCLKHD1X         smic13_tt      6.052000       2     12.104000  
+BUFHD6X            smic13_tt     18.155001       1     18.155001  
+INVHD2X            smic13_tt      6.052000       1      6.052000  
+INVHD4X            smic13_tt     10.590000       1     10.590000  
+INVHDPX            smic13_tt      4.539000       1      4.539000  
+NAND2HD1X          smic13_tt      6.052000       2     12.104000  
+NAND2HD2X          smic13_tt     10.590000       4     42.360001  
+NAND2HD3X          smic13_tt     13.616000       2     27.232000  
+NAND3B1HD1X        smic13_tt     10.590000       1     10.590000  
+NAND3HD1X          smic13_tt      9.077000       3     27.230999  
+NAND4HDMX          smic13_tt      9.077000       1      9.077000  
+NOR2HD1X           smic13_tt      6.052000       2     12.104000  
+NOR2HD2X           smic13_tt      9.077000      10     90.769997  
+NOR2HD3X           smic13_tt     13.616000       1     13.616000  
+XNOR2HD1X          smic13_tt     15.129000       2     30.257999  
+XNOR2HD2X          smic13_tt     16.642000       8    133.136002  
+XNOR2HD3X          smic13_tt     19.667999       2     39.335999  
+XNOR2HDMX          smic13_tt     15.129000       4     60.515999  
+XOR2HD2X           smic13_tt     16.642000       4     66.568001  
+-----------------------------------------------------------------------------
+Total 25 references                                   726.186997
+
+****************************************
+Design: hazard_unit 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22HDLX          smic13_tt      9.077000       1      9.077000  
+AOI22HDMX          smic13_tt      9.077000       1      9.077000  
+AOI211HD2X         smic13_tt     16.642000       1     16.642000  
+AOI211HDLX         smic13_tt      9.077000       2     18.153999  
+INVHDLX            smic13_tt      4.539000       1      4.539000  
+INVHDMX            smic13_tt      4.539000       1      4.539000  
+INVHDPX            smic13_tt      4.539000       1      4.539000  
+INVHDUX            smic13_tt      4.539000       2      9.078000  
+NAND3HDLX          smic13_tt      7.564000       1      7.564000  
+NAND4HDMX          smic13_tt      9.077000       2     18.153999  
+NOR3HD1X           smic13_tt      7.564000       1      7.564000  
+OAI21HDMX          smic13_tt      7.564000       2     15.128000  
+OR3HDLX            smic13_tt      9.077000       1      9.077000  
+XNOR2HDMX          smic13_tt     15.129000       4     60.515999  
+XOR2HDMX           smic13_tt     15.129000       2     30.257999  
+-----------------------------------------------------------------------------
+Total 15 references                                   223.905997
+
+****************************************
+Design: id_stage 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUFCLKHD1X         smic13_tt      6.052000       2     12.104000  
+BUFHDLX            smic13_tt      6.052000       1      6.052000  
+BUFHDMX            smic13_tt      6.052000      16     96.832001  
+FFDQRHD1X          smic13_tt     36.310001       9    326.790012  n
+FFDQRHD2X          smic13_tt     39.334999       7    275.344994  n
+FFDQRHDMX          smic13_tt     36.310001     126   4575.060173  n
+FFDRHQHD3X         smic13_tt     55.977001      21   1175.517025  n
+INVCLKHD14X        smic13_tt     27.232000       3     81.696001  
+INVHD4X            smic13_tt     10.590000       1     10.590000  
+INVHDLX            smic13_tt      4.539000       1      4.539000  
+INVHDUX            smic13_tt      4.539000       2      9.078000  
+MUX2HD1X           smic13_tt     13.616000       1     13.616000  
+MUX2HDMX           smic13_tt     12.103000     161   1948.582950  
+NAND2HD1X          smic13_tt      6.052000       2     12.104000  
+NAND3B1HDLX        smic13_tt      9.077000       1      9.077000  
+NOR2B1HD2X         smic13_tt     12.103000       1     12.103000  
+decoder                         328.302001       1    328.302001  h
+imm_gen                         408.495002       1    408.495002  h
+regfile                       62904.555637       1  62904.555637  h, n
+-----------------------------------------------------------------------------
+Total 19 references                                 72210.438795
+
+****************************************
+Design: decoder 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2CLKHD1X        smic13_tt      7.564000       1      7.564000  
+AND2HD1X           smic13_tt      7.564000       1      7.564000  
+AND2HD2X           smic13_tt     10.590000       1     10.590000  
+AOI21HDLX          smic13_tt      7.564000       1      7.564000  
+AOI31HDLX          smic13_tt      9.077000       1      9.077000  
+AOI211HDLX         smic13_tt      9.077000       1      9.077000  
+INVHDLX            smic13_tt      4.539000       6     27.234000  
+INVHDPX            smic13_tt      4.539000       6     27.234000  
+INVHDUX            smic13_tt      4.539000       1      4.539000  
+NAND2B1HD1X        smic13_tt      7.564000       1      7.564000  
+NAND2HD1X          smic13_tt      6.052000       3     18.156000  
+NAND2HD2X          smic13_tt     10.590000       1     10.590000  
+NAND2HDUX          smic13_tt      4.539000      10     45.390000  
+NAND3B1HDLX        smic13_tt      9.077000       1      9.077000  
+NAND3HDLX          smic13_tt      7.564000       1      7.564000  
+NOR2HD1X           smic13_tt      6.052000       3     18.156000  
+NOR2HD2X           smic13_tt      9.077000       1      9.077000  
+NOR2HDUX           smic13_tt      4.539000       5     22.695000  
+OAI21HDMX          smic13_tt      7.564000       1      7.564000  
+OAI21HDUX          smic13_tt      7.564000       1      7.564000  
+OAI22HDMX          smic13_tt      9.077000       2     18.153999  
+OAI211HDLX         smic13_tt     10.590000       2     21.180000  
+OR2HD1X            smic13_tt      7.564000       1      7.564000  
+OR2HDLX            smic13_tt      7.564000       1      7.564000  
+-----------------------------------------------------------------------------
+Total 24 references                                   328.302001
+
+****************************************
+Design: imm_gen 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI21HDMX          smic13_tt      7.564000       1      7.564000  
+AOI22HDLX          smic13_tt      9.077000       1      9.077000  
+AOI31HDLX          smic13_tt      9.077000       1      9.077000  
+AOI32HDLX          smic13_tt     10.590000       1     10.590000  
+INVHDLX            smic13_tt      4.539000       2      9.078000  
+INVHDMX            smic13_tt      4.539000       1      4.539000  
+INVHDPX            smic13_tt      4.539000       1      4.539000  
+INVHDUX            smic13_tt      4.539000       2      9.078000  
+NAND2HD1X          smic13_tt      6.052000       4     24.208000  
+NAND2HDUX          smic13_tt      4.539000      46    208.794002  
+NOR2B1HD2X         smic13_tt     12.103000       1     12.103000  
+NOR2B1HDLX         smic13_tt      7.564000       7     52.948001  
+NOR2HD1X           smic13_tt      6.052000       2     12.104000  
+NOR2HD2X           smic13_tt      9.077000       1      9.077000  
+NOR2HDUX           smic13_tt      4.539000       2      9.078000  
+OAI21HDLX          smic13_tt      7.564000       1      7.564000  
+OAI22HDLX          smic13_tt      9.077000       1      9.077000  
+-----------------------------------------------------------------------------
+Total 17 references                                   408.495002
+
+****************************************
+Design: regfile 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2CLKHD4X        smic13_tt     13.616000       1     13.616000  
+AND2HD1X           smic13_tt      7.564000       1      7.564000  
+AND2HD2X           smic13_tt     10.590000       1     10.590000  
+AND2HDMX           smic13_tt      7.564000       1      7.564000  
+AOI21HD1X          smic13_tt      9.077000       1      9.077000  
+AOI22B2HDLX        smic13_tt     12.103000     992  12006.175690  
+AOI22HDLX          smic13_tt      9.077000     639   5800.202785  
+AOI22HDMX          smic13_tt      9.077000     389   3530.952869  
+AOI211HD1X         smic13_tt     15.129000       1     15.129000  
+AOI211HD2X         smic13_tt     16.642000       1     16.642000  
+AOI211HDLX         smic13_tt      9.077000      64    580.927979  
+AOI221HDLX         smic13_tt     13.616000       2     27.232000  
+BUFHD2X            smic13_tt      7.564000       1      7.564000  
+BUFHD3X            smic13_tt     10.590000       6     63.540001  
+BUFHD4X            smic13_tt     13.616000       4     54.464001  
+FFDQRHDMX          smic13_tt     36.310001     992  36019.521362  n
+INVCLKHD2X         smic13_tt      6.052000       2     12.104000  
+INVCLKHD3X         smic13_tt      9.077000       2     18.153999  
+INVCLKHDMX         smic13_tt      4.539000       1      4.539000  
+INVHD1X            smic13_tt      4.539000      44    199.716002  
+INVHD2X            smic13_tt      6.052000      14     84.728001  
+INVHD3X            smic13_tt      9.077000      23    208.770992  
+INVHD4X            smic13_tt     10.590000       6     63.540001  
+INVHD5X            smic13_tt     12.103000       2     24.205999  
+INVHD7X            smic13_tt     16.642000       1     16.642000  
+INVHDMX            smic13_tt      4.539000       7     31.773000  
+INVHDPX            smic13_tt      4.539000      17     77.163001  
+NAND2HD1X          smic13_tt      6.052000       8     48.416000  
+NAND2HD2X          smic13_tt     10.590000       4     42.360001  
+NAND2HD3X          smic13_tt     13.616000       5     68.080001  
+NAND2HDLX          smic13_tt      6.052000       4     24.208000  
+NAND2HDMX          smic13_tt      6.052000       6     36.312000  
+NAND2HDUX          smic13_tt      4.539000      65    295.035002  
+NAND3HD1X          smic13_tt      9.077000       2     18.153999  
+NAND3HD2X          smic13_tt     15.129000       1     15.129000  
+NAND3HDMX          smic13_tt      7.564000       3     22.692000  
+NAND4B1HDLX        smic13_tt     10.590000      61    645.990009  
+NAND4B1HDMX        smic13_tt     12.103000       3     36.308999  
+NAND4HDLX          smic13_tt      9.077000     175   1588.474941  
+NAND4HDMX          smic13_tt      9.077000      19    172.462994  
+NOR2B1HD2X         smic13_tt     12.103000       2     24.205999  
+NOR2HD1X           smic13_tt      6.052000      14     84.728001  
+NOR2HD2X           smic13_tt      9.077000      10     90.769997  
+NOR2HD3X           smic13_tt     13.616000      31    422.096005  
+NOR2HDMX           smic13_tt      6.052000       5     30.260000  
+NOR2HDUX           smic13_tt      4.539000      13     59.007000  
+OAI22HD1X          smic13_tt     10.590000       1     10.590000  
+OAI22HDLX          smic13_tt      9.077000       1      9.077000  
+OR2HD1X            smic13_tt      7.564000      24    181.536003  
+OR2HD2X            smic13_tt     10.590000       2     21.180000  
+OR2HDLX            smic13_tt      7.564000       2     15.128000  
+OR2HDMX            smic13_tt      7.564000       4     30.256001  
+-----------------------------------------------------------------------------
+Total 52 references                                 62904.555637
+
+****************************************
+Design: if_stage_00000000 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2CLKHD1X        smic13_tt      7.564000       1      7.564000  
+AOI22HD1X          smic13_tt     10.590000      18    190.620003  
+AOI22HDMX          smic13_tt      9.077000       3     27.230999  
+BUFCLKHDMX         smic13_tt      6.052000       1      6.052000  
+BUFHD6X            smic13_tt     18.155001       4     72.620003  
+BUFHDLX            smic13_tt      6.052000       1      6.052000  
+FFDQRHD1X          smic13_tt     36.310001       1     36.310001  n
+FFDQRHD2X          smic13_tt     39.334999      12    472.019989  n
+FFDQRHDMX          smic13_tt     36.310001     114   4139.340157  n
+FFDRHDLX           smic13_tt     39.334999       1     39.334999  n
+FFDRHDMX           smic13_tt     39.334999       2     78.669998  n
+INVCLKHDMX         smic13_tt      4.539000       1      4.539000  
+INVHD2X            smic13_tt      6.052000       6     36.312000  
+INVHD3X            smic13_tt      9.077000       1      9.077000  
+INVHD4X            smic13_tt     10.590000       1     10.590000  
+INVHD5X            smic13_tt     12.103000       1     12.103000  
+INVHD8X            smic13_tt     18.155001       1     18.155001  
+INVHDLX            smic13_tt      4.539000      29    131.631001  
+INVHDMX            smic13_tt      4.539000       7     31.773000  
+INVHDPX            smic13_tt      4.539000       3     13.617000  
+INVHDUX            smic13_tt      4.539000       2      9.078000  
+MUX2HD2X           smic13_tt     16.642000       1     16.642000  
+MUX2HDMX           smic13_tt     12.103000      96   1161.887970  
+NAND2B1HD2X        smic13_tt     12.103000       1     12.103000  
+NAND2HD1X          smic13_tt      6.052000      15     90.780001  
+NAND2HD2X          smic13_tt     10.590000      29    307.110004  
+NAND2HD3X          smic13_tt     13.616000       3     40.848001  
+NAND2HDMX          smic13_tt      6.052000      23    139.196001  
+NAND2HDUX          smic13_tt      4.539000      28    127.092001  
+NAND3HD1X          smic13_tt      9.077000       4     36.307999  
+NAND3HDMX          smic13_tt      7.564000       4     30.256001  
+NOR2HD1X           smic13_tt      6.052000       6     36.312000  
+NOR2HDMX           smic13_tt      6.052000       1      6.052000  
+NOR2HDUX           smic13_tt      4.539000      14     63.546000  
+OAI21B2HD1X        smic13_tt     10.590000       1     10.590000  
+OAI22HDLX          smic13_tt      9.077000       1      9.077000  
+XNOR2HDMX          smic13_tt     15.129000      17    257.192995  
+XOR2HDMX           smic13_tt     15.129000      12    181.547997  
+-----------------------------------------------------------------------------
+Total 38 references                                  7879.230120
+
+****************************************
+Design: mem_stage 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2HD1X           smic13_tt      7.564000       1      7.564000  
+AND2HDMX           smic13_tt      7.564000       1      7.564000  
+AOI22HDLX          smic13_tt      9.077000      23    208.770992  
+AOI22HDMX          smic13_tt      9.077000      26    236.001991  
+AOI211HDLX         smic13_tt      9.077000       1      9.077000  
+AOI221HDLX         smic13_tt     13.616000       1     13.616000  
+BUFHDLX            smic13_tt      6.052000       4     24.208000  
+FFDQRHDMX          smic13_tt     36.310001      96   3485.760132  n
+FFDRHQHD3X         smic13_tt     55.977001      10    559.770012  n
+INVCLKHD14X        smic13_tt     27.232000       1     27.232000  
+INVHD1X            smic13_tt      4.539000       7     31.773000  
+INVHD2X            smic13_tt      6.052000       1      6.052000  
+INVHDLX            smic13_tt      4.539000      16     72.624001  
+INVHDMX            smic13_tt      4.539000       4     18.156000  
+INVHDPX            smic13_tt      4.539000       8     36.312000  
+INVHDUX            smic13_tt      4.539000       4     18.156000  
+MUX2HDMX           smic13_tt     12.103000      80    968.239975  
+NAND2B1HDMX        smic13_tt      7.564000       1      7.564000  
+NAND2HD1X          smic13_tt      6.052000       8     48.416000  
+NAND2HD2X          smic13_tt     10.590000       1     10.590000  
+NAND2HDUX          smic13_tt      4.539000      38    172.482001  
+NAND3HDLX          smic13_tt      7.564000       1      7.564000  
+NAND3HDMX          smic13_tt      7.564000       7     52.948001  
+NOR2B1HD2X         smic13_tt     12.103000       1     12.103000  
+NOR2B1HDMX         smic13_tt      7.564000       1      7.564000  
+NOR2HD1X           smic13_tt      6.052000       4     24.208000  
+NOR2HD2X           smic13_tt      9.077000       2     18.153999  
+NOR2HDLX           smic13_tt      6.052000       5     30.260000  
+NOR2HDUX           smic13_tt      4.539000       8     36.312000  
+OAI21HDLX          smic13_tt      7.564000       1      7.564000  
+OAI21HDMX          smic13_tt      7.564000       2     15.128000  
+OAI21HDUX          smic13_tt      7.564000      12     90.768002  
+OAI22B2HDLX        smic13_tt     12.103000       8     96.823997  
+OAI22HDLX          smic13_tt      9.077000       8     72.615997  
+OR2HD1X            smic13_tt      7.564000       1      7.564000  
+-----------------------------------------------------------------------------
+Total 35 references                                  6449.506104
+
+****************************************
+Design: pipeline_control_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2CLKHD1X        smic13_tt      7.564000       1      7.564000  
+AND3HD2X           smic13_tt     12.103000       2     24.205999  
+AOI21HDUX          smic13_tt      7.564000       1      7.564000  
+AOI211HDLX         smic13_tt      9.077000       1      9.077000  
+BUFCLKHD1X         smic13_tt      6.052000       1      6.052000  
+FFDQRHDMX          smic13_tt     36.310001       1     36.310001  n
+INVHD1X            smic13_tt      4.539000       2      9.078000  
+INVHD2X            smic13_tt      6.052000       1      6.052000  
+INVHD4X            smic13_tt     10.590000       1     10.590000  
+INVHDMX            smic13_tt      4.539000       1      4.539000  
+INVHDPX            smic13_tt      4.539000       1      4.539000  
+NAND2HD1X          smic13_tt      6.052000       1      6.052000  
+NAND2HD3X          smic13_tt     13.616000       1     13.616000  
+NAND2HDMX          smic13_tt      6.052000       1      6.052000  
+NAND2HDUX          smic13_tt      4.539000       1      4.539000  
+NOR2HD2X           smic13_tt      9.077000       2     18.153999  
+OR2HDLX            smic13_tt      7.564000       1      7.564000  
+-----------------------------------------------------------------------------
+Total 17 references                                   181.548001
+
+****************************************
+Design: wb_stage 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2CLKHD1X        smic13_tt      7.564000       3     22.692000  
+AND2HD1X           smic13_tt      7.564000       1      7.564000  
+AND2HDMX           smic13_tt      7.564000       8     60.512001  
+AOI21HD2X          smic13_tt     15.129000       1     15.129000  
+AOI22HD1X          smic13_tt     10.590000       1     10.590000  
+AOI22HDMX          smic13_tt      9.077000       3     27.230999  
+BUFHD4X            smic13_tt     13.616000       1     13.616000  
+INVHD1X            smic13_tt      4.539000       1      4.539000  
+INVHD2X            smic13_tt      6.052000       1      6.052000  
+INVHD4X            smic13_tt     10.590000       1     10.590000  
+INVHD6X            smic13_tt     13.616000       1     13.616000  
+INVHD7X            smic13_tt     16.642000       1     16.642000  
+INVHD8X            smic13_tt     18.155001       1     18.155001  
+NAND2HD1X          smic13_tt      6.052000       4     24.208000  
+NAND2HD2X          smic13_tt     10.590000       1     10.590000  
+NAND2HD3X          smic13_tt     13.616000       1     13.616000  
+NAND2HDLX          smic13_tt      6.052000       1      6.052000  
+NAND2HDMX          smic13_tt      6.052000      52    314.704002  
+NAND2HDUX          smic13_tt      4.539000      24    108.936001  
+NAND3HD1X          smic13_tt      9.077000      12    108.923996  
+NAND3HD2X          smic13_tt     15.129000      12    181.547997  
+NOR2HD1X           smic13_tt      6.052000       1      6.052000  
+NOR2HD2X           smic13_tt      9.077000       1      9.077000  
+NOR3HD1X           smic13_tt      7.564000       1      7.564000  
+OR3HD1X            smic13_tt      9.077000       2     18.153999  
+OR3HD2X            smic13_tt     12.103000       2     24.205999  
+-----------------------------------------------------------------------------
+Total 26 references                                  1060.558997
+1

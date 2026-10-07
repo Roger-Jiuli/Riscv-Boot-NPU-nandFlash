@@ -49,6 +49,7 @@ module ex_stage (
     input  logic [4:0]  mem_rd,
     input  logic [1:0]  mem_wb_sel,
     input  logic [31:0] mem_forward_data,
+    input  logic        hold_forward,
 
 
     // ============================================================
@@ -131,6 +132,8 @@ module ex_stage (
         .wb_valid      (wb_valid),
         .wb_reg_write  (wb_reg_write),
         .wb_rd         (wb_rd),
+
+        .hold_forward  (hold_forward),
 
         .forward_a     (forward_a),
         .forward_b     (forward_b)

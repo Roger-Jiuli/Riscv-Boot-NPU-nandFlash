@@ -10,416 +10,435 @@ cModel Technology
 dE:/digital_ic/gpt_study/dep_64/rtl_v3/modelsim_work
 valu
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1791292789
 !i10b 1
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-r1
-!s85 0
-31
 !s100 fEl]h04[?ARFb>]PZ9^Mk1
 I[iNebh`[c;K;5:hle;JPl0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 !s105 alu_sv_unit
 S1
-Z2 dE:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/sim
+Z3 dE:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/sim
 w1790922311
 8E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/alu.sv
 FE:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/alu.sv
 L0 1
-Z3 OV;L;10.5b;63
-Z4 !s108 1791027754.000000
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1791292789.000000
 !s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/alu.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/alu.sv|
 !i113 1
-Z5 o-work work -sv
-Z6 tCvgOpt 0
+Z6 o-work work -sv
+Z7 tCvgOpt 0
 vcpu_core
 R0
-!i10b 1
 R1
-r1
-!s85 0
-31
-!s100 IYFiL6lBmNVfNC1?SM=bU1
-ICYYE<I<Lcn]8hbKZNkVSZ3
+!i10b 1
+!s100 jCH4hTDE6;n_BjH44n@?@3
+I>J1A8S_eF7?F?7VzCZ^B11
+R2
 !s105 cpu_core_sv_unit
 S1
-R2
-w1791015066
+R3
+w1791196728
 8E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/cpu_core.sv
 FE:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/cpu_core.sv
 L0 1
-R3
 R4
+r1
+!s85 0
+31
+R5
 !s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/cpu_core.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/cpu_core.sv|
 !i113 1
-R5
 R6
+R7
 vcpu_tb
 R0
+!s110 1791292791
 !i10b 1
-R1
-r1
-!s85 0
-31
-!s100 nPJNf^VkYH9PDPF`LFY0O3
-IUA18_S?87a1oQBE_5CZ9U2
+!s100 J8CT@LmVQU6B_A8>`7oI`0
+IUBT5NGC>Y?bZ5BPIKG2f@0
+R2
 !s105 cpu_tb_sv_unit
 S1
-R2
-w1791027749
+R3
+w1791292782
 8E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/tb/rv32i_cpu/cpu_tb.sv
 FE:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/tb/rv32i_cpu/cpu_tb.sv
-FE:\digital_ic\gpt_study\RISC_V\Riscv-Boot-NPU-nandFlash\tb\rv32i_cpu\tests\alu_test.sv
+FE:\digital_ic\gpt_study\RISC_V\Riscv-Boot-NPU-nandFlash\tb\rv32i_cpu\common\cpu_checkers.sv
+FE:\digital_ic\gpt_study\RISC_V\Riscv-Boot-NPU-nandFlash\tb\rv32i_cpu\tests\integration_test.sv
 L0 3
-R3
-Z7 !s108 1791027755.000000
-!s107 E:\digital_ic\gpt_study\RISC_V\Riscv-Boot-NPU-nandFlash\tb\rv32i_cpu\tests\alu_test.sv|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/tb/rv32i_cpu/cpu_tb.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/tb/rv32i_cpu/cpu_tb.sv|
-!i113 1
-R5
-R6
-vdecoder
-R0
-!i10b 1
-R1
+R4
 r1
 !s85 0
 31
+!s108 1791292791.000000
+!s107 E:\digital_ic\gpt_study\RISC_V\Riscv-Boot-NPU-nandFlash\tb\rv32i_cpu\tests\integration_test.sv|E:\digital_ic\gpt_study\RISC_V\Riscv-Boot-NPU-nandFlash\tb\rv32i_cpu\common\cpu_checkers.sv|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/tb/rv32i_cpu/cpu_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/tb/rv32i_cpu/cpu_tb.sv|
+!i113 1
+R6
+R7
+vdecoder
+R0
+R1
+!i10b 1
 !s100 jlkdOBkahi^lC5gX1^Z;z0
 IY>El4d8G4bAE87@`P:i450
+R2
 !s105 decoder_sv_unit
 S1
-R2
+R3
 w1790920821
 8E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/decoder.sv
 FE:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/decoder.sv
 L0 1
-R3
 R4
-!s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/decoder.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/decoder.sv|
-!i113 1
-R5
-R6
-vdsram_model
-R0
-!i10b 1
-R1
 r1
 !s85 0
 31
+R5
+!s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/decoder.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/decoder.sv|
+!i113 1
+R6
+R7
+vdsram_model
+R0
+Z8 !s110 1791292790
+!i10b 1
 !s100 [QUBo]MDWYlmWObYL[i[01
 I:RVTT[`]W]gRXkiSR?W7K1
+R2
 !s105 dsram_model_sv_unit
 S1
-R2
+R3
 w1791022414
 8E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/tb/rv32i_cpu/dsram_model.sv
 FE:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/tb/rv32i_cpu/dsram_model.sv
 L0 1
-R3
-R7
+R4
+r1
+!s85 0
+31
+Z9 !s108 1791292790.000000
 !s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/tb/rv32i_cpu/dsram_model.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/tb/rv32i_cpu/dsram_model.sv|
 !i113 1
-R5
 R6
+R7
 vex_stage
 R0
-!i10b 1
 R1
-r1
-!s85 0
-31
-!s100 TANbe73beBECCUMSl2hMI1
-I^_U8cdBV78[^:T`ebSHXK0
+!i10b 1
+!s100 F]HOTI5fB02LAK<2L;>[c0
+I7UAT]3@4^aoDZ^VmSVMSO2
+R2
 !s105 ex_state_sv_unit
 S1
-R2
-w1790925012
+R3
+w1791196777
 8E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/ex_state.sv
 FE:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/ex_state.sv
 L0 1
-R3
 R4
+r1
+!s85 0
+31
+R5
 !s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/ex_state.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/ex_state.sv|
 !i113 1
-R5
 R6
+R7
 vforwarding_unit
 R0
+R8
 !i10b 1
-R1
-r1
-!s85 0
-31
-!s100 <IDX<fRiSNNb_D:dLB0>j0
-Iz;3EN4]Z4^HTiaFf6LMm[2
+!s100 jDKi9Ml8aRTSY]o7[9`Lo2
+IT=IlncEW^1o35Xj6d?^0C1
+R2
 !s105 forwarding_unit_sv_unit
 S1
-R2
-w1790922346
+R3
+w1791196835
 8E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/forwarding_unit.sv
 FE:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/forwarding_unit.sv
 L0 1
-R3
 R4
-!s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/forwarding_unit.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/forwarding_unit.sv|
-!i113 1
-R5
-R6
-vhazard_unit
-R0
-!i10b 1
-R1
 r1
 !s85 0
 31
+R5
+!s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/forwarding_unit.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/forwarding_unit.sv|
+!i113 1
+R6
+R7
+vhazard_unit
+R0
+R8
+!i10b 1
 !s100 6m8dBoDX45bMRAD`ZbFO^2
 IH[VP5Xn?`26ZfFUC`l;O^3
+R2
 !s105 hazard_unit_sv_unit
 S1
-R2
+R3
 w1790922278
 8E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/hazard_unit.sv
 FE:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/hazard_unit.sv
 L0 1
-R3
 R4
-!s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/hazard_unit.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/hazard_unit.sv|
-!i113 1
-R5
-R6
-vid_stage
-R0
-!i10b 1
-R1
 r1
 !s85 0
 31
+R9
+!s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/hazard_unit.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/hazard_unit.sv|
+!i113 1
+R6
+R7
+vid_stage
+R0
+R8
+!i10b 1
 !s100 EG?5T03CoKYjEANA>e0<>3
 I[=9[WB2<:DK[aB54`Vz7R3
+R2
 !s105 id_state_sv_unit
 S1
-R2
+R3
 w1790922258
 8E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/id_state.sv
 FE:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/id_state.sv
 L0 1
-R3
 R4
+r1
+!s85 0
+31
+R9
 !s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/id_state.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/id_state.sv|
 !i113 1
-R5
 R6
+R7
 vif_stage
 R0
+R8
 !i10b 1
-R1
-r1
-!s85 0
-31
-!s100 UZzECfSHCZYPJ9of^g;<J0
-IQ>kfQC>[5J5WQe6]o;[KK2
+!s100 =HU8D:OMh?n;MU;bWEbeU3
+I`L<RLQPloUiJ1J51HD;VM3
+R2
 !s105 if_stage_sv_unit
 S1
-R2
-w1791015010
+R3
+w1791101057
 8E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/if_stage.sv
 FE:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/if_stage.sv
 L0 1
-R3
 R4
-!s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/if_stage.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/if_stage.sv|
-!i113 1
-R5
-R6
-vimm_gen
-R0
-!i10b 1
-R1
 r1
 !s85 0
 31
+R9
+!s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/if_stage.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/if_stage.sv|
+!i113 1
+R6
+R7
+vimm_gen
+R0
+R8
+!i10b 1
 !s100 9zeR4Ca2;fIg88I`NFYeV3
 I:GJ?k34=;AOmdE:a<9>6B2
+R2
 !s105 imm_gen_sv_unit
 S1
-R2
+R3
 w1790920749
 8E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/imm_gen.sv
 FE:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/imm_gen.sv
 L0 1
-R3
-R7
-!s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/imm_gen.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/imm_gen.sv|
-!i113 1
-R5
-R6
-visram_model
-R0
-!i10b 1
-R1
+R4
 r1
 !s85 0
 31
+R9
+!s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/imm_gen.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/imm_gen.sv|
+!i113 1
+R6
+R7
+visram_model
+R0
+R8
+!i10b 1
 !s100 jDX:5U:DM6zONCd5LH_Um2
 I[5>DK>zj_VRI8gE]baUdJ0
+R2
 !s105 isram_model_sv_unit
 S1
-R2
+R3
 w1791021514
 8E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/tb/rv32i_cpu/isram_model.sv
 FE:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/tb/rv32i_cpu/isram_model.sv
 L0 1
-R3
-R7
-!s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/tb/rv32i_cpu/isram_model.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/tb/rv32i_cpu/isram_model.sv|
-!i113 1
-R5
-R6
-vload_unit
-R0
-!i10b 1
-R1
+R4
 r1
 !s85 0
 31
+R9
+!s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/tb/rv32i_cpu/isram_model.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/tb/rv32i_cpu/isram_model.sv|
+!i113 1
+R6
+R7
+vload_unit
+R0
+R8
+!i10b 1
 !s100 4cf>L=jm8WI2F706j8dSF0
 IU;Q55dnj4URM[;Q=ViGLl0
+R2
 !s105 load_unit_sv_unit
 S1
-R2
+R3
 w1790933053
 8E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/load_unit.sv
 FE:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/load_unit.sv
 L0 1
-R3
-R7
+R4
+r1
+!s85 0
+31
+R9
 !s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/load_unit.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/load_unit.sv|
 !i113 1
-R5
 R6
+R7
 vmem_stage
 R0
+R8
 !i10b 1
-R1
-r1
-!s85 0
-31
-!s100 =F7hNIKCAV9C<AL[@8FaG2
-IHQmM`B?CN]RakbYN7;NcV3
+!s100 l>f;b1z7Vg`2YGhAAb>SL0
+I;oi;;8P0fLXgg19gOcjo@1
+R2
 !s105 mem_stage_sv_unit
 S1
-R2
-w1790933292
+R3
+w1791196622
 8E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/mem_stage.sv
 FE:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/mem_stage.sv
 L0 1
-R3
-R7
-!s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/mem_stage.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/mem_stage.sv|
-!i113 1
-R5
-R6
-vpipeline_control
-R0
-!i10b 1
-R1
+R4
 r1
 !s85 0
 31
+R9
+!s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/mem_stage.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/mem_stage.sv|
+!i113 1
+R6
+R7
+vpipeline_control
+R0
+R8
+!i10b 1
 !s100 >>BKbGCNb=e2^cCoMemAn0
 IMi6XP93P9d:e[b8o[]PS61
+R2
 !s105 pipeline_control_sv_unit
 S1
-R2
+R3
 w1791009953
 8E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/pipeline_control.sv
 FE:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/pipeline_control.sv
 L0 1
-R3
-R7
-!s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/pipeline_control.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/pipeline_control.sv|
-!i113 1
-R5
-R6
-vregfile
-R0
-!i10b 1
-R1
+R4
 r1
 !s85 0
 31
+R9
+!s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/pipeline_control.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/pipeline_control.sv|
+!i113 1
+R6
+R7
+vregfile
+R0
+R8
+!i10b 1
 !s100 RHMV5CozmMN?NTn9O@;nV1
 IeMd:oZ=J>haod5_doT^e[0
+R2
 !s105 regfile_sv_unit
 S1
-R2
+R3
 w1790919570
 8E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/regfile.sv
 FE:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/regfile.sv
 L0 1
-R3
-R7
-!s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/regfile.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/regfile.sv|
-!i113 1
-R5
-R6
-vstore_unit
-R0
-!i10b 1
-R1
+R4
 r1
 !s85 0
 31
+R9
+!s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/regfile.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/regfile.sv|
+!i113 1
+R6
+R7
+vstore_unit
+R0
+R8
+!i10b 1
 !s100 aWlo7k?gcJRUK>fHPlZJn1
 I]?7dCK8FjPFLa;gSniLcg0
+R2
 !s105 store_unit_sv_unit
 S1
-R2
+R3
 w1790933018
 8E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/store_unit.sv
 FE:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/store_unit.sv
 L0 1
-R3
-R7
-!s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/store_unit.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/store_unit.sv|
-!i113 1
-R5
-R6
-vwb_stage
-R0
-!i10b 1
-R1
+R4
 r1
 !s85 0
 31
+R9
+!s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/store_unit.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/store_unit.sv|
+!i113 1
+R6
+R7
+vwb_stage
+R0
+R8
+!i10b 1
 !s100 TF6^;3e;8]8@87dmm;O_E0
 IE?Td0C3fGzQS1NnYg>zOF3
+R2
 !s105 wb_stage_sv_unit
 S1
-R2
+R3
 w1790933900
 8E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/wb_stage.sv
 FE:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/wb_stage.sv
 L0 1
-R3
-R7
+R4
+r1
+!s85 0
+31
+R9
 !s107 E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/wb_stage.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/digital_ic/gpt_study/RISC_V/Riscv-Boot-NPU-nandFlash/rtl/rv32i_cpu/wb_stage.sv|
 !i113 1
-R5
 R6
+R7

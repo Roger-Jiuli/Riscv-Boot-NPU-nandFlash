@@ -1,0 +1,465 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : cpu_core
+Version: O-2018.06-SP1
+Date   : Wed Oct  7 19:46:38 2026
+****************************************
+
+
+   max_delay/setup ('clk' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   imem_en                      2.00           2.13 r        -0.13  (VIOLATED)
+   u_if_stage/pc_reg[16]/D      2.87           3.00 f        -0.13  (VIOLATED)
+   u_if_stage/pc_reg[29]/D      2.87           3.00 f        -0.13  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[29]/D
+                                2.86           2.98 f        -0.12  (VIOLATED)
+   u_if_stage/pc_reg[30]/D      2.87           3.00 f        -0.12  (VIOLATED)
+   u_if_stage/pc_reg[25]/D      2.87           2.99 f        -0.12  (VIOLATED)
+   u_if_stage/pc_reg[27]/D      2.87           2.99 f        -0.12  (VIOLATED)
+   u_if_stage/pc_reg[22]/D      2.87           2.99 f        -0.12  (VIOLATED)
+   u_if_stage/pc_reg[28]/D      2.87           2.99 f        -0.12  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[30]/D
+                                2.85           2.97 f        -0.12  (VIOLATED)
+   u_if_stage/pc_reg[19]/D      2.87           2.99 f        -0.12  (VIOLATED)
+   u_if_stage/pc_reg[17]/D      2.87           2.98 f        -0.11  (VIOLATED)
+   u_if_stage/pc_reg[31]/D      2.87           2.98 f        -0.11  (VIOLATED)
+   u_if_stage/pc_reg[23]/D      2.87           2.98 f        -0.11  (VIOLATED)
+   u_if_stage/pc_reg[20]/D      2.87           2.99 f        -0.11  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[23]/D
+                                2.87           2.98 f        -0.11  (VIOLATED)
+   u_if_stage/pc_reg[26]/D      2.87           2.98 f        -0.11  (VIOLATED)
+   u_if_stage/pc_reg[8]/D       2.91           3.02 r        -0.11  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[17]/D
+                                2.87           2.98 f        -0.11  (VIOLATED)
+   u_if_stage/pc_reg[24]/D      2.87           2.98 f        -0.11  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[25]/D
+                                2.87           2.98 f        -0.11  (VIOLATED)
+   u_if_stage/pc_reg[12]/D      2.87           2.97 f        -0.10  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[27]/D
+                                2.87           2.97 f        -0.10  (VIOLATED)
+   u_if_stage/pc_reg[7]/D       2.86           2.96 f        -0.10  (VIOLATED)
+   u_if_stage/pc_reg[18]/D      2.87           2.97 f        -0.10  (VIOLATED)
+   u_if_stage/pc_reg[11]/D      2.87           2.97 f        -0.10  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[0]/D
+                                2.87           2.97 f        -0.10  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[31]/D
+                                2.87           2.97 f        -0.10  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[11]/D
+                                2.85           2.95 f        -0.10  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[25]/D
+                                2.85           2.95 f        -0.10  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[24]/D
+                                2.87           2.97 f        -0.10  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[27]/D
+                                2.85           2.95 f        -0.10  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[11]/D
+                                2.85           2.95 f        -0.10  (VIOLATED)
+   u_if_stage/pc_reg[0]/D       2.87           2.97 f        -0.10  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[20]/D
+                                2.85           2.95 f        -0.10  (VIOLATED)
+   u_if_stage/pc_reg[9]/D       2.87           2.96 f        -0.10  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[28]/D
+                                2.87           2.97 f        -0.10  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[18]/D
+                                2.86           2.95 f        -0.10  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[15]/D
+                                2.85           2.95 f        -0.10  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[18]/D
+                                2.85           2.95 f        -0.10  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[5]/D
+                                2.85           2.95 f        -0.10  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[18]/D
+                                2.85           2.95 f        -0.10  (VIOLATED)
+   u_id_stage/id_ex_alu_src_b_reg/D
+                                2.85           2.95 f        -0.10  (VIOLATED)
+   u_id_stage/id_ex_rs1_reg[0]/D
+                                2.85           2.94 f        -0.09  (VIOLATED)
+   u_id_stage/id_ex_rs1_reg[3]/D
+                                2.85           2.94 f        -0.09  (VIOLATED)
+   u_id_stage/id_ex_rs1_reg[1]/D
+                                2.85           2.94 f        -0.09  (VIOLATED)
+   u_id_stage/id_ex_rs1_reg[2]/D
+                                2.85           2.94 f        -0.09  (VIOLATED)
+   u_id_stage/id_ex_rs1_reg[4]/D
+                                2.85           2.94 f        -0.09  (VIOLATED)
+   u_id_stage/id_ex_rs2_reg[1]/D
+                                2.85           2.94 f        -0.09  (VIOLATED)
+   u_id_stage/id_ex_rs2_reg[2]/D
+                                2.85           2.94 f        -0.09  (VIOLATED)
+   u_id_stage/id_ex_rs2_reg[3]/D
+                                2.85           2.94 f        -0.09  (VIOLATED)
+   u_id_stage/id_ex_rs2_reg[4]/D
+                                2.85           2.94 f        -0.09  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[28]/D
+                                2.86           2.96 f        -0.09  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[9]/D
+                                2.85           2.95 f        -0.09  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[3]/D
+                                2.85           2.95 f        -0.09  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[6]/D
+                                2.86           2.95 f        -0.09  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[19]/D
+                                2.86           2.95 f        -0.09  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[31]/D
+                                2.86           2.95 f        -0.09  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[2]/D
+                                2.86           2.95 f        -0.09  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[19]/D
+                                2.89           2.98 r        -0.09  (VIOLATED)
+   u_id_stage/id_ex_alu_op_reg[1]/D
+                                2.86           2.95 f        -0.09  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[21]/D
+                                2.86           2.95 f        -0.09  (VIOLATED)
+   u_id_stage/id_ex_rs2_reg[0]/D
+                                2.86           2.94 f        -0.09  (VIOLATED)
+   u_id_stage/id_ex_use_rs1_reg/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_use_rs2_reg/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_alu_op_reg[3]/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[10]/D
+                                2.85           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[20]/D
+                                2.85           2.94 f        -0.08  (VIOLATED)
+   u_if_stage/pc_reg[6]/D       2.86           2.95 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_alu_op_reg[0]/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_alu_op_reg[2]/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[3]/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[5]/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_if_stage/pc_reg[3]/D       2.92           3.00 r        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[30]/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[4]/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[22]/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[26]/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[12]/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[16]/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[21]/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[23]/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[12]/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[22]/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[26]/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[24]/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[19]/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[14]/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[6]/D
+                                2.86           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_alu_src_a_reg[0]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_ctrl_flow_reg[1]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[9]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[12]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[18]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[22]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[23]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[26]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[27]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_mem_read_reg/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_mem_write_reg/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[0]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[1]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[2]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[9]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[11]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[12]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[15]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[16]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[20]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[21]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[24]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[25]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[29]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rd_reg[2]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[29]/D
+                                2.87           2.94 f        -0.08  (VIOLATED)
+   u_if_stage/pc_reg[1]/D       2.87           2.95 f        -0.07  (VIOLATED)
+   u_if_stage/pc_reg[10]/D      2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_funct3_reg[2]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_funct3_reg[1]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_if_stage/pc_reg[13]/D      2.91           2.99 r        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[1]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[13]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[8]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[17]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[7]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[13]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[23]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[17]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[28]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[16]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[8]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[27]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[10]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_funct3_reg[0]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[0]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[1]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[2]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[3]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[4]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[5]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[6]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[7]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[8]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[10]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[14]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[15]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[16]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[17]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[20]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[21]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[25]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[29]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[31]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[4]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[8]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[19]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[23]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[28]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[31]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rd_reg[1]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rd_reg[3]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[0]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_wb_sel_reg[0]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_wb_sel_reg[1]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[26]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[10]/D
+                                2.85           2.92 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs1_data_reg[14]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[9]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[24]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[0]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[6]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[7]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[25]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[30]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[2]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[1]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[15]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[29]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[21]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[4]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rs2_data_reg[31]/D
+                                2.86           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[11]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_alu_src_a_reg[1]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_ctrl_flow_reg[0]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[13]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[19]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[24]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[28]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_imm_reg[30]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[3]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[5]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[7]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[10]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[13]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[14]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[17]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[18]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[22]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[26]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[27]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_pc_reg[30]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rd_reg[0]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_rd_reg[4]/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_id_stage/id_ex_reg_write_reg/D
+                                2.87           2.94 f        -0.07  (VIOLATED)
+   u_if_stage/pc_reg[2]/D       2.92           2.99 r        -0.07  (VIOLATED)
+   u_if_stage/pc_reg[21]/D      2.87           2.94 f        -0.07  (VIOLATED)
+   u_if_stage/pc_reg[14]/D      2.87           2.93 f        -0.07  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[22]/D
+                                2.87           2.93 f        -0.06  (VIOLATED)
+   u_if_stage/pc_reg[15]/D      2.87           2.93 f        -0.06  (VIOLATED)
+   u_if_stage/pc_reg[5]/D       2.91           2.97 r        -0.06  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[9]/D
+                                2.86           2.92 f        -0.06  (VIOLATED)
+   u_if_stage/pc_reg[4]/D       2.87           2.93 f        -0.06  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[11]/D
+                                2.86           2.92 f        -0.06  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[15]/D
+                                2.87           2.92 f        -0.05  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[6]/D
+                                2.85           2.91 f        -0.05  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[20]/D
+                                2.86           2.91 f        -0.05  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[3]/D
+                                2.86           2.92 f        -0.05  (VIOLATED)
+   u_id_stage/id_ex_valid_reg/D
+                                2.85           2.90 f        -0.05  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[14]/D
+                                2.85           2.90 f        -0.05  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[16]/D
+                                2.87           2.92 f        -0.05  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[12]/D
+                                2.85           2.90 f        -0.04  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[13]/D
+                                2.85           2.89 f        -0.04  (VIOLATED)
+   u_if_stage/if_id_instr_reg[18]/D
+                                2.86           2.87 f        -0.01  (VIOLATED)
+   u_if_stage/if_id_instr_reg[5]/D
+                                2.86           2.87 f        -0.01  (VIOLATED)
+   u_if_stage/if_id_instr_reg[16]/D
+                                2.86           2.87 f        -0.01  (VIOLATED)
+   u_if_stage/if_id_instr_reg[17]/D
+                                2.86           2.87 f        -0.01  (VIOLATED)
+   u_if_stage/if_id_instr_reg[19]/D
+                                2.86           2.87 f        -0.01  (VIOLATED)
+   u_if_stage/if_id_instr_reg[21]/D
+                                2.86           2.87 f        -0.01  (VIOLATED)
+   u_if_stage/if_id_instr_reg[22]/D
+                                2.86           2.87 f        -0.01  (VIOLATED)
+   u_if_stage/if_id_instr_reg[24]/D
+                                2.86           2.87 f        -0.01  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[1]/D
+                                2.88           2.89 r        -0.01  (VIOLATED)
+   u_ex_stage/ex_mem_alu_result_reg[5]/D
+                                2.85           2.86 f         0.00  (VIOLATED: increase significant digits)
+   u_ex_stage/ex_mem_alu_result_reg[8]/D
+                                2.86           2.87 f         0.00  (VIOLATED: increase significant digits)
+   u_ex_stage/ex_mem_alu_result_reg[7]/D
+                                2.85           2.86 f         0.00  (VIOLATED: increase significant digits)
+   u_if_stage/if_id_instr_reg[12]/D
+                                2.87           2.87 f         0.00  (VIOLATED: increase significant digits)
+   u_if_stage/if_id_instr_reg[2]/D
+                                2.87           2.87 f         0.00  (VIOLATED: increase significant digits)
+
+
+   max_leakage_power
+
+                             Required        Actual
+   Design                   Leakage Power  Leakage Power     Slack
+   -----------------------------------------------------------------
+   cpu_core                     0.00        4669.80       -4669.80  (VIOLATED)
+
+
+1

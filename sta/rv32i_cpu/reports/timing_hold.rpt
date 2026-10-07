@@ -1,0 +1,615 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-slack_lesser_than 100.00
+	-max_paths 20
+	-sort_by slack
+Design : cpu_core
+Version: O-2018.06-SP1
+Date   : Wed Oct  7 20:20:22 2026
+****************************************
+
+
+  Startpoint: u_if_stage/if1_pc_q_reg_16_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if_id_pc_reg_16_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_if_stage/if1_pc_q_reg_16_/CK (FFDQRHDMX)              0.00       0.00 r
+  u_if_stage/if1_pc_q_reg_16_/Q (FFDQRHDMX)               0.29       0.29 r
+  u_if_stage/U261/Z (MUX2HDMX)                            0.12       0.41 r
+  u_if_stage/if_id_pc_reg_16_/D (FFDQRHDMX)               0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  u_if_stage/if_id_pc_reg_16_/CK (FFDQRHDMX)                         0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  ------------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_if_stage/if1_pc_q_reg_4_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if_id_pc_reg_4_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_if_stage/if1_pc_q_reg_4_/CK (FFDQRHDMX)               0.00       0.00 r
+  u_if_stage/if1_pc_q_reg_4_/Q (FFDQRHDMX)                0.29       0.29 r
+  u_if_stage/U273/Z (MUX2HDMX)                            0.12       0.41 r
+  u_if_stage/if_id_pc_reg_4_/D (FFDQRHDMX)                0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  u_if_stage/if_id_pc_reg_4_/CK (FFDQRHDMX)                          0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  ------------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_if_stage/if1_pc_q_reg_20_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if_id_pc_reg_20_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_if_stage/if1_pc_q_reg_20_/CK (FFDQRHDMX)              0.00       0.00 r
+  u_if_stage/if1_pc_q_reg_20_/Q (FFDQRHDMX)               0.29       0.29 r
+  u_if_stage/U257/Z (MUX2HDMX)                            0.12       0.41 r
+  u_if_stage/if_id_pc_reg_20_/D (FFDQRHDMX)               0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  u_if_stage/if_id_pc_reg_20_/CK (FFDQRHDMX)                         0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  ------------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_if_stage/if1_pc_q_reg_31_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if_id_pc_reg_31_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_if_stage/if1_pc_q_reg_31_/CK (FFDQRHDMX)              0.00       0.00 r
+  u_if_stage/if1_pc_q_reg_31_/Q (FFDQRHDMX)               0.29       0.29 r
+  u_if_stage/U246/Z (MUX2HDMX)                            0.12       0.41 r
+  u_if_stage/if_id_pc_reg_31_/D (FFDQRHDMX)               0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  u_if_stage/if_id_pc_reg_31_/CK (FFDQRHDMX)                         0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  ------------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_if_stage/if1_pc_q_reg_12_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if_id_pc_reg_12_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_if_stage/if1_pc_q_reg_12_/CK (FFDQRHDMX)              0.00       0.00 r
+  u_if_stage/if1_pc_q_reg_12_/Q (FFDQRHDMX)               0.29       0.29 r
+  u_if_stage/U265/Z (MUX2HDMX)                            0.12       0.41 r
+  u_if_stage/if_id_pc_reg_12_/D (FFDQRHDMX)               0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  u_if_stage/if_id_pc_reg_12_/CK (FFDQRHDMX)                         0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  ------------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_if_stage/if1_pc_q_reg_8_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if_id_pc_reg_8_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_if_stage/if1_pc_q_reg_8_/CK (FFDQRHDMX)               0.00       0.00 r
+  u_if_stage/if1_pc_q_reg_8_/Q (FFDQRHDMX)                0.29       0.29 r
+  u_if_stage/U269/Z (MUX2HDMX)                            0.12       0.41 r
+  u_if_stage/if_id_pc_reg_8_/D (FFDQRHDMX)                0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  u_if_stage/if_id_pc_reg_8_/CK (FFDQRHDMX)                          0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  ------------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_if_stage/if1_pc_q_reg_24_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if_id_pc_reg_24_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_if_stage/if1_pc_q_reg_24_/CK (FFDQRHDMX)              0.00       0.00 r
+  u_if_stage/if1_pc_q_reg_24_/Q (FFDQRHDMX)               0.29       0.29 r
+  u_if_stage/U253/Z (MUX2HDMX)                            0.12       0.41 r
+  u_if_stage/if_id_pc_reg_24_/D (FFDQRHDMX)               0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  u_if_stage/if_id_pc_reg_24_/CK (FFDQRHDMX)                         0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  ------------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_if_stage/if1_pc_q_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if_id_pc_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_if_stage/if1_pc_q_reg_0_/CK (FFDQRHDMX)               0.00       0.00 r
+  u_if_stage/if1_pc_q_reg_0_/Q (FFDQRHDMX)                0.29       0.29 r
+  u_if_stage/U277/Z (MUX2HDMX)                            0.12       0.41 r
+  u_if_stage/if_id_pc_reg_0_/D (FFDQRHDMX)                0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  u_if_stage/if_id_pc_reg_0_/CK (FFDQRHDMX)                          0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  ------------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_if_stage/if1_pc_q_reg_1_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if_id_pc_reg_1_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_if_stage/if1_pc_q_reg_1_/CK (FFDQRHDMX)               0.00       0.00 r
+  u_if_stage/if1_pc_q_reg_1_/Q (FFDQRHDMX)                0.29       0.29 r
+  u_if_stage/U276/Z (MUX2HDMX)                            0.12       0.41 r
+  u_if_stage/if_id_pc_reg_1_/D (FFDQRHDMX)                0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  u_if_stage/if_id_pc_reg_1_/CK (FFDQRHDMX)                          0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  ------------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_if_stage/if1_pc_q_reg_28_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if_id_pc_reg_28_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_if_stage/if1_pc_q_reg_28_/CK (FFDQRHDMX)              0.00       0.00 r
+  u_if_stage/if1_pc_q_reg_28_/Q (FFDQRHDMX)               0.29       0.29 r
+  u_if_stage/U249/Z (MUX2HDMX)                            0.12       0.41 r
+  u_if_stage/if_id_pc_reg_28_/D (FFDQRHDMX)               0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  u_if_stage/if_id_pc_reg_28_/CK (FFDQRHDMX)                         0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  ------------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_if_stage/if1_pc_q_reg_28_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_28_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_if_stage/if1_pc_q_reg_28_/CK (FFDQRHDMX)              0.00       0.00 r
+  u_if_stage/if1_pc_q_reg_28_/Q (FFDQRHDMX)               0.29       0.29 r
+  u_if_stage/U205/Z (MUX2HDMX)                            0.12       0.41 r
+  u_if_stage/if1_pc_q_reg_28_/D (FFDQRHDMX)               0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  u_if_stage/if1_pc_q_reg_28_/CK (FFDQRHDMX)                         0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  ------------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_if_stage/if1_pc_q_reg_8_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_8_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_if_stage/if1_pc_q_reg_8_/CK (FFDQRHDMX)               0.00       0.00 r
+  u_if_stage/if1_pc_q_reg_8_/Q (FFDQRHDMX)                0.29       0.29 r
+  u_if_stage/U210/Z (MUX2HDMX)                            0.12       0.41 r
+  u_if_stage/if1_pc_q_reg_8_/D (FFDQRHDMX)                0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  u_if_stage/if1_pc_q_reg_8_/CK (FFDQRHDMX)                          0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  ------------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_if_stage/if1_pc_q_reg_20_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_20_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_if_stage/if1_pc_q_reg_20_/CK (FFDQRHDMX)              0.00       0.00 r
+  u_if_stage/if1_pc_q_reg_20_/Q (FFDQRHDMX)               0.29       0.29 r
+  u_if_stage/U207/Z (MUX2HDMX)                            0.12       0.41 r
+  u_if_stage/if1_pc_q_reg_20_/D (FFDQRHDMX)               0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  u_if_stage/if1_pc_q_reg_20_/CK (FFDQRHDMX)                         0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  ------------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_if_stage/if1_pc_q_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_if_stage/if1_pc_q_reg_0_/CK (FFDQRHDMX)               0.00       0.00 r
+  u_if_stage/if1_pc_q_reg_0_/Q (FFDQRHDMX)                0.29       0.29 r
+  u_if_stage/U213/Z (MUX2HDMX)                            0.12       0.41 r
+  u_if_stage/if1_pc_q_reg_0_/D (FFDQRHDMX)                0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  u_if_stage/if1_pc_q_reg_0_/CK (FFDQRHDMX)                          0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  ------------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_if_stage/if1_pc_q_reg_1_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_1_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_if_stage/if1_pc_q_reg_1_/CK (FFDQRHDMX)               0.00       0.00 r
+  u_if_stage/if1_pc_q_reg_1_/Q (FFDQRHDMX)                0.29       0.29 r
+  u_if_stage/U212/Z (MUX2HDMX)                            0.12       0.41 r
+  u_if_stage/if1_pc_q_reg_1_/D (FFDQRHDMX)                0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  u_if_stage/if1_pc_q_reg_1_/CK (FFDQRHDMX)                          0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  ------------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_if_stage/if1_pc_q_reg_31_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_31_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_if_stage/if1_pc_q_reg_31_/CK (FFDQRHDMX)              0.00       0.00 r
+  u_if_stage/if1_pc_q_reg_31_/Q (FFDQRHDMX)               0.29       0.29 r
+  u_if_stage/U203/Z (MUX2HDMX)                            0.12       0.41 r
+  u_if_stage/if1_pc_q_reg_31_/D (FFDQRHDMX)               0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  u_if_stage/if1_pc_q_reg_31_/CK (FFDQRHDMX)                         0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  ------------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_if_stage/if1_pc_q_reg_12_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_12_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_if_stage/if1_pc_q_reg_12_/CK (FFDQRHDMX)              0.00       0.00 r
+  u_if_stage/if1_pc_q_reg_12_/Q (FFDQRHDMX)               0.29       0.29 r
+  u_if_stage/U209/Z (MUX2HDMX)                            0.12       0.41 r
+  u_if_stage/if1_pc_q_reg_12_/D (FFDQRHDMX)               0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  u_if_stage/if1_pc_q_reg_12_/CK (FFDQRHDMX)                         0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  ------------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_if_stage/if1_pc_q_reg_24_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_24_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_if_stage/if1_pc_q_reg_24_/CK (FFDQRHDMX)              0.00       0.00 r
+  u_if_stage/if1_pc_q_reg_24_/Q (FFDQRHDMX)               0.29       0.29 r
+  u_if_stage/U206/Z (MUX2HDMX)                            0.12       0.41 r
+  u_if_stage/if1_pc_q_reg_24_/D (FFDQRHDMX)               0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  u_if_stage/if1_pc_q_reg_24_/CK (FFDQRHDMX)                         0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  ------------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_if_stage/if1_pc_q_reg_4_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_4_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_if_stage/if1_pc_q_reg_4_/CK (FFDQRHDMX)               0.00       0.00 r
+  u_if_stage/if1_pc_q_reg_4_/Q (FFDQRHDMX)                0.29       0.29 r
+  u_if_stage/U211/Z (MUX2HDMX)                            0.12       0.41 r
+  u_if_stage/if1_pc_q_reg_4_/D (FFDQRHDMX)                0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  u_if_stage/if1_pc_q_reg_4_/CK (FFDQRHDMX)                          0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  ------------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+
+  Startpoint: u_if_stage/if1_pc_q_reg_16_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_if_stage/if1_pc_q_reg_16_
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_if_stage/if1_pc_q_reg_16_/CK (FFDQRHDMX)              0.00       0.00 r
+  u_if_stage/if1_pc_q_reg_16_/Q (FFDQRHDMX)               0.29       0.29 r
+  u_if_stage/U208/Z (MUX2HDMX)                            0.12       0.41 r
+  u_if_stage/if1_pc_q_reg_16_/D (FFDQRHDMX)               0.00       0.41 r
+  data arrival time                                                  0.41
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock reconvergence pessimism                           0.00       0.00
+  u_if_stage/if1_pc_q_reg_16_/CK (FFDQRHDMX)                         0.00 r
+  library hold time                                      -0.04      -0.04
+  data required time                                                -0.04
+  ------------------------------------------------------------------------------
+  data required time                                                -0.04
+  data arrival time                                                 -0.41
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.45
+
+Warning: report_timing has satisfied the max_paths criteria. There are 1585 further endpoints which have paths of interest with slack less than   100.00 that were not considered when generating this report. (UITE-502)
+
+1

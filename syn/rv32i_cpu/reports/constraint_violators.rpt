@@ -1,0 +1,19 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : cpu_core
+Version: O-2018.06-SP1
+Date   : Wed Oct  7 19:29:12 2026
+****************************************
+
+
+   max_leakage_power
+
+                             Required        Actual
+   Design                   Leakage Power  Leakage Power     Slack
+   -----------------------------------------------------------------
+   cpu_core                     0.00        3385.98       -3385.98  (VIOLATED)
+
+
+1

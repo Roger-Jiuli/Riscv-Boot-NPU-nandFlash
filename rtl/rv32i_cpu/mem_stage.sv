@@ -39,6 +39,7 @@ module mem_stage (
     // Pipeline control
     // ============================================================
     output logic        mem_stall,
+    output logic        hold_forward,
 
     input  logic        mem_wb_en,
     input  logic        mem_wb_flush,
@@ -120,6 +121,15 @@ module mem_stage (
 
     assign mem_stall =
         mem_access && !dmem_ready;
+
+    always_ff @(posedge clk or negedge rst_n) begin
+        if (!rst_n)
+            hold_forward <= 1'b0;
+        else if (mem_stall && ex_mem_valid)
+            hold_forward <= 1'b1;
+        else if (mem_wb_valid)
+            hold_forward <= 1'b0;
+    end
 
 
     // ============================================================
